@@ -8,3 +8,7 @@ Translations
 * Finished: 03.12.2012
 * Contact: zoogar@163.com
 
+* File: ruby-beginner-en-F3loB.yml
+* Started: 04.12.2012
+* Finished:
+* Contact: zoogar@163.com
