@@ -230,7 +230,8 @@ sections:
     entry: ! "我们知道数组的索引从0开始到数组长度减一。
       （想一想：一个有四个元素的数组，其索引有0、1、2和3。）\n\n
       但是如果我们想要使用不从0到数组末端的索引，怎么办呢？如果我们不想使用数字来做索引，又怎么办？
-      那么我们就需要一种全新的数组结构，叫做 **哈希表**。\n\n
+      那么我们就需要一种全新的数组结构，叫做 **哈希表**
+      （这个叫法来自于英文 **Hash** 的音译；也有另一种叫法是 **散列表** ）。\n\n
       哈希表有点像JavaScript的对象和Python的字典。
       如果你没有学过那些语言，那么你只需要知道哈希表就是 **键-值对** 的集合。
       哈希表的语法是这样的：\n\n    hash
@@ -258,12 +259,12 @@ sections:
         UFqRmkORIAACAAdB
     created_at: 2012-09-20 03:46:34.000000000 Z
     default_code: ''
-    entry: ! "What we just showed you was hash **literal notation**. We call it that
-      because you *literally* describe what you want in the hash: you give it a name
-      and you set it equal to a bunch of key => value pairs inside curly braces.\n\nYou
-      can also create a hash using `Hash.new`, like so:\n\n    my_hash = Hash.new\n\nSetting
-      a variable equal to `Hash.new` creates a new, empty hash; it's the same as setting
-      the variable equal to empty curly braces (`{}`)."
+    entry: ! "刚才向你展示的是哈希表的 **字面量表示法** 。
+      之所以这样说是因为我们通过字面量来描述哈希表：
+      用大括号将若干个key => value对括起来。\n\n
+      我们同样可以使用`Hash.new`来创建一个哈希表，像这样：\n\n    my_hash = Hash.new\n\n
+      将一个变量赋值为`Hash.new`会创建一个新的空哈希表；
+      这和将一个空白的大括号（`{}`）赋值给变量是等价的。"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 4
@@ -271,17 +272,17 @@ sections:
       other: 1
     from_console: false
     hint: ''
-    instruction: Use `Hash.new` to create a new hash called `pets`. `Hash` *must*
-      be capitalized, or Ruby won't know what you're talking about!
+    instruction: 使用`Hash.new`创建一个新的哈希表`pets`。
+      `Hash`的首字母 *必须* 大写，否则Ruby会不知道你在说什么！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Using Hash.new
+    name: 使用Hash.new
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ pets\nrescue NameError\n  return \"Did you declare a variable called pets?\"\nend\n\nunless
-      pets.is_a? Hash\n  return \"It looks like pets isn't a hash.\"\nend\n\nif code.scan(\"Hash.new\").length
-      == 0\n  return \"Make sure to use Hash.new to create your new hash!\"\nend\n\nreturn
+    test_functions: ! "if code == nil\n  return \"你没有编写任何代码！\"\nend\n\nbegin\n
+      \ pets\nrescue NameError\n  return \"你声明了一个名叫pets的变量吗？\"\nend\n\nunless
+      pets.is_a? Hash\n  return \"貌似pets不是哈希表。\"\nend\n\nif code.scan(\"Hash.new\").length
+      == 0\n  return \"确保使用Hash.new来创建你的哈希表！\"\nend\n\nreturn
       true"
     updated_at: 2012-10-01 02:36:23.000000000 Z
     view: console_and_editor
