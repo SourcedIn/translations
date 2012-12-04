@@ -148,14 +148,11 @@ sections:
 
 
       multi_d_array.each { |x| puts "#{x}\n" }'
-    entry: ! 'You might be asking yourself: "If I can put *anything* in an array,
-      can I make an array of arrays?" The answer is: yes!
+    entry: ! '你可能会问自己：“如果我可以把 *任何东西* 放进数组里，那么我可以建一个数组的数组吗？”答案是：可以！
 
 
-      Check out the array of arrays we have in the editor. Arrays of arrays are called
-      **multidimensional** arrays, since the act of adding more arrays expands the
-      array out of its string-like shape. For instance, the array in the editor is
-      a two-dimensional array.'
+      看一看编辑器中的数组的数组。数组的数组被称为 **多维** 数组，因为随着加入的数组增加，原来的数组就越来越不像字符串那个样子了。
+      比如，编辑器中的数组是二维数组。'
     expect_error: false
     feedback_stats:
       correctness_test_issue: 24
@@ -166,12 +163,11 @@ sections:
       positive_feedback: 1
     from_console: false
     hint: ''
-    instruction: Can you guess what this two-dimensional array will look like if we
-      print it out? Click Run to see.
+    instruction: 你可以猜出这个二维数组打印出来是什么样子吗？单击Run看看吧。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Arrays of Arrays
+    name: 数组的数组
     tabs: []
     test_functions: return true
     updated_at: 2012-10-31 08:33:16.186000000 Z
