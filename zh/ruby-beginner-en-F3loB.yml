@@ -291,27 +291,25 @@ sections:
         UFqRnDV3mwACAAl7
     created_at: 2012-09-20 03:46:36.000000000 Z
     default_code: ''
-    entry: ! "We can add to a hash two ways: if we created it using literal notation,
-      we can simply add a new key-value pair directly between the curly braces. If
-      we used `Hash.new`, we can add to the hash using bracket notation:\n\n    pets
-      = Hash.new\n    pets[\"Stevie\"] = \"cat\"\n    # Adds the key \"Stevie\" with
-      the\n    # value \"cat\" to the hash\n"
+    entry: ! "向一个哈希表添加内容有两种方式：如果使用字面量表示法创建，
+      则可以简单地将键-值对直接添加到大括号中；如果使用`Hash.new`创建的哈希表，
+      我们可以用方括号表示法来添加：\n\n    pets
+      = Hash.new\n    pets[\"Stevie\"] = \"cat\"\n    # 将键\"Stevie\"及其键值\"cat\"添加到哈希表\n"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 1
       total: 1
     from_console: false
     hint: ''
-    instruction: Add a pet to your `pets` hash. It can be any key-value pair you like!
+    instruction: 向你的`pets`哈希表添加一个宠物。你可以用任意的键和键值！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Adding to a Hash
+    name: 向哈希表添加内容
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right--check the example in the instructions if you
-      need help.\"\nend\n\nif pets.empty?\n  return \"It looks like you didn't add
-      any key-value pairs to your pets hash.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"
+      你的语法貌似不大正确——如需帮助可查看教程中的示例。
+      \"\nend\n\nif pets.empty?\n  return \"貌似你没有向你的pets哈希表添加键-值对。\"\nend\n\nreturn true"
     updated_at: 2012-09-29 19:35:32.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
