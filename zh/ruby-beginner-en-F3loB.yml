@@ -4,17 +4,16 @@ classification: :lesson
 created_at: 2012-09-20 00:16:09.000000000 Z
 domain: :freestyle
 down_votes: 182
-entry: You already know a little bit about arrays. This lesson will teach you more
-  about arrays, about a new data structure called a hash, and how Ruby can iterate
-  over both to help you build better programs.
+entry: 你已经对数组有所了解。这一课将教你更多关于数组的内容，然后介绍一种叫做哈希表的全新数据结构，
+  最后讲解如何在Ruby中对这两种数据结构进行迭代遍历以编写出高质量的程序。
 feedback_total: 108
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
   raw_data: !binary |-
     TyFOXyFuzxlcRMGV
 level: :beginner
-locale: en
-name: Data Structures
+locale: zh
+name: 数据结构
 num_exercises: 16
 num_published_exercises: 16
 num_published_sections: 4
@@ -44,31 +43,30 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-20 00:16:09.000000000 Z
   default_view: console_and_editor
-  entry: Let's take a closer look at arrays.
+  entry: 让我们深入探讨一下数组。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFpgSoXuTAACAGoA
     created_at: 2012-09-20 00:16:10.000000000 Z
     default_code: ''
-    entry: Earlier we saw that an array can be used to store a list of values in a
-      single variable. You can stuff any number of numbers in there, you can repeat
-      numbers, and they don't have to be in numeric order!
+    entry: 在前面的课程中我们看到数组可以将列表的值存储在一个变量中。
+      你可以再数组里放任意多的数字，数字可以重复，而且可以任意顺序！
     expect_error: false
     feedback_stats: {}
     from_console: false
-    hint: ! "You can declare an array like this:\n\n    var_name = [num1, num2, num3]"
-    instruction: Declare a variable, `my_array`, in the editor, and set it equal to
-      an array of your choice. Check the Hint if you need a syntax refresher.
+    hint: ! "你可以像这样定义数组：\n\n    var_name = [num1, num2, num3]"
+    instruction: 在编辑器中声明一个变量`my_array`，将它赋值为一个任意数组。
+      如果你不记得语法，可以查看提示。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Creating Arrays
+    name: 创建数组
     tabs: []
-    test_functions: ! "begin\n  my_array\nrescue NameError\n  return \"Did you declare
-      a variable called my_array?\"\nend\n\nunless my_array.is_a? Array\n  return
-      \"It looks like my_array isn't an array.\"\nend\n\nif my_array.empty?\n  return
-      \"Okay, that's TECHNICALLY an array, but it's empty. Put something in there!\"\nend\n\nreturn
+    test_functions: ! "begin\n  my_array\nrescue NameError\n  return \"你声明了一个叫做my_array的数组吗？
+      \"\nend\n\nunless my_array.is_a? Array\n  return
+      \"貌似你声明的my_array不是数组。\"\nend\n\nif my_array.empty?\n  return
+      \"好吧，从技术上讲，你声明了一个数组，但它是空的。放些东西进去吧！\"\nend\n\nreturn
       true"
     updated_at: 2012-09-20 23:14:34.000000000 Z
     view: console_and_editor
