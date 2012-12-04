@@ -131,7 +131,7 @@ sections:
     load_submission_from_previous_exercise: false
     name: 非数字组成的数组
     tabs: []
-    test_functions: ! "if code == nil\n  return \"你没有输入任何东西！\"\nend\n\nbegin\n
+    test_functions: ! "if code == nil\n  return \"你没有编写任何代码！\"\nend\n\nbegin\n
       \ string_array\nrescue NameError\n  return \"你声明了一个名叫string_array的数组吗？
       \"\nend\n\nunless string_array.is_a? Array\n  return \"貌似string_array不是数组。
       \"\nend\n\nif string_array.empty?\n  return
@@ -177,29 +177,26 @@ sections:
         UFqRkggK+AACAAZX
     created_at: 2012-09-20 03:46:26.000000000 Z
     default_code: ''
-    entry: See how a two-dimensional array with the same number of elements per row
-      and overall rows is a square? An array (like a line) is one-dimensional; an
-      array of arrays (like a square) is two-dimensional.
+    entry: 你觉得具有相同行数和列数的二维数组像一个正方形吗？数组（像直线）是一维的；数组的数组（像正方形）是二维的。
     expect_error: false
     feedback_stats:
       typo: 1
       total: 1
     from_console: false
-    hint: ! "Remember, a simple 2-D array looks like this:\n\n    array = [[thing,
+    hint: ! "记住，一个简单的二维数组是这个样子的：\n\n    array = [[thing,
       thing], [thing, thing]]"
-    instruction: ! 'Create your own two-dimensional array called `my_2d_array` in
-      the editor. The elements of the inner array can be anything you like: numbers,
-      strings, booleans, and so on. Check the Hint if you need help.'
+    instruction: ! '在编辑器中创建你自己的二维数组`my_2d_array`。
+      内层数组的元素可以是任何类型：数字、字符串、布尔值等等。如需帮助可查看提示。'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Create Your Own
+    name: 创建你自己的
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ my_2d_array\nrescue NameError\n  return \"Did you declare an array called
-      my_2d_array?\"\nend\n\nunless my_2d_array.is_a? Array\n  return \"It looks like
-      my_2d_array isn't an array.\"\nend\n\nunless my_2d_array.all? {|item| item.is_a?
-      Array}\n  return \"It looks like not every element of my_2d_array is an array.\"\nend\n\nreturn
+    test_functions: ! "if code == nil\n  return \"你没有编写任何代码！\"\nend\n\nbegin\n
+      \ my_2d_array\nrescue NameError\n  return \"你声明了一个名叫my_2d_array的数组吗？
+      \"\nend\n\nunless my_2d_array.is_a? Array\n  return \"貌似my_2d_array不是数组。
+      \"\nend\n\nunless my_2d_array.all? {|item| item.is_a?
+      Array}\n  return \"貌似my_2d_array数组的元素并不全是数组。\"\nend\n\nreturn
       true"
     updated_at: 2012-10-01 02:35:02.000000000 Z
     view: console_and_editor
@@ -208,7 +205,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: More With Arrays
+  name: 数组进阶
   num_forum_answers: 18
   num_forum_questions: 10
   published: true
