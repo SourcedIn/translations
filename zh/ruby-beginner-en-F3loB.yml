@@ -317,13 +317,13 @@ sections:
         UFqRm1ueswACAAZk
     created_at: 2012-09-20 03:46:35.000000000 Z
     default_code: ''
-    entry: ! "Just like with arrays, you can access values in a hash by offset (that
-      is, using indices). Each index in a hash is a key that you assign; simply by
-      putting the key name between square brackets, we can access the value associated
-      with that key.\n\nFor instance, if we have the hash\n\n    pets = { \"Stevie\"
+    entry: ! "就像数组那样，我们也可以通过偏移量（即索引）来访问哈希表。
+      哈希表中的索引就是键，只需将键名放在方括号里面，我们就可以访问对应的键值。\n\n
+      例如，我们有这样一个哈希表：\n\n    pets = { \"Stevie\"
       => \"cat\",\n      \"Bowser\" => \"hamster\",\n      \"Kevin Sorbo\" => \"fish\"\n
-      \   }\n\nWe can get the value of `\"Stevie\"` by typing\n\n    pets[\"Stevie\"]\n
-      \   # will return \"cat\"\n"
+      \   }\n\n
+      要得到`\"Stevie\"`键的值，我们只需要输入\n\n    pets[\"Stevie\"]\n
+      \   # 将会返回\"cat\"\n"
     expect_error: false
     feedback_stats:
       correctness_test_issue: 10
@@ -331,20 +331,17 @@ sections:
       other: 2
       instructional_text_issue: 1
     from_console: false
-    hint: ! "To print a value associated with a key `my_key` in a hash called `my_hash`,
-      you'd write\n\n    puts my_hash[\"my_key\"]"
-    instruction: Use bracket notation to access the key-value pair you added to `pets`,
-      then use `puts` to print that value to the console. Check the Hint if you need
-      help.
+    hint: ! "要打印`my_hash`哈希表的`my_key`键的键值，代码是：\n\n    puts my_hash[\"my_key\"]"
+    instruction: 使用括号表示法访问你的`pets`哈希表中的键-值对，并使用`puts`将键值打印到控制台。
+      如需帮助可查看提示。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Accessing Hash Values
+    name: 访问哈希表键值
     tabs: []
-    test_functions: ! "if prints.length == 0\n  return \"It looks like you didn't
-      print anything to the console.\"\nend\n\nfor x, y in pets\n  unless prints.include?
-      y\n    return \"It looks like you didn't print out the value of the key stored
-      in your hash.\"\n  end\nend\n\nreturn true"
+    test_functions: ! "if prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。
+      \"\nend\n\nfor x, y in pets\n  unless prints.include?
+      y\n    return \"貌似你没有将你的哈希表键值打印出来。\"\n  end\nend\n\nreturn true"
     updated_at: 2012-10-27 21:53:58.528000000 Z
     view: console_and_editor
   feedback_total: 22
@@ -352,7 +349,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Hashes
+  name: 哈希表
   num_forum_answers: 7
   num_forum_questions: 4
   published: true
