@@ -77,41 +77,37 @@ sections:
     default_code: ! 'demo_array = [100, 200, 300, 400, 500]
 
 
-      print  # Add your code here!'
-    entry: ! "Here's something interesting about arrays: each element in the array
-      has what's called an **index**. The first element gets index 0, the next gets
-      index 1, the one after that gets index 2, and so on. We can access elements
-      of the array directly through these numbers, like so:\n\n    array = [5, 7,
-      9, 2, 0]\n    array[2]\n    # returns \"9\", since \"9\"\n    # is at index
-      2\n\nThe diagram below shows how these indices work for our sample array, `[5,
-      7, 9, 2, 0]`. The first element gets index 0, the next gets 1, the next gets
-      2, and so on.\n\n    +---+---+---+---+---+\n    | 5 | 7 | 9 | 2 | 0 |\n    +---+---+---+---+---+\n
-      \     0   1   2   3   4\n\n(This is a bit of an oversimplification, but it gets
-      the idea across for now.)\n\nWe can access the `i`th element of an array called
-      `array` by putting the index in square brackets, like so: `array[i]`. `array[0]`
-      gets the first element, `array[1]` gets the second element, and so on. This
-      is called **access by index** or **index by offset**."
+      print  # 在此处添加你的代码！'
+    entry: ! "数组具备一些有趣的特性：数组中每个都有一个 **索引** 。第一个元素的索引是0，
+      下一个的索引是1，再下一个的索引是2，依此类推。我们可以通过这些索引数字来直接访问数组中的元素，像这样：
+      \n\n    array = [5, 7,
+      9, 2, 0]\n    array[2]\n    # 返回\"9\"，因为\"9\"对应于索引2\n\n
+      下表展示了我们示例数组`[5, 7, 9, 2, 0]`的索引详情。第一个元素的索引是0，下一个是1，再下一个是2，依此类推。
+      \n\n    +---+---+---+---+---+\n    | 5 | 7 | 9 | 2 | 0 |\n    +---+---+---+---+---+\n
+      \     0   1   2   3   4\n\n
+      （这里有点过于简化，但可以讲明白目前这个概念。）\n\n
+      为了访问索引为`i`的元素，我们可以将该索引放在`array`数组后面的方括号里，像这样：`array[i]`。
+      `array[0]`取得第一个元素，`array[1]`取得第二个元素，依此类推。这称为 **索引访问** 或者 **偏移索引** 。"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 2
       total: 2
     from_console: false
-    hint: ! "Remember, you can access the `i`th value of an array with\n\n    array_name[i]"
-    instruction: Use square bracket notation to `print` the third value of `demo_array`
-      to the console.
+    hint: ! "记住，访问索引为`i`的元素是这样的：\n\n    array_name[i]"
+    instruction: 使用方括号表示法将`demo_array`数组的第三个元素的值打印到控制台（使用`print`打印）。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Access by Index
+    name: 索引访问
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Check the Hint if you need help!\"\nend\n\nif
-      code.scan(\"demo_array[\").length == 0\n  return \"Make sure to use square bracket
-      notation to print out the third element of demo_array.\"\nend\n\nif prints.length
-      == 0\n  return \"It looks like you didn't print anything to the console.\"\nend\n\nif
-      prints.include? \"400\"\n  return \"Remember, array indices start with 0, not
-      1!\"\nend\n\nunless prints.include? \"300\"\n  return \"It doesn't look like
-      you printed out the third value of demo_array to the console.\"\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。如需帮助可查看提示！
+      \"\nend\n\nif
+      code.scan(\"demo_array[\").length == 0\n  return \"确保使用方括号表示法将demo_array数组的第三个元素的值打印出来。
+      \"\nend\n\nif prints.length
+      == 0\n  return \"貌似你没有向控制台打印任何东西。\"\nend\n\nif
+      prints.include? \"400\"\n  return \"记住，数组的索引从0开始，不是从1开始！
+      \"\nend\n\nunless prints.include? \"300\"\n  return \"貌似你没有将demo_array数组第三个元素的值打印到控制台。
+      \"\nend\n\nreturn
       true"
     updated_at: 2012-10-31 02:59:28.995000000 Z
     view: console_and_editor
