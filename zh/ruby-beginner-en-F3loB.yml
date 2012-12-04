@@ -116,9 +116,7 @@ sections:
         UFqRkIFUkAACAAg+
     created_at: 2012-09-20 03:46:24.000000000 Z
     default_code: ''
-    entry: ! 'Here''s something you might not have known: you can make an array of
-      *any* collection of Ruby objects. You can make an array of booleans! An array
-      of strings! The list is (almost) endless.'
+    entry: ! '你可能不知道：数组里面可以放入 *任意* Ruby对象。你可以创建布尔值组成的数组！字符串数组！几乎无穷无尽的可能。'
     expect_error: false
     feedback_stats:
       correctness_test_issue: 1
@@ -127,20 +125,19 @@ sections:
       instructional_text_issue: 1
     from_console: false
     hint: ''
-    instruction: Create a new array called `string_array`. Make it an array of...
-      strings!
+    instruction: 创建一个名叫`string_array`的数组。然后让它成为...字符串数组！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Arrays of Non-Numbers
+    name: 非数字组成的数组
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ string_array\nrescue NameError\n  return \"Did you declare an array called
-      string_array?\"\nend\n\nunless string_array.is_a? Array\n  return \"It looks
-      like string_array isn't an array.\"\nend\n\nif string_array.empty?\n  return
-      \"Your array is emptier than a Nickelback concert!\"\nend\n\nunless string_array.all?
-      {|word| word.is_a? String}\n  return \"It looks like not every element of string_array
-      is a string.\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你没有输入任何东西！\"\nend\n\nbegin\n
+      \ string_array\nrescue NameError\n  return \"你声明了一个名叫string_array的数组吗？
+      \"\nend\n\nunless string_array.is_a? Array\n  return \"貌似string_array不是数组。
+      \"\nend\n\nif string_array.empty?\n  return
+      \"你的数组空空如也！\"\nend\n\nunless string_array.all?
+      {|word| word.is_a? String}\n  return \"貌似你的string_array数组的元素并不全是字符串。
+      \"\nend\n\nreturn true"
     updated_at: 2012-10-31 08:30:10.281000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
