@@ -400,12 +400,11 @@ sections:
 
 
 '
-    entry: ! "Iterating over arrays is easier than it looks. Array elements are indexed
-      starting at 0 and always go up by one, and loops are particularly good at starting
-      at a certain number and going up by one with each iteration. When we type\n\n
-      \   array.each { |element| action }\n\nWe're telling Ruby: \"Take this array
-      and for each element, do this action.\" As usual, we can use any placeholder
-      name for the bit between `| |`s."
+    entry: ! "对数组迭代比实际看起来要简单。数组元素的索引从0开始，且总是以1递增，而循环正擅长于这种迭代。
+      当我们键入：\n\n
+      \   array.each { |element| action }\n\n
+      我们是在告诉Ruby：“对于该数组的每个元素，执行这个动作。”
+      照例，`| |`之间的占位符可以任意命名。"
     expect_error: false
     feedback_stats:
       other: 3
@@ -413,20 +412,19 @@ sections:
       instructional_text_issue: 1
     from_console: false
     hint: ''
-    instruction: Use the `.each` iterator to print out each element of the `languages`
-      array. Make sure to use `puts` instead of `print`, so each element is on its
-      own line.
+    instruction: 使用`.each`迭代器将`languages`数组的每个元素打印出来。
+      确保使用`puts`而不是`print`，这样每个元素占一行。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Iterating Over Arrays
+    name: 对数组迭代
     tabs: []
-    test_functions: ! "if prints.length == 0\n  return \"It looks like you didn't
-      print anything to the console.\"\nend\n\nif code.scan(\"puts\").length == 0\n
-      \ return \"Make sure to use puts insead of print! We want each element printed
-      on its own line.\"\nend\n\nfor i in languages\n  unless prints.include? i\n
-      \   return \"It looks like you didn't print out each element of the languages
-      array.\"\n  end\nend\n\nreturn true"
+    test_functions: ! "if prints.length == 0\n  return \"貌似你没有向控制台打印任何东西
+      \"\nend\n\nif code.scan(\"puts\").length == 0\n
+      \ return \"确保使用puts而不是print！我们需要每个元素占一行。
+      \"\nend\n\nfor i in languages\n  unless prints.include? i\n
+      \   return \"貌似你没有把languages数组的每个元素打印出来。
+      \"\n  end\nend\n\nreturn true"
     updated_at: 2012-10-04 22:55:51.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
