@@ -114,10 +114,9 @@ sections:
         UFobaa34sgACA+1D
     created_at: 2012-09-19 19:22:17.000000000 Z
     default_code: ''
-    entry: We want to make sure we capture both `"S"` and `"s"` in the user's input.
-      We could write separate `if` / `else` statements to handle this, but we can
-      also use `.downcase!` to convert the user's input to all lower case. That way,
-      we only have to search for `"s"`.
+    entry: 我们要确保将用户输入中的`"S"`和`"s"`都捕获。
+      当然，我们可以使用各自的`if` / `else`语句来处理，但是我们还可以使用
+      `.downcase!`来将用户输入的内容都转换为小写。这样，我们就只需要搜索`"s"`。
     expect_error: false
     feedback_stats:
       correctness_test_issue: 2
@@ -125,20 +124,18 @@ sections:
       instructional_text_issue: 2
     from_console: false
     hint: ''
-    instruction: Call the `.downcase!` method on `user_input`. Make sure to include
-      the `!` so that the user's string is modified in-place; otherwise, Ruby will
-      create a copy of `user_input` and modify that instead.
+    instruction: 对`user_input`调用`.downcase!`方法。确保不要漏掉
+      `!`，这样才能修改字符串本身；否则，Ruby会创建一个`user_input`的副本并修改它。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Downcase!
+    name: 转换为小写！
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Check the first exercise if you need help!\"\nend\n\nif
-      code.scan(\".downcase!\").length == 0\n  return \"Make sure you call the .downcase!
-      method on user_input.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。
+      如需帮助可查看第一个练习！\"\nend\n\nif
+      code.scan(\".downcase!\").length == 0\n  return \"确保对user_input调用.downcase!方法。\"\nend\n\nreturn true"
     updated_at: 2012-10-02 18:55:26.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
