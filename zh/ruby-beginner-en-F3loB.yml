@@ -560,26 +560,23 @@ sections:
         UFqSOAgK+AACAAp5
     created_at: 2012-09-20 03:49:12.000000000 Z
     default_code: ''
-    entry: Good! Now let's create a hash. Feel free to use either hash literal notation
-      or `Hash.new`.
+    entry: 好！现在让我们创建一个哈希表。你可以使用字面量表示法或者`Hash.new`来创建。
     expect_error: false
     feedback_stats: {}
     from_console: false
-    hint: ! "Hash literal notation looks like this:\n\n    hash_name = { key1 => value1,\n
-      \     key2 => value2,\n      key3 => value3\n    }\n\nYou use `Hash.new` like
-      this:\n\n    hash_name = Hash.new"
-    instruction: Create a hash called `my_hash` in the editor. Give it at least one
-      key-value pair.
+    hint: ! "哈希表的字面量表示法是这样的：\n\n    hash_name = { key1 => value1,\n
+      \     key2 => value2,\n      key3 => value3\n    }\n\n
+      使用`Hash.new`的话是这样：\n\n    hash_name = Hash.new"
+    instruction: 在编辑器中创建一个名叫`my_hash`的哈希表。向该哈希表添加至少一个键-值对。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Hashes
+    name: 哈希表
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ my_hash\nrescue NameError\n  return \"Did you declare a variable called my_hash?\"\nend\n\nunless
-      my_hash.is_a? Hash\n  return \"It looks like my_hash isn't a hash.\"\nend\n\nif
-      my_hash.empty?\n  return \"It looks like you didn't add any key-value pairs
-      to my_hash.\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你没有编写任何代码！\"\nend\n\nbegin\n
+      \ my_hash\nrescue NameError\n  return \"你声明了一个名叫my_hash的变量吗？\"\nend\n\nunless
+      my_hash.is_a? Hash\n  return \"貌似my_hash不是哈希表。\"\nend\n\nif
+      my_hash.empty?\n  return \"貌似你没有向my_hash添加任何键-值对。\"\nend\n\nreturn true"
     updated_at: 2012-09-20 19:46:45.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
