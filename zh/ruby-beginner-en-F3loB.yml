@@ -526,34 +526,32 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-20 00:17:17.000000000 Z
   default_view: console_and_editor
-  entry: Let's take some time to go over what we've learned in this lesson.
+  entry: 让我们花点时间复习本课所学内容。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFpgjtac7AACAHvM
     created_at: 2012-09-20 00:17:18.000000000 Z
     default_code: ''
-    entry: Great work! You've learned a lot in this lesson. Let's do a little review
-      to be sure you really know your stuff.
+    entry: 干得好！你在这一课已经学了很多。让我们来复习一下以确保你真正掌握这些内容。
     expect_error: false
     feedback_stats: {}
     from_console: false
-    hint: ! "Remember, a simple multidimensional array looks like this:\n\n    array
+    hint: ! "记住，一个简单的多维数组是这个样子的：\n\n    array
       = [[thing, thing], [thing, thing]]"
-    instruction: ! 'Create your own multidimensional array called `my_array` in the
-      editor. The elements of the innermost array can be anything you like: numbers,
-      strings, booleans, and so on. Check the Hint if you need help.'
+    instruction: ! '在编辑器中创建你自己的多维数组`my_array`
+      最内层数组的元素可以是你喜欢的任意类型：数字、字符串、布尔值等等。如需帮助可查看提示。'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Multidimensional Arrays
+    name: 多维数组
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ my_array\nrescue NameError\n  return \"Did you declare an array called my_array?\"\nend\n\nunless
-      my_array.is_a? Array\n  return \"It looks like my_array isn't an array.\"\nend\n\nif
-      my_array.empty?\n  return \"Okay, that's TECHNICALLY an array, but it's empty.
-      Put something in it!\"\nend\n\nunless my_array.all? {|item| item.is_a? Array}\n
-      \ return \"It looks like not every element of my_array is an array.\"\nend\n\nreturn
+    test_functions: ! "if code == nil\n  return \"你没有编写任何代码！\"\nend\n\nbegin\n
+      \ my_array\nrescue NameError\n  return \"你声明了一个名叫my_array的数组吗？\"\nend\n\nunless
+      my_array.is_a? Array\n  return \"貌似my_array不是数组。\"\nend\n\nif
+      my_array.empty?\n  return \"好吧，从技术上讲，你声明了一个数组，但它是空的。放些东西进去吧！
+      \"\nend\n\nunless my_array.all? {|item| item.is_a? Array}\n
+      \ return \"貌似my_array数组的元素并不全是数组。\"\nend\n\nreturn
       true"
     updated_at: 2012-09-20 19:45:55.000000000 Z
     view: console_and_editor
