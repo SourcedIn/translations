@@ -374,7 +374,7 @@ sections:
       => \"dog\"\n}\n\nfriends.each { |x| puts \"#{x}\" }\nfamily.each { |x, y| puts
       \"#{x}: #{y}\" }"
     entry: ! '还记得我们讲过的[循环和迭代器](http://www.codecademy.com/courses/ruby-beginner-en-XYcN1)课程吗？
-      在程序中我们可以使用多种方法来实现循环。当我们循环一个哈希表时，我们说我们在 **迭代** 它。
+      在程序中我们可以使用多种方法来实现循环。当我们循环遍历一个哈希表时，我们说是在 **迭代** 它。
 
 
       在这一节我们将使用`.each`迭代器来迭代数组和哈希表
@@ -417,7 +417,7 @@ sections:
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: 对数组迭代
+    name: 迭代数组
     tabs: []
     test_functions: ! "if prints.length == 0\n  return \"貌似你没有向控制台打印任何东西
       \"\nend\n\nif code.scan(\"puts\").length == 0\n
@@ -459,7 +459,7 @@ sections:
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: 对多维数组迭代
+    name: 迭代多维数组
     tabs: []
     test_functions: ! "if exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。如需帮助可查看提示！
       \"\nend\n\nif prints.length
@@ -477,14 +477,12 @@ sections:
     default_code: ! "secret_identities = { \"The Batman\" => \"Bruce Wayne\",\n  \"Superman\"
       => \"Clark Kent\",\n  \"Wonder Woman\" => \"Diana Prince\",\n  \"Freakazoid\"
       => \"Dexter Douglas\"\n}\n  \n"
-    entry: ! "When iterating over hashes, we also need to search for more than one
-      placeholder variable. Whereas with multidimensional arrays, we nested our `.each`
-      calls so we could loop through each index of each nested array, for hashes we
-      do this so we can get both parts of each hash element: the key and the value.\n\nIf
-      we wanted to print the keys and values of a hash, we might type\n\n    hash.each
-      { |key, value| puts \"#{key}:  #{value}\" }\n\nWhere `key` and `value` are just
-      placeholder names, as usual: they could be `x` and `y`, `hamburgers` and `hotdogs`,
-      you name it."
+    entry: ! "当我们迭代哈希表的时候，我们同样需要搜索不止一个占位符。
+      尽管对于多维数组，我们使用嵌套的`.each`调用以循环遍历每个嵌套数组的索引，
+      但对于哈希表，我们同时获得键和键值。\n\n
+      如果我们想打印一个哈希表的键和键值，我们就键入：\n\n    hash.each
+      { |key, value| puts \"#{key}:  #{value}\" }\n\n
+      这里的`key`和`value`只是占位符的名称，照例，他们可以是`x`和`y`，`hamburgers`和`hotdogs`，随便你用什么名称。"
     expect_error: false
     feedback_stats:
       correctness_test_issue: 8
@@ -493,22 +491,20 @@ sections:
       positive_feedback: 1
       typo: 1
     from_console: false
-    hint: ! "For example, you should print out\n\n    The Batman: Bruce Wayne\n    Superman:
-      Clark Kent\n\nand so on."
-    instruction: ! 'Use `.each` to iterate over the `secret_identities` hash. Use
-      `puts` to print each key-value pair, separated by a colon and a space (`: `),
-      to the console.'
+    hint: ! "例如，你应该打印出：\n\n    The Batman: Bruce Wayne\n    Superman:
+      Clark Kent\n\n
+      等等。"
+    instruction: ! '使用`.each`迭代`secret_identities`哈希表。使用`puts`向控制台打印每个键-值对，键与键值之间用冒号和一个空格隔开（`: `）。'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Iterating Over Hashes
+    name: 迭代哈希表
     tabs: []
-    test_functions: ! "if prints.length == 0\n  return \"It looks like you didn't
-      print anything to the console.\"\nend\n\nif code.scan(\"puts\").length == 0\n
-      \ return \"Make sure to use puts insead of print! We want each key-value pair
-      printed on its own line.\"\nend\n\nfor i, j in secret_identities\n  unless prints.include?
-      \"#{i}: #{j}\"\n    return \"It looks like you aren't printing each colon-separated
-      key-value pair on its own line. Check the hint if you need help!\"\n  end\nend\n\nreturn
+    test_functions: ! "if prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。
+      \"\nend\n\nif code.scan(\"puts\").length == 0\n
+      \ return \"确保使用puts而不是print！我们需要每个元素占一行打印。
+      \"\nend\n\nfor i, j in secret_identities\n  unless prints.include?
+      \"#{i}: #{j}\"\n    return \"貌似你没有把由冒号隔开的键-值对打印在单独的一行。如需帮助可查看提示！\"\n  end\nend\n\nreturn
       true"
     updated_at: 2012-10-29 14:10:56.892000000 Z
     view: console_and_editor
@@ -517,7 +513,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Iterating Over Arrays and Hashes
+  name: 迭代数组和哈希表
   num_forum_answers: 18
   num_forum_questions: 11
   published: true
