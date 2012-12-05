@@ -436,14 +436,14 @@ sections:
 
 
 '
-    entry: ! "Iterating over a multidimensional array is slightly trickier.\n\nWe've
-      created a 2-D array, `s` (for \"sandwiches\"). We want to iterate over `s` in
-      such a way that we don't print out each element, like `[\"ham\", \"swiss\"]`,
-      but each element *within* each element, so we get a list of all the meats and
-      cheeses within `s`.\n\nIf we just wanted to access `\"swiss\"`, we could type\n\n
-      \   s[0][1]\n\nMeaning, \"bring me the second element of the first element,\"
-      which is \"swiss.\" If we iterate over a regular array using\n\n    array.each
-      { |element| action }\n\nthen how might we iterate over an array of arrays?"
+    entry: ! "迭代多维数组稍微有点复杂。\n\n
+      我们创建了一个二维数组`s`。我们想这样来迭代`s`：
+      不是打印每个元素，像这样`[\"ham\", \"swiss\"]`，而是打印元素 *里面* 的元素。\n\n
+      如果我们要访问元素`\"swiss\"`，我们会键入：\n\n
+      \   s[0][1]\n\n
+      意思是：“给我第一个元素的第二个元素”，也就是“swiss”元素。
+      如果我们这样迭代一个常规数组：\n\n    array.each { |element| action }\n\n
+      那么我们怎样迭代一个数组的数组呢？"
     expect_error: false
     feedback_stats:
       typo: 2
@@ -452,24 +452,21 @@ sections:
       instructional_text_issue: 3
       other: 1
     from_console: false
-    hint: ! "Your nested `.each`es should look something like this:\n\n    s.each
+    hint: ! "你的`.each`嵌套应该是这个样子的：\n\n    s.each
       do | x |\n      x.each do | y |\n        puts y\n      end\n    end"
-    instruction: ! 'We''ll give you a hint: use two `.each` iterators, one inside
-      the other, to print out each element of each element of the `s` array. Make
-      sure to use `puts` instead of `print`, so each element is on its own line. Check
-      the Hint if you need more help!'
+    instruction: ! '我们给你一个提示：使用双层`.each`迭代器来打印`s`数组的每个元素的元素。
+      确保使用`puts`而不是`print`，这样每个元素占一行。如果你需要更多的帮助，可查看本练习的提示！'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Iterating Over Multidimensional Arrays
+    name: 对多维数组迭代
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Your syntax doesn't
-      look quite right. Check the Hint if you need help!\"\nend\n\nif prints.length
-      == 0\n  return \"It looks like you didn't print anything to the console.\"\nend\n\nif
-      code.scan(\"puts\").length == 0\n  return \"Make sure to use puts insead of
-      print! We want each element printed on its own line.\"\nend\n\nfor i in s\n
-      \ for j in i\n    unless prints.include? j\n      return \"It looks like you
-      didn't print out each element of the s array.\"\n    end\n  end\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。如需帮助可查看提示！
+      \"\nend\n\nif prints.length
+      == 0\n  return \"貌似你没有向控制台输出任何东西。\"\nend\n\nif
+      code.scan(\"puts\").length == 0\n  return \"确保使用puts而不是print！我们需要每个元素占一行。\"\nend\n\nfor i in s\n
+      \ for j in i\n    unless prints.include? j\n      return \"貌似你没有把s数组的每个元素打印出来。
+      \"\n    end\n  end\nend\n\nreturn
       true"
     updated_at: 2012-10-22 20:17:40.101000000 Z
     view: console_and_editor
