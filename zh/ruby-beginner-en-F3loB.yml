@@ -362,8 +362,7 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-20 00:17:07.000000000 Z
   default_view: console_and_editor
-  entry: We've done a little iteration over arrays. In this section, we'll get in
-    some more practice and learn how to iterate over hashes.
+  entry: 我们已经对数组的迭代有所了解。在这一节，我们将对此加强练习，然后学习如何迭代哈希表。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
@@ -374,24 +373,21 @@ sections:
       \ \"Maggie\" => \"sister\",\n  \"Abe\" => \"grandpa\",\n  \"Santa's Little Helper\"
       => \"dog\"\n}\n\nfriends.each { |x| puts \"#{x}\" }\nfamily.each { |x, y| puts
       \"#{x}: #{y}\" }"
-    entry: ! 'Remember when we covered [loops and iterators](http://www.codecademy.com/courses/ruby-beginner-en-XYcN1)?
-      We could use a whole bunch of different methods for looping in a program. When
-      we loop over an array or a hash, we say that we **iterate** over it.
+    entry: ! '还记得我们讲过的[循环和迭代器](http://www.codecademy.com/courses/ruby-beginner-en-XYcN1)课程吗？
+      在程序中我们可以使用多种方法来实现循环。当我们循环一个哈希表时，我们说我们在 **迭代** 它。
 
 
-      We''ll be using the `.each` iterator to iterate over arrays and hashes in this
-      section. Take a look at the code in the editor to see one example of how we
-      might go about this.'
+      在这一节我们将使用`.each`迭代器来迭代数组和哈希表
+      阅读编辑器中的代码，看看我们的示例代码是怎么做的。'
     expect_error: false
     feedback_stats: {}
     from_console: false
     hint: ''
-    instruction: When you think you understand the code in the editor, click Run to
-      see it in action.
+    instruction: 当你觉得你看懂了编辑器中的代码后，单击Run来看结果。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: (Re)Introduction to Iteration
+    name: 再次介绍迭代
     tabs: []
     test_functions: return true
     updated_at: 2012-09-20 16:16:57.000000000 Z
