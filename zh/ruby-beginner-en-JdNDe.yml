@@ -4,15 +4,15 @@ classification: :game
 created_at: 2012-09-19 19:17:37.000000000 Z
 domain: :freestyle
 down_votes: 58
-entry: Using control flow, we can modify a user's input and return it to them. In
-  this project, we'll make them sound like Daffy Duck!
+entry: 使用控制流，我们可以修改用户的输入，然后将其返回。
+  在这个项目中，我们会使其变成像达菲鸭！
 feedback_total: 55
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
   raw_data: !binary |-
     TyFOXyFuzxlcRMGV
 level: :beginner
-locale: en
+locale: zh
 name: Thith Meanth War!
 num_exercises: 8
 num_published_exercises: 8
@@ -44,22 +44,20 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 19:17:37.000000000 Z
   default_view: console_and_editor
-  entry: Combining our knowledge of control flow with Ruby's rich method library can
-    let us accomplish a lot with just a few lines of code.
+  entry: 将我们的控制流知识和Ruby丰富的方法库结合起来，我们只需几行代码便完成大量工作。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFoaUpro+AACA+Ev
     created_at: 2012-09-19 19:17:38.000000000 Z
     default_code: ! "print \"Thtring, pleathe!: \"\nuser_input = gets.chomp\nuser_input.downcase!\n\nif
-      user_input.include? \"s\"\n  user_input.gsub!(/s/, \"th\")\nelse\n  puts \"Nothing
-      to do here!\"\nend\n  \nputs \"Your string is: #{user_input}\""
-    entry: ! 'Now that we can direct our program using `if` / `else` statements, we
-      can produce different results based on different user input.
+      user_input.include? \"s\"\n  user_input.gsub!(/s/, \"th\")\nelse\n  puts \"这儿什么也不做！
+      \"\nend\n  \nputs \"你的字符串是：#{user_input}\""
+    entry: ! '由于我们可以使用`if` / `else`语句改变程序流向，
+      那么我们就可以根据不同的用户输入产生不同的结果。
 
 
-      In this project, we''ll combine control flow with a few new Ruby string methods
-      to Daffy Duckify a user''s string, replacing each `"s"` with `"th"`.'
+      在这个项目中，我们把控制流和一些新的Ruby字符串方法结合起来，Daffy Duckify用户的字符串，将每个`"s"`变成`"th"`。'
     expect_error: false
     feedback_stats:
       positive_feedback: 2
@@ -68,12 +66,11 @@ sections:
       typo: 1
     from_console: false
     hint: ''
-    instruction: Click Run to see the Daffy Duckifier in action and to start building
-      your own!
+    instruction: 单击Run来看看Daffy Duckifier的运行，然后准备开始打造你自己的！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: What You'll Be Building
+    name: 你即将要建造的东西
     solution_code: ''
     solution_entry: ''
     tabs: []
