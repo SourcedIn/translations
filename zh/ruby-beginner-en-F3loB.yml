@@ -585,8 +585,7 @@ sections:
     created_at: 2012-09-20 03:49:13.000000000 Z
     default_code: ! "lunch_order = { \"Ryan\" => \"wonton soup\",\n  \"Eric\" => \"hamburger\",\n
       \ \"Jimmy\" => \"sandwich\",\n  \"Sasha\" => \"salad\",\n  \"Cole\" => \"taco\"\n}\n\n"
-    entry: We've done a fair amount of iteration over arrays, so to finish up, let's
-      review how to iterate over a hash.
+    entry: 我们已经做了大量的数组迭代，现在，让我们通过复习哈希表的迭代来结课吧。
     expect_error: false
     feedback_stats:
       correctness_test_issue: 3
@@ -594,24 +593,21 @@ sections:
       positive_feedback: 3
       typo: 1
     from_console: false
-    hint: ! "For example, you should print out\n\n    wanton soup\n    hamburger\n\nand
-      so on."
-    instruction: Write the code necessary to print JUST the values of each key-value
-      pair in `lunch_order`. (Use `puts` instead of `print` so each value is printed
-      on its own line.) Click Run to iterate your way to completing this lesson.
+    hint: ! "例如，你应该打印出\n\n    wanton soup\n    hamburger\n\n
+      等等。"
+    instruction: 编写只打印`lunch_order`键值的代码。（使用`puts`而不是`print`，这样每个键值占一行。）
+      单击Run来运行你的迭代程序以完成这一课。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Iterating Over a Hash
+    name: 迭代哈希表
     tabs: []
-    test_functions: ! "if prints.length == 0\n  return \"It looks like you didn't
-      print anything to the console.\"\nend\n\nif code.scan(\"puts\").length == 0\n
-      \ return \"Make sure to use puts insead of print! We want each key-value pair
-      printed on its own line.\"\nend\n\nfor i, j in lunch_order\n  unless prints.include?
-      \"#{j}\"\n    return \"It looks like you aren't printing the value part of each
-      key-value pair on its own line. Check the hint if you need help!\"\n  end\nend\n\nfor
-      i, j in lunch_order\n  if prints.include? \"#{i}\"\n    return \"It looks like
-      you're printing your hash's keys to the console. Only print the values!\"\n
+    test_functions: ! "if prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。
+      \"\nend\n\nif code.scan(\"puts\").length == 0\n
+      \ return \"确保使用puts而不是print！我们需要每个键-值对占一行打印。
+      \"\nend\n\nfor i, j in lunch_order\n  unless prints.include?
+      \"#{j}\"\n    return \"貌似你没有将每个键-值对的键值单独一行打印。如需帮助可查看提示！\"\n  end\nend\n\nfor
+      i, j in lunch_order\n  if prints.include? \"#{i}\"\n    return \"貌似你将哈希表的键名打印到控制台了。请只打印键值！\"\n
       \ end\nend\n\nreturn true"
     updated_at: 2012-10-09 10:53:53.574000000 Z
     view: console_and_editor
@@ -620,7 +616,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Review
+  name: 复习
   num_forum_answers: 6
   num_forum_questions: 6
   published: true
