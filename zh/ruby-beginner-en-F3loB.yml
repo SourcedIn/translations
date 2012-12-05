@@ -4,17 +4,16 @@ classification: :lesson
 created_at: 2012-09-20 00:16:09.000000000 Z
 domain: :freestyle
 down_votes: 182
-entry: You already know a little bit about arrays. This lesson will teach you more
-  about arrays, about a new data structure called a hash, and how Ruby can iterate
-  over both to help you build better programs.
+entry: 你已经对数组有所了解。这一课将教你更多关于数组的内容，然后介绍一种叫做哈希表的全新数据结构，
+  最后讲解如何在Ruby中对这两种数据结构进行迭代遍历以编写出高质量的程序。
 feedback_total: 108
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
   raw_data: !binary |-
     TyFOXyFuzxlcRMGV
 level: :beginner
-locale: en
-name: Data Structures
+locale: zh
+name: 数据结构
 num_exercises: 16
 num_published_exercises: 16
 num_published_sections: 4
@@ -44,31 +43,30 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-20 00:16:09.000000000 Z
   default_view: console_and_editor
-  entry: Let's take a closer look at arrays.
+  entry: 让我们深入探讨一下数组。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFpgSoXuTAACAGoA
     created_at: 2012-09-20 00:16:10.000000000 Z
     default_code: ''
-    entry: Earlier we saw that an array can be used to store a list of values in a
-      single variable. You can stuff any number of numbers in there, you can repeat
-      numbers, and they don't have to be in numeric order!
+    entry: 在前面的课程中我们看到数组可以将列表的值存储在一个变量中。
+      你可以再数组里放任意多的数字，数字可以重复，而且可以任意顺序！
     expect_error: false
     feedback_stats: {}
     from_console: false
-    hint: ! "You can declare an array like this:\n\n    var_name = [num1, num2, num3]"
-    instruction: Declare a variable, `my_array`, in the editor, and set it equal to
-      an array of your choice. Check the Hint if you need a syntax refresher.
+    hint: ! "你可以像这样定义数组：\n\n    var_name = [num1, num2, num3]"
+    instruction: 在编辑器中声明一个变量`my_array`，将它赋值为一个任意数组。
+      如果你不记得语法，可以查看提示。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Creating Arrays
+    name: 创建数组
     tabs: []
-    test_functions: ! "begin\n  my_array\nrescue NameError\n  return \"Did you declare
-      a variable called my_array?\"\nend\n\nunless my_array.is_a? Array\n  return
-      \"It looks like my_array isn't an array.\"\nend\n\nif my_array.empty?\n  return
-      \"Okay, that's TECHNICALLY an array, but it's empty. Put something in there!\"\nend\n\nreturn
+    test_functions: ! "begin\n  my_array\nrescue NameError\n  return \"你声明了一个叫做my_array的数组吗？
+      \"\nend\n\nunless my_array.is_a? Array\n  return
+      \"貌似你声明的my_array不是数组。\"\nend\n\nif my_array.empty?\n  return
+      \"好吧，从技术上讲，你声明了一个数组，但它是空的。放些东西进去吧！\"\nend\n\nreturn
       true"
     updated_at: 2012-09-20 23:14:34.000000000 Z
     view: console_and_editor
@@ -79,41 +77,37 @@ sections:
     default_code: ! 'demo_array = [100, 200, 300, 400, 500]
 
 
-      print  # Add your code here!'
-    entry: ! "Here's something interesting about arrays: each element in the array
-      has what's called an **index**. The first element gets index 0, the next gets
-      index 1, the one after that gets index 2, and so on. We can access elements
-      of the array directly through these numbers, like so:\n\n    array = [5, 7,
-      9, 2, 0]\n    array[2]\n    # returns \"9\", since \"9\"\n    # is at index
-      2\n\nThe diagram below shows how these indices work for our sample array, `[5,
-      7, 9, 2, 0]`. The first element gets index 0, the next gets 1, the next gets
-      2, and so on.\n\n    +---+---+---+---+---+\n    | 5 | 7 | 9 | 2 | 0 |\n    +---+---+---+---+---+\n
-      \     0   1   2   3   4\n\n(This is a bit of an oversimplification, but it gets
-      the idea across for now.)\n\nWe can access the `i`th element of an array called
-      `array` by putting the index in square brackets, like so: `array[i]`. `array[0]`
-      gets the first element, `array[1]` gets the second element, and so on. This
-      is called **access by index** or **index by offset**."
+      print  # 在此处添加你的代码！'
+    entry: ! "数组具备一些有趣的特性：数组中每个都有一个 **索引** 。第一个元素的索引是0，
+      下一个的索引是1，再下一个的索引是2，依此类推。我们可以通过这些索引数字来直接访问数组中的元素，像这样：
+      \n\n    array = [5, 7,
+      9, 2, 0]\n    array[2]\n    # 返回\"9\"，因为\"9\"对应于索引2\n\n
+      下表展示了我们示例数组`[5, 7, 9, 2, 0]`的索引详情。第一个元素的索引是0，下一个是1，再下一个是2，依此类推。
+      \n\n    +---+---+---+---+---+\n    | 5 | 7 | 9 | 2 | 0 |\n    +---+---+---+---+---+\n
+      \     0   1   2   3   4\n\n
+      （这里有点过于简化，但可以讲明白目前这个概念。）\n\n
+      为了访问索引为`i`的元素，我们可以将该索引放在`array`数组后面的方括号里，像这样：`array[i]`。
+      `array[0]`取得第一个元素，`array[1]`取得第二个元素，依此类推。这称为 **索引访问** 或者 **偏移索引** 。"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 2
       total: 2
     from_console: false
-    hint: ! "Remember, you can access the `i`th value of an array with\n\n    array_name[i]"
-    instruction: Use square bracket notation to `print` the third value of `demo_array`
-      to the console.
+    hint: ! "记住，访问索引为`i`的元素是这样的：\n\n    array_name[i]"
+    instruction: 使用方括号表示法将`demo_array`数组的第三个元素的值打印到控制台（使用`print`打印）。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Access by Index
+    name: 索引访问
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Check the Hint if you need help!\"\nend\n\nif
-      code.scan(\"demo_array[\").length == 0\n  return \"Make sure to use square bracket
-      notation to print out the third element of demo_array.\"\nend\n\nif prints.length
-      == 0\n  return \"It looks like you didn't print anything to the console.\"\nend\n\nif
-      prints.include? \"400\"\n  return \"Remember, array indices start with 0, not
-      1!\"\nend\n\nunless prints.include? \"300\"\n  return \"It doesn't look like
-      you printed out the third value of demo_array to the console.\"\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。如需帮助可查看提示！
+      \"\nend\n\nif
+      code.scan(\"demo_array[\").length == 0\n  return \"确保使用方括号表示法将demo_array数组的第三个元素的值打印出来。
+      \"\nend\n\nif prints.length
+      == 0\n  return \"貌似你没有向控制台打印任何东西。\"\nend\n\nif
+      prints.include? \"400\"\n  return \"记住，数组的索引从0开始，不是从1开始！
+      \"\nend\n\nunless prints.include? \"300\"\n  return \"貌似你没有将demo_array数组第三个元素的值打印到控制台。
+      \"\nend\n\nreturn
       true"
     updated_at: 2012-10-31 02:59:28.995000000 Z
     view: console_and_editor
@@ -122,9 +116,7 @@ sections:
         UFqRkIFUkAACAAg+
     created_at: 2012-09-20 03:46:24.000000000 Z
     default_code: ''
-    entry: ! 'Here''s something you might not have known: you can make an array of
-      *any* collection of Ruby objects. You can make an array of booleans! An array
-      of strings! The list is (almost) endless.'
+    entry: ! '你可能不知道：数组里面可以放入 *任意* Ruby对象。你可以创建布尔值组成的数组！字符串数组！几乎无穷无尽的可能。'
     expect_error: false
     feedback_stats:
       correctness_test_issue: 1
@@ -133,20 +125,19 @@ sections:
       instructional_text_issue: 1
     from_console: false
     hint: ''
-    instruction: Create a new array called `string_array`. Make it an array of...
-      strings!
+    instruction: 创建一个名叫`string_array`的数组。然后让它成为...字符串数组！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Arrays of Non-Numbers
+    name: 非数字组成的数组
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ string_array\nrescue NameError\n  return \"Did you declare an array called
-      string_array?\"\nend\n\nunless string_array.is_a? Array\n  return \"It looks
-      like string_array isn't an array.\"\nend\n\nif string_array.empty?\n  return
-      \"Your array is emptier than a Nickelback concert!\"\nend\n\nunless string_array.all?
-      {|word| word.is_a? String}\n  return \"It looks like not every element of string_array
-      is a string.\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你没有编写任何代码！\"\nend\n\nbegin\n
+      \ string_array\nrescue NameError\n  return \"你声明了一个名叫string_array的数组吗？
+      \"\nend\n\nunless string_array.is_a? Array\n  return \"貌似string_array不是数组。
+      \"\nend\n\nif string_array.empty?\n  return
+      \"你的数组空空如也！\"\nend\n\nunless string_array.all?
+      {|word| word.is_a? String}\n  return \"貌似你的string_array数组的元素并不全是字符串。
+      \"\nend\n\nreturn true"
     updated_at: 2012-10-31 08:30:10.281000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -157,14 +148,11 @@ sections:
 
 
       multi_d_array.each { |x| puts "#{x}\n" }'
-    entry: ! 'You might be asking yourself: "If I can put *anything* in an array,
-      can I make an array of arrays?" The answer is: yes!
+    entry: ! '你可能会问自己：“如果我可以把 *任何东西* 放进数组里，那么我可以建一个数组的数组吗？”答案是：可以！
 
 
-      Check out the array of arrays we have in the editor. Arrays of arrays are called
-      **multidimensional** arrays, since the act of adding more arrays expands the
-      array out of its string-like shape. For instance, the array in the editor is
-      a two-dimensional array.'
+      看一看编辑器中的数组的数组。数组的数组被称为 **多维** 数组，因为随着加入的数组增加，原来的数组就越来越不像字符串那个样子了。
+      比如，编辑器中的数组是二维数组。'
     expect_error: false
     feedback_stats:
       correctness_test_issue: 24
@@ -175,12 +163,11 @@ sections:
       positive_feedback: 1
     from_console: false
     hint: ''
-    instruction: Can you guess what this two-dimensional array will look like if we
-      print it out? Click Run to see.
+    instruction: 你可以猜出这个二维数组打印出来是什么样子吗？单击Run看看吧。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Arrays of Arrays
+    name: 数组的数组
     tabs: []
     test_functions: return true
     updated_at: 2012-10-31 08:33:16.186000000 Z
@@ -190,29 +177,26 @@ sections:
         UFqRkggK+AACAAZX
     created_at: 2012-09-20 03:46:26.000000000 Z
     default_code: ''
-    entry: See how a two-dimensional array with the same number of elements per row
-      and overall rows is a square? An array (like a line) is one-dimensional; an
-      array of arrays (like a square) is two-dimensional.
+    entry: 你觉得具有相同行数和列数的二维数组像一个正方形吗？数组（像直线）是一维的；数组的数组（像正方形）是二维的。
     expect_error: false
     feedback_stats:
       typo: 1
       total: 1
     from_console: false
-    hint: ! "Remember, a simple 2-D array looks like this:\n\n    array = [[thing,
+    hint: ! "记住，一个简单的二维数组是这个样子的：\n\n    array = [[thing,
       thing], [thing, thing]]"
-    instruction: ! 'Create your own two-dimensional array called `my_2d_array` in
-      the editor. The elements of the inner array can be anything you like: numbers,
-      strings, booleans, and so on. Check the Hint if you need help.'
+    instruction: ! '在编辑器中创建你自己的二维数组`my_2d_array`。
+      内层数组的元素可以是任何类型：数字、字符串、布尔值等等。如需帮助可查看提示。'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Create Your Own
+    name: 创建你自己的
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ my_2d_array\nrescue NameError\n  return \"Did you declare an array called
-      my_2d_array?\"\nend\n\nunless my_2d_array.is_a? Array\n  return \"It looks like
-      my_2d_array isn't an array.\"\nend\n\nunless my_2d_array.all? {|item| item.is_a?
-      Array}\n  return \"It looks like not every element of my_2d_array is an array.\"\nend\n\nreturn
+    test_functions: ! "if code == nil\n  return \"你没有编写任何代码！\"\nend\n\nbegin\n
+      \ my_2d_array\nrescue NameError\n  return \"你声明了一个名叫my_2d_array的数组吗？
+      \"\nend\n\nunless my_2d_array.is_a? Array\n  return \"貌似my_2d_array不是数组。
+      \"\nend\n\nunless my_2d_array.all? {|item| item.is_a?
+      Array}\n  return \"貌似my_2d_array数组的元素并不全是数组。\"\nend\n\nreturn
       true"
     updated_at: 2012-10-01 02:35:02.000000000 Z
     view: console_and_editor
@@ -221,7 +205,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: More With Arrays
+  name: 数组进阶
   num_forum_answers: 18
   num_forum_questions: 10
   published: true
@@ -234,9 +218,8 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-20 00:16:56.000000000 Z
   default_view: console_and_editor
-  entry: ! 'Hashes are combinations of key-value pairs. Like arrays, they have indices,
-    but their indices don''t have to be numbers: they can be any Ruby object, such
-    as strings.'
+  entry: ! '哈希表是由键-值对组成的。就像数组，它们也有索引，不过它们的索引不一定是数字：
+    索引可以是任何Ruby对象，比如字符串。'
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
@@ -244,16 +227,16 @@ sections:
     created_at: 2012-09-20 00:16:57.000000000 Z
     default_code: ! "my_hash = { \"name\" => \"Eric\",\n  \"age\" => 26,\n  \"hungry?\"
       => true\n}\n\nputs my_hash[\"name\"]\nputs my_hash[\"age\"]\nputs my_hash[\"hungry?\"]"
-    entry: ! "We know that arrays are indexed with numbers that start with 0 and go
-      up to the array's length minus one. (Think about it: an array with four elements
-      has the indices 0, 1, 2, and 3.)\n\nBut what if we want to use numeric indices
-      that don't go in order from 0 to the end of the array? What if we don't want
-      to use numbers as indices at all? We'll need a new array structure called a
-      **hash**.\n\nHashes are sort of like JavaScript objects or Python dictionaries.
-      If you haven't studied those languages, all you need to know that a hash is
-      a collection of **key-value pairs**. Hash syntax looks like this:\n\n    hash
-      = { key1 => value1,\n      key2 => value2,\n      key3 => value3\n    }\n\nValues
-      are assigned to keys using `=>`. You can use any Ruby object for a key or value."
+    entry: ! "我们知道数组的索引从0开始到数组长度减一。
+      （想一想：一个有四个元素的数组，其索引有0、1、2和3。）\n\n
+      但是如果我们想要使用不从0到数组末端的索引，怎么办呢？如果我们不想使用数字来做索引，又怎么办？
+      那么我们就需要一种全新的数组结构，叫做 **哈希表**
+      （这个叫法来自于英文 **Hash** 的音译；也有另一种叫法是 **散列表** ）。\n\n
+      哈希表有点像JavaScript的对象和Python的字典。
+      如果你没有学过那些语言，那么你只需要知道哈希表就是 **键-值对** 的集合。
+      哈希表的语法是这样的：\n\n    hash
+      = { key1 => value1,\n      key2 => value2,\n      key3 => value3\n    }\n\n
+      将值赋给键所使用的符号是`=>`。键和值都可以是任何Ruby对象。"
     expect_error: false
     feedback_stats:
       positive_feedback: 2
@@ -261,13 +244,12 @@ sections:
       other: 1
     from_console: false
     hint: ''
-    instruction: ! 'We''ve created a hash in the editor to the right. See how it''s
-      made up of keys and values? Check out the code below it: it should look vaguely
-      familiar. Click Run to see what it''ll do!'
+    instruction: ! '在右侧的编辑器中我们已经创建了一个哈希表。看到它是怎样由键和值组成的吗？
+      看看它下面的代码：应该有点眼熟吧。单击Run看看会有什么结果！'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Introduction to Hashes
+    name: 哈希表入门
     tabs: []
     test_functions: return true
     updated_at: 2012-10-27 07:33:35.464000000 Z
@@ -277,12 +259,12 @@ sections:
         UFqRmkORIAACAAdB
     created_at: 2012-09-20 03:46:34.000000000 Z
     default_code: ''
-    entry: ! "What we just showed you was hash **literal notation**. We call it that
-      because you *literally* describe what you want in the hash: you give it a name
-      and you set it equal to a bunch of key => value pairs inside curly braces.\n\nYou
-      can also create a hash using `Hash.new`, like so:\n\n    my_hash = Hash.new\n\nSetting
-      a variable equal to `Hash.new` creates a new, empty hash; it's the same as setting
-      the variable equal to empty curly braces (`{}`)."
+    entry: ! "刚才向你展示的是哈希表的 **字面量表示法** 。
+      之所以这样说是因为我们通过字面量来描述哈希表：
+      用大括号将若干个key => value对括起来。\n\n
+      我们同样可以使用`Hash.new`来创建一个哈希表，像这样：\n\n    my_hash = Hash.new\n\n
+      将一个变量赋值为`Hash.new`会创建一个新的空哈希表；
+      这和将一个空白的大括号（`{}`）赋值给变量是等价的。"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 4
@@ -290,17 +272,17 @@ sections:
       other: 1
     from_console: false
     hint: ''
-    instruction: Use `Hash.new` to create a new hash called `pets`. `Hash` *must*
-      be capitalized, or Ruby won't know what you're talking about!
+    instruction: 使用`Hash.new`创建一个新的哈希表`pets`。
+      `Hash`的首字母 *必须* 大写，否则Ruby会不知道你在说什么！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Using Hash.new
+    name: 使用Hash.new
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ pets\nrescue NameError\n  return \"Did you declare a variable called pets?\"\nend\n\nunless
-      pets.is_a? Hash\n  return \"It looks like pets isn't a hash.\"\nend\n\nif code.scan(\"Hash.new\").length
-      == 0\n  return \"Make sure to use Hash.new to create your new hash!\"\nend\n\nreturn
+    test_functions: ! "if code == nil\n  return \"你没有编写任何代码！\"\nend\n\nbegin\n
+      \ pets\nrescue NameError\n  return \"你声明了一个名叫pets的变量吗？\"\nend\n\nunless
+      pets.is_a? Hash\n  return \"貌似pets不是哈希表。\"\nend\n\nif code.scan(\"Hash.new\").length
+      == 0\n  return \"确保使用Hash.new来创建你的哈希表！\"\nend\n\nreturn
       true"
     updated_at: 2012-10-01 02:36:23.000000000 Z
     view: console_and_editor
@@ -309,27 +291,25 @@ sections:
         UFqRnDV3mwACAAl7
     created_at: 2012-09-20 03:46:36.000000000 Z
     default_code: ''
-    entry: ! "We can add to a hash two ways: if we created it using literal notation,
-      we can simply add a new key-value pair directly between the curly braces. If
-      we used `Hash.new`, we can add to the hash using bracket notation:\n\n    pets
-      = Hash.new\n    pets[\"Stevie\"] = \"cat\"\n    # Adds the key \"Stevie\" with
-      the\n    # value \"cat\" to the hash\n"
+    entry: ! "向一个哈希表添加内容有两种方式：如果使用字面量表示法创建，
+      则可以简单地将键-值对直接添加到大括号中；如果使用`Hash.new`创建的哈希表，
+      我们可以用方括号表示法来添加：\n\n    pets
+      = Hash.new\n    pets[\"Stevie\"] = \"cat\"\n    # 将键\"Stevie\"及其键值\"cat\"添加到哈希表\n"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 1
       total: 1
     from_console: false
     hint: ''
-    instruction: Add a pet to your `pets` hash. It can be any key-value pair you like!
+    instruction: 向你的`pets`哈希表添加一个宠物。你可以用任意的键和键值！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Adding to a Hash
+    name: 向哈希表添加内容
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right--check the example in the instructions if you
-      need help.\"\nend\n\nif pets.empty?\n  return \"It looks like you didn't add
-      any key-value pairs to your pets hash.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"
+      你的语法貌似不大正确——如需帮助可查看教程中的示例。
+      \"\nend\n\nif pets.empty?\n  return \"貌似你没有向你的pets哈希表添加键-值对。\"\nend\n\nreturn true"
     updated_at: 2012-09-29 19:35:32.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -337,13 +317,13 @@ sections:
         UFqRm1ueswACAAZk
     created_at: 2012-09-20 03:46:35.000000000 Z
     default_code: ''
-    entry: ! "Just like with arrays, you can access values in a hash by offset (that
-      is, using indices). Each index in a hash is a key that you assign; simply by
-      putting the key name between square brackets, we can access the value associated
-      with that key.\n\nFor instance, if we have the hash\n\n    pets = { \"Stevie\"
+    entry: ! "就像数组那样，我们也可以通过偏移量（即索引）来访问哈希表。
+      哈希表中的索引就是键，只需将键名放在方括号里面，我们就可以访问对应的键值。\n\n
+      例如，我们有这样一个哈希表：\n\n    pets = { \"Stevie\"
       => \"cat\",\n      \"Bowser\" => \"hamster\",\n      \"Kevin Sorbo\" => \"fish\"\n
-      \   }\n\nWe can get the value of `\"Stevie\"` by typing\n\n    pets[\"Stevie\"]\n
-      \   # will return \"cat\"\n"
+      \   }\n\n
+      要得到`\"Stevie\"`键的值，我们只需要输入\n\n    pets[\"Stevie\"]\n
+      \   # 将会返回\"cat\"\n"
     expect_error: false
     feedback_stats:
       correctness_test_issue: 10
@@ -351,20 +331,17 @@ sections:
       other: 2
       instructional_text_issue: 1
     from_console: false
-    hint: ! "To print a value associated with a key `my_key` in a hash called `my_hash`,
-      you'd write\n\n    puts my_hash[\"my_key\"]"
-    instruction: Use bracket notation to access the key-value pair you added to `pets`,
-      then use `puts` to print that value to the console. Check the Hint if you need
-      help.
+    hint: ! "要打印`my_hash`哈希表的`my_key`键的键值，代码是：\n\n    puts my_hash[\"my_key\"]"
+    instruction: 使用括号表示法访问你的`pets`哈希表中的键-值对，并使用`puts`将键值打印到控制台。
+      如需帮助可查看提示。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Accessing Hash Values
+    name: 访问哈希表键值
     tabs: []
-    test_functions: ! "if prints.length == 0\n  return \"It looks like you didn't
-      print anything to the console.\"\nend\n\nfor x, y in pets\n  unless prints.include?
-      y\n    return \"It looks like you didn't print out the value of the key stored
-      in your hash.\"\n  end\nend\n\nreturn true"
+    test_functions: ! "if prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。
+      \"\nend\n\nfor x, y in pets\n  unless prints.include?
+      y\n    return \"貌似你没有将你的哈希表键值打印出来。\"\n  end\nend\n\nreturn true"
     updated_at: 2012-10-27 21:53:58.528000000 Z
     view: console_and_editor
   feedback_total: 22
@@ -372,7 +349,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Hashes
+  name: 哈希表
   num_forum_answers: 7
   num_forum_questions: 4
   published: true
@@ -385,8 +362,7 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-20 00:17:07.000000000 Z
   default_view: console_and_editor
-  entry: We've done a little iteration over arrays. In this section, we'll get in
-    some more practice and learn how to iterate over hashes.
+  entry: 我们已经对数组的迭代有所了解。在这一节，我们将对此加强练习，然后学习如何迭代哈希表。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
@@ -397,24 +373,21 @@ sections:
       \ \"Maggie\" => \"sister\",\n  \"Abe\" => \"grandpa\",\n  \"Santa's Little Helper\"
       => \"dog\"\n}\n\nfriends.each { |x| puts \"#{x}\" }\nfamily.each { |x, y| puts
       \"#{x}: #{y}\" }"
-    entry: ! 'Remember when we covered [loops and iterators](http://www.codecademy.com/courses/ruby-beginner-en-XYcN1)?
-      We could use a whole bunch of different methods for looping in a program. When
-      we loop over an array or a hash, we say that we **iterate** over it.
+    entry: ! '还记得我们讲过的[循环和迭代器](http://www.codecademy.com/courses/ruby-beginner-en-XYcN1)课程吗？
+      在程序中我们可以使用多种方法来实现循环。当我们循环遍历一个哈希表时，我们说是在 **迭代** 它。
 
 
-      We''ll be using the `.each` iterator to iterate over arrays and hashes in this
-      section. Take a look at the code in the editor to see one example of how we
-      might go about this.'
+      在这一节我们将使用`.each`迭代器来迭代数组和哈希表
+      阅读编辑器中的代码，看看我们的示例代码是怎么做的。'
     expect_error: false
     feedback_stats: {}
     from_console: false
     hint: ''
-    instruction: When you think you understand the code in the editor, click Run to
-      see it in action.
+    instruction: 当你觉得你看懂了编辑器中的代码后，单击Run来看结果。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: (Re)Introduction to Iteration
+    name: 再次介绍迭代
     tabs: []
     test_functions: return true
     updated_at: 2012-09-20 16:16:57.000000000 Z
@@ -427,12 +400,11 @@ sections:
 
 
 '
-    entry: ! "Iterating over arrays is easier than it looks. Array elements are indexed
-      starting at 0 and always go up by one, and loops are particularly good at starting
-      at a certain number and going up by one with each iteration. When we type\n\n
-      \   array.each { |element| action }\n\nWe're telling Ruby: \"Take this array
-      and for each element, do this action.\" As usual, we can use any placeholder
-      name for the bit between `| |`s."
+    entry: ! "对数组迭代比实际看起来要简单。数组元素的索引从0开始，且总是以1递增，而循环正擅长于这种迭代。
+      当我们键入：\n\n
+      \   array.each { |element| action }\n\n
+      我们是在告诉Ruby：“对于该数组的每个元素，执行这个动作。”
+      照例，`| |`之间的占位符可以任意命名。"
     expect_error: false
     feedback_stats:
       other: 3
@@ -440,20 +412,19 @@ sections:
       instructional_text_issue: 1
     from_console: false
     hint: ''
-    instruction: Use the `.each` iterator to print out each element of the `languages`
-      array. Make sure to use `puts` instead of `print`, so each element is on its
-      own line.
+    instruction: 使用`.each`迭代器将`languages`数组的每个元素打印出来。
+      确保使用`puts`而不是`print`，这样每个元素占一行。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Iterating Over Arrays
+    name: 迭代数组
     tabs: []
-    test_functions: ! "if prints.length == 0\n  return \"It looks like you didn't
-      print anything to the console.\"\nend\n\nif code.scan(\"puts\").length == 0\n
-      \ return \"Make sure to use puts insead of print! We want each element printed
-      on its own line.\"\nend\n\nfor i in languages\n  unless prints.include? i\n
-      \   return \"It looks like you didn't print out each element of the languages
-      array.\"\n  end\nend\n\nreturn true"
+    test_functions: ! "if prints.length == 0\n  return \"貌似你没有向控制台打印任何东西
+      \"\nend\n\nif code.scan(\"puts\").length == 0\n
+      \ return \"确保使用puts而不是print！我们需要每个元素占一行。
+      \"\nend\n\nfor i in languages\n  unless prints.include? i\n
+      \   return \"貌似你没有把languages数组的每个元素打印出来。
+      \"\n  end\nend\n\nreturn true"
     updated_at: 2012-10-04 22:55:51.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -465,14 +436,14 @@ sections:
 
 
 '
-    entry: ! "Iterating over a multidimensional array is slightly trickier.\n\nWe've
-      created a 2-D array, `s` (for \"sandwiches\"). We want to iterate over `s` in
-      such a way that we don't print out each element, like `[\"ham\", \"swiss\"]`,
-      but each element *within* each element, so we get a list of all the meats and
-      cheeses within `s`.\n\nIf we just wanted to access `\"swiss\"`, we could type\n\n
-      \   s[0][1]\n\nMeaning, \"bring me the second element of the first element,\"
-      which is \"swiss.\" If we iterate over a regular array using\n\n    array.each
-      { |element| action }\n\nthen how might we iterate over an array of arrays?"
+    entry: ! "迭代多维数组稍微有点复杂。\n\n
+      我们创建了一个二维数组`s`。我们想这样来迭代`s`：
+      不是打印每个元素，像这样`[\"ham\", \"swiss\"]`，而是打印元素 *里面* 的元素。\n\n
+      如果我们要访问元素`\"swiss\"`，我们会键入：\n\n
+      \   s[0][1]\n\n
+      意思是：“给我第一个元素的第二个元素”，也就是“swiss”元素。
+      如果我们这样迭代一个常规数组：\n\n    array.each { |element| action }\n\n
+      那么我们怎样迭代一个数组的数组呢？"
     expect_error: false
     feedback_stats:
       typo: 2
@@ -481,24 +452,21 @@ sections:
       instructional_text_issue: 3
       other: 1
     from_console: false
-    hint: ! "Your nested `.each`es should look something like this:\n\n    s.each
+    hint: ! "你的`.each`嵌套应该是这个样子的：\n\n    s.each
       do | x |\n      x.each do | y |\n        puts y\n      end\n    end"
-    instruction: ! 'We''ll give you a hint: use two `.each` iterators, one inside
-      the other, to print out each element of each element of the `s` array. Make
-      sure to use `puts` instead of `print`, so each element is on its own line. Check
-      the Hint if you need more help!'
+    instruction: ! '我们给你一个提示：使用双层`.each`迭代器来打印`s`数组的每个元素的元素。
+      确保使用`puts`而不是`print`，这样每个元素占一行。如果你需要更多的帮助，可查看本练习的提示！'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Iterating Over Multidimensional Arrays
+    name: 迭代多维数组
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Your syntax doesn't
-      look quite right. Check the Hint if you need help!\"\nend\n\nif prints.length
-      == 0\n  return \"It looks like you didn't print anything to the console.\"\nend\n\nif
-      code.scan(\"puts\").length == 0\n  return \"Make sure to use puts insead of
-      print! We want each element printed on its own line.\"\nend\n\nfor i in s\n
-      \ for j in i\n    unless prints.include? j\n      return \"It looks like you
-      didn't print out each element of the s array.\"\n    end\n  end\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。如需帮助可查看提示！
+      \"\nend\n\nif prints.length
+      == 0\n  return \"貌似你没有向控制台输出任何东西。\"\nend\n\nif
+      code.scan(\"puts\").length == 0\n  return \"确保使用puts而不是print！我们需要每个元素占一行。\"\nend\n\nfor i in s\n
+      \ for j in i\n    unless prints.include? j\n      return \"貌似你没有把s数组的每个元素打印出来。
+      \"\n    end\n  end\nend\n\nreturn
       true"
     updated_at: 2012-10-22 20:17:40.101000000 Z
     view: console_and_editor
@@ -509,14 +477,12 @@ sections:
     default_code: ! "secret_identities = { \"The Batman\" => \"Bruce Wayne\",\n  \"Superman\"
       => \"Clark Kent\",\n  \"Wonder Woman\" => \"Diana Prince\",\n  \"Freakazoid\"
       => \"Dexter Douglas\"\n}\n  \n"
-    entry: ! "When iterating over hashes, we also need to search for more than one
-      placeholder variable. Whereas with multidimensional arrays, we nested our `.each`
-      calls so we could loop through each index of each nested array, for hashes we
-      do this so we can get both parts of each hash element: the key and the value.\n\nIf
-      we wanted to print the keys and values of a hash, we might type\n\n    hash.each
-      { |key, value| puts \"#{key}:  #{value}\" }\n\nWhere `key` and `value` are just
-      placeholder names, as usual: they could be `x` and `y`, `hamburgers` and `hotdogs`,
-      you name it."
+    entry: ! "当我们迭代哈希表的时候，我们同样需要搜索不止一个占位符。
+      尽管对于多维数组，我们使用嵌套的`.each`调用以循环遍历每个嵌套数组的索引，
+      但对于哈希表，我们同时获得键和键值。\n\n
+      如果我们想打印一个哈希表的键和键值，我们就键入：\n\n    hash.each
+      { |key, value| puts \"#{key}:  #{value}\" }\n\n
+      这里的`key`和`value`只是占位符的名称，照例，他们可以是`x`和`y`，`hamburgers`和`hotdogs`，随便你用什么名称。"
     expect_error: false
     feedback_stats:
       correctness_test_issue: 8
@@ -525,22 +491,20 @@ sections:
       positive_feedback: 1
       typo: 1
     from_console: false
-    hint: ! "For example, you should print out\n\n    The Batman: Bruce Wayne\n    Superman:
-      Clark Kent\n\nand so on."
-    instruction: ! 'Use `.each` to iterate over the `secret_identities` hash. Use
-      `puts` to print each key-value pair, separated by a colon and a space (`: `),
-      to the console.'
+    hint: ! "例如，你应该打印出：\n\n    The Batman: Bruce Wayne\n    Superman:
+      Clark Kent\n\n
+      等等。"
+    instruction: ! '使用`.each`迭代`secret_identities`哈希表。使用`puts`向控制台打印每个键-值对，键与键值之间用冒号和一个空格隔开（`: `）。'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Iterating Over Hashes
+    name: 迭代哈希表
     tabs: []
-    test_functions: ! "if prints.length == 0\n  return \"It looks like you didn't
-      print anything to the console.\"\nend\n\nif code.scan(\"puts\").length == 0\n
-      \ return \"Make sure to use puts insead of print! We want each key-value pair
-      printed on its own line.\"\nend\n\nfor i, j in secret_identities\n  unless prints.include?
-      \"#{i}: #{j}\"\n    return \"It looks like you aren't printing each colon-separated
-      key-value pair on its own line. Check the hint if you need help!\"\n  end\nend\n\nreturn
+    test_functions: ! "if prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。
+      \"\nend\n\nif code.scan(\"puts\").length == 0\n
+      \ return \"确保使用puts而不是print！我们需要每个元素占一行打印。
+      \"\nend\n\nfor i, j in secret_identities\n  unless prints.include?
+      \"#{i}: #{j}\"\n    return \"貌似你没有把由冒号隔开的键-值对打印在单独的一行。如需帮助可查看提示！\"\n  end\nend\n\nreturn
       true"
     updated_at: 2012-10-29 14:10:56.892000000 Z
     view: console_and_editor
@@ -549,7 +513,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Iterating Over Arrays and Hashes
+  name: 迭代数组和哈希表
   num_forum_answers: 18
   num_forum_questions: 11
   published: true
@@ -562,34 +526,32 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-20 00:17:17.000000000 Z
   default_view: console_and_editor
-  entry: Let's take some time to go over what we've learned in this lesson.
+  entry: 让我们花点时间复习本课所学内容。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFpgjtac7AACAHvM
     created_at: 2012-09-20 00:17:18.000000000 Z
     default_code: ''
-    entry: Great work! You've learned a lot in this lesson. Let's do a little review
-      to be sure you really know your stuff.
+    entry: 干得好！你在这一课已经学了很多。让我们来复习一下以确保你真正掌握这些内容。
     expect_error: false
     feedback_stats: {}
     from_console: false
-    hint: ! "Remember, a simple multidimensional array looks like this:\n\n    array
+    hint: ! "记住，一个简单的多维数组是这个样子的：\n\n    array
       = [[thing, thing], [thing, thing]]"
-    instruction: ! 'Create your own multidimensional array called `my_array` in the
-      editor. The elements of the innermost array can be anything you like: numbers,
-      strings, booleans, and so on. Check the Hint if you need help.'
+    instruction: ! '在编辑器中创建你自己的多维数组`my_array`
+      最内层数组的元素可以是你喜欢的任意类型：数字、字符串、布尔值等等。如需帮助可查看提示。'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Multidimensional Arrays
+    name: 多维数组
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ my_array\nrescue NameError\n  return \"Did you declare an array called my_array?\"\nend\n\nunless
-      my_array.is_a? Array\n  return \"It looks like my_array isn't an array.\"\nend\n\nif
-      my_array.empty?\n  return \"Okay, that's TECHNICALLY an array, but it's empty.
-      Put something in it!\"\nend\n\nunless my_array.all? {|item| item.is_a? Array}\n
-      \ return \"It looks like not every element of my_array is an array.\"\nend\n\nreturn
+    test_functions: ! "if code == nil\n  return \"你没有编写任何代码！\"\nend\n\nbegin\n
+      \ my_array\nrescue NameError\n  return \"你声明了一个名叫my_array的数组吗？\"\nend\n\nunless
+      my_array.is_a? Array\n  return \"貌似my_array不是数组。\"\nend\n\nif
+      my_array.empty?\n  return \"好吧，从技术上讲，你声明了一个数组，但它是空的。放些东西进去吧！
+      \"\nend\n\nunless my_array.all? {|item| item.is_a? Array}\n
+      \ return \"貌似my_array数组的元素并不全是数组。\"\nend\n\nreturn
       true"
     updated_at: 2012-09-20 19:45:55.000000000 Z
     view: console_and_editor
@@ -598,26 +560,23 @@ sections:
         UFqSOAgK+AACAAp5
     created_at: 2012-09-20 03:49:12.000000000 Z
     default_code: ''
-    entry: Good! Now let's create a hash. Feel free to use either hash literal notation
-      or `Hash.new`.
+    entry: 好！现在让我们创建一个哈希表。你可以使用字面量表示法或者`Hash.new`来创建。
     expect_error: false
     feedback_stats: {}
     from_console: false
-    hint: ! "Hash literal notation looks like this:\n\n    hash_name = { key1 => value1,\n
-      \     key2 => value2,\n      key3 => value3\n    }\n\nYou use `Hash.new` like
-      this:\n\n    hash_name = Hash.new"
-    instruction: Create a hash called `my_hash` in the editor. Give it at least one
-      key-value pair.
+    hint: ! "哈希表的字面量表示法是这样的：\n\n    hash_name = { key1 => value1,\n
+      \     key2 => value2,\n      key3 => value3\n    }\n\n
+      使用`Hash.new`的话是这样：\n\n    hash_name = Hash.new"
+    instruction: 在编辑器中创建一个名叫`my_hash`的哈希表。向该哈希表添加至少一个键-值对。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Hashes
+    name: 哈希表
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ my_hash\nrescue NameError\n  return \"Did you declare a variable called my_hash?\"\nend\n\nunless
-      my_hash.is_a? Hash\n  return \"It looks like my_hash isn't a hash.\"\nend\n\nif
-      my_hash.empty?\n  return \"It looks like you didn't add any key-value pairs
-      to my_hash.\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你没有编写任何代码！\"\nend\n\nbegin\n
+      \ my_hash\nrescue NameError\n  return \"你声明了一个名叫my_hash的变量吗？\"\nend\n\nunless
+      my_hash.is_a? Hash\n  return \"貌似my_hash不是哈希表。\"\nend\n\nif
+      my_hash.empty?\n  return \"貌似你没有向my_hash添加任何键-值对。\"\nend\n\nreturn true"
     updated_at: 2012-09-20 19:46:45.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -626,8 +585,7 @@ sections:
     created_at: 2012-09-20 03:49:13.000000000 Z
     default_code: ! "lunch_order = { \"Ryan\" => \"wonton soup\",\n  \"Eric\" => \"hamburger\",\n
       \ \"Jimmy\" => \"sandwich\",\n  \"Sasha\" => \"salad\",\n  \"Cole\" => \"taco\"\n}\n\n"
-    entry: We've done a fair amount of iteration over arrays, so to finish up, let's
-      review how to iterate over a hash.
+    entry: 我们已经做了大量的数组迭代，现在，让我们通过复习哈希表的迭代来结课吧。
     expect_error: false
     feedback_stats:
       correctness_test_issue: 3
@@ -635,24 +593,21 @@ sections:
       positive_feedback: 3
       typo: 1
     from_console: false
-    hint: ! "For example, you should print out\n\n    wanton soup\n    hamburger\n\nand
-      so on."
-    instruction: Write the code necessary to print JUST the values of each key-value
-      pair in `lunch_order`. (Use `puts` instead of `print` so each value is printed
-      on its own line.) Click Run to iterate your way to completing this lesson.
+    hint: ! "例如，你应该打印出\n\n    wanton soup\n    hamburger\n\n
+      等等。"
+    instruction: 编写只打印`lunch_order`键值的代码。（使用`puts`而不是`print`，这样每个键值占一行。）
+      单击Run来运行你的迭代程序以完成这一课。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Iterating Over a Hash
+    name: 迭代哈希表
     tabs: []
-    test_functions: ! "if prints.length == 0\n  return \"It looks like you didn't
-      print anything to the console.\"\nend\n\nif code.scan(\"puts\").length == 0\n
-      \ return \"Make sure to use puts insead of print! We want each key-value pair
-      printed on its own line.\"\nend\n\nfor i, j in lunch_order\n  unless prints.include?
-      \"#{j}\"\n    return \"It looks like you aren't printing the value part of each
-      key-value pair on its own line. Check the hint if you need help!\"\n  end\nend\n\nfor
-      i, j in lunch_order\n  if prints.include? \"#{i}\"\n    return \"It looks like
-      you're printing your hash's keys to the console. Only print the values!\"\n
+    test_functions: ! "if prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。
+      \"\nend\n\nif code.scan(\"puts\").length == 0\n
+      \ return \"确保使用puts而不是print！我们需要每个键-值对占一行打印。
+      \"\nend\n\nfor i, j in lunch_order\n  unless prints.include?
+      \"#{j}\"\n    return \"貌似你没有将每个键-值对的键值单独一行打印。如需帮助可查看提示！\"\n  end\nend\n\nfor
+      i, j in lunch_order\n  if prints.include? \"#{i}\"\n    return \"貌似你将哈希表的键名打印到控制台了。请只打印键值！\"\n
       \ end\nend\n\nreturn true"
     updated_at: 2012-10-09 10:53:53.574000000 Z
     view: console_and_editor
@@ -661,7 +616,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Review
+  name: 复习
   num_forum_answers: 6
   num_forum_questions: 6
   published: true
