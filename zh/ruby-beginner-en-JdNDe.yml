@@ -82,8 +82,7 @@ sections:
         UFobaa34sgACA+1B
     created_at: 2012-09-19 19:22:17.000000000 Z
     default_code: ''
-    entry: First, we should `print` a statement to prompt the user for input, then
-      set that input to a variable using `gets.chomp`.
+    entry: 首先，我们要使用`print`打印一个信息来提示用户输入，然后使用`gets.chomp`将输入的内容赋值到一个变量。
     expect_error: false
     feedback_stats:
       correctness_test_issue: 2
@@ -91,24 +90,23 @@ sections:
       other: 1
     from_console: false
     hint: ''
-    instruction: ! '1. Use `print` to ask the user for input.
+    instruction: ! '1. 使用`print`向用户提示输入。
 
-      2. Declare a variable called `user_input` and set it equal to the user''s input
-      using `gets.chomp`.'
+      2. 声明一个名叫`user_input`的变量，然后使用`gets.chomp`将用户的输入赋值给这个变量。'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Getting User Input
+    name: 获取用户输入
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "begin\n  user_input\nrescue NameError\n  return \"Did you declare
-      a variable called user_input?\"\nend\n\nif code.scan(\"print\").length == 0
-      || prints.length == 0\n  return \"Make sure to use the print keyword to print
-      a prompt for the user.\"\nend\n\nif code.scan(\"gets.chomp\").length == 0\n
-      \ return \"Make sure to use gets.chomp to capture the user's input.\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"It looks like your syntax isn't quite
-      right. Check the first exercise if you need help!\"\nend\n\nreturn true"
+    test_functions: ! "begin\n  user_input\nrescue NameError\n  return \"你声明了一个名叫user_input的变量吗？
+      \"\nend\n\nif code.scan(\"print\").length == 0
+      || prints.length == 0\n  return \"确保使用print关键字来向用户打印提示。
+      \"\nend\n\nif code.scan(\"gets.chomp\").length == 0\n
+      \ return \"确保使用gets.chomp来获取用户输入。\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。如需帮助可查看第一个练习！
+      \"\nend\n\nreturn true"
     updated_at: 2012-10-11 15:00:22.284000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
