@@ -209,8 +209,7 @@ sections:
         UFoba0GIOQACA+hf
     created_at: 2012-09-19 19:22:19.000000000 Z
     default_code: ''
-    entry: The hard part's over! Now we just need to let the user know if we don't
-      find any instances of the letter "s".
+    entry: 最难的部分过去了！现在我们只需要在没有找到"s"字母的时候让用户知道就可以了。
     expect_error: false
     feedback_stats:
       correctness_test_issue: 1
@@ -218,20 +217,19 @@ sections:
       other: 1
     from_console: false
     hint: ''
-    instruction: Add an `else` statement that displays a string to the user to let
-      them know if there are no "s"s in their string.
+    instruction: 添加一个`else`语句，当用户输入的字符串中不包含"s"的时候，显示一个字符串信息让用户知道这一情况。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Setting Up the 'Else' Branch
+    name: 编写'else'分支
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Check the first exercise if you need help!\"\nend\n\nif
-      code.scan(\"else\").length == 0\n  return \"Make sure to add an else statement!\"\nend\n\nif
-      prints.length == 0\n  return \"It doesn't look like you printed anything to
-      the console.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可查看第一个练习！
+      \"\nend\n\nif
+      code.scan(\"else\").length == 0\n  return \"确保添加了else语句！\"\nend\n\nif
+      prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。
+      \"\nend\n\nreturn true"
     updated_at: 2012-11-10 17:18:12.080000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
