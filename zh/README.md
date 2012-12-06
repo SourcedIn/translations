@@ -15,5 +15,5 @@ Translations
 
 * File: ruby-beginner-en-JdNDe.yml
 * Started: 05.12.2012
-* Finished:
+* Finished: 06.12.2012
 * Contact: zoogar@163.com
