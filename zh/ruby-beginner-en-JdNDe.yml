@@ -5,7 +5,8 @@ created_at: 2012-09-19 19:17:37.000000000 Z
 domain: :freestyle
 down_votes: 58
 entry: 使用控制流，我们可以修改用户的输入，然后将其返回。
-  在这个项目中，我们会使其变成像达菲鸭！
+  在这个项目中，我们会使用户输入的英文读起来像达菲鸭口音！
+  （达菲鸭，是一个在乐一通动画系列里出现的一个虚构卡通人物。因其说话常咬舌头，所以常把英文单词中的“s”发音为“th”。）
 feedback_total: 55
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
@@ -57,7 +58,7 @@ sections:
       那么我们就可以根据不同的用户输入产生不同的结果。
 
 
-      在这个项目中，我们把控制流和一些新的Ruby字符串方法结合起来，Daffy Duckify用户的字符串，将每个`"s"`变成`"th"`。'
+      在这个项目中，我们把控制流和一些新的Ruby字符串方法结合起来，将用户输入的字符串变成达菲鸭口音，将每个`"s"`变成`"th"`。'
     expect_error: false
     feedback_stats:
       positive_feedback: 2
@@ -66,7 +67,7 @@ sections:
       typo: 1
     from_console: false
     hint: ''
-    instruction: 单击Run来看看Daffy Duckifier的运行，然后准备开始打造你自己的！
+    instruction: 单击Run来看看达菲鸭口音转换器的运行，然后准备开始打造你自己的！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
@@ -237,7 +238,7 @@ sections:
         UFoba634sgACA+2A
     created_at: 2012-09-19 19:22:19.000000000 Z
     default_code: ''
-    entry: ! "最后冲刺——现在，我们想要向用户显示Daffy Duckified字符串。
+    entry: ! "最后冲刺——现在，我们想要向用户显示带达菲鸭口音的字符串。
       你可以使用我们前面学过的字符串插入方式：\n\n
       \   my_string = \"朋友\"\n    print \"再见，#{my_string}！\"\n    # ==>
       \"再见，朋友！\"\n"
@@ -249,17 +250,17 @@ sections:
       other: 2
     from_console: false
     hint: ''
-    instruction: 添加一个`puts`语句，使用字符串插入的方式来向用户显示其输入的字符串。
+    instruction: 添加一个`puts`语句，使用字符串插入的方式来向用户显示转换后的字符串。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: 返回最终的字符串——呃，“Thtring”
+    name: 返回最终的字符串
     solution_code: ''
     solution_entry: ''
     tabs: []
     test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可查看第一个练习！
       \"\nend\n\nif
-      code.scan(\"puts\").length == 0\n  return \"确保使用'puts'向用户显示其输入的字符串。
+      code.scan(\"puts\").length == 0\n  return \"确保使用'puts'向用户显示转换后的字符串。
       \"\nend\n\nunless prints.grep(user_input)\n
       \ return \"貌似你没有打印出user_input字符串。\"\nend\n\nreturn
       true"
