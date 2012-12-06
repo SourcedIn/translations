@@ -270,19 +270,17 @@ sections:
         UFobbYqTxQACBAOl
     created_at: 2012-09-19 19:22:21.000000000 Z
     default_code: ''
-    entry: ! 'Great work!
+    entry: ! '干得好！
 
 
-      How might you improve this project? You could:
+      想一想，你能够如何改进这个项目呢？我认为你可以：
 
 
-      * Add an additional `if` statement to re-prompt the user for input if they don''t
-      enter anything
+      * 再添加一个`if`语句，当用户输入空白内容时再次提示用户输入
 
-      * Think about how you might account for words in which the letter "c" sounds
-      like an "s"
+      * 考虑一下，对于有些单词中发音听起来像"s"的字母"c"，如何处理
 
-      * Think about how you might preserve the user''s original capitalization'
+      * 考虑一下如何保持用户输入字符串的首字母大写'
     expect_error: false
     feedback_stats:
       other: 4
@@ -291,12 +289,11 @@ sections:
       positive_feedback: 5
     from_console: false
     hint: ''
-    instruction: Enough pondering for now. When you're ready, click Run to complete
-      this project.
+    instruction: 就考虑这么多吧。当你想好以后，单击Run来完成这个项目。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Congratulationth!
+    name: 祝贺你！
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -308,7 +305,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Thtrings & Things
+  name: 有关字符串的那些事儿
   num_forum_answers: 30
   num_forum_questions: 21
   published: true
