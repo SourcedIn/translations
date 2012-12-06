@@ -5,7 +5,8 @@ created_at: 2012-09-19 19:17:37.000000000 Z
 domain: :freestyle
 down_votes: 58
 entry: 使用控制流，我们可以修改用户的输入，然后将其返回。
-  在这个项目中，我们会使其变成像达菲鸭！
+  在这个项目中，我们会使用户输入的英文读起来像达菲鸭口音！
+  （达菲鸭，是一个在乐一通动画系列里出现的一个虚构卡通人物。因其说话常咬舌头，所以常把英文单词中的“s”发音为“th”。）
 feedback_total: 55
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
@@ -57,7 +58,7 @@ sections:
       那么我们就可以根据不同的用户输入产生不同的结果。
 
 
-      在这个项目中，我们把控制流和一些新的Ruby字符串方法结合起来，Daffy Duckify用户的字符串，将每个`"s"`变成`"th"`。'
+      在这个项目中，我们把控制流和一些新的Ruby字符串方法结合起来，将用户输入的字符串变成达菲鸭口音，将每个`"s"`变成`"th"`。'
     expect_error: false
     feedback_stats:
       positive_feedback: 2
@@ -66,7 +67,7 @@ sections:
       typo: 1
     from_console: false
     hint: ''
-    instruction: 单击Run来看看Daffy Duckifier的运行，然后准备开始打造你自己的！
+    instruction: 单击Run来看看达菲鸭口音转换器的运行，然后准备开始打造你自己的！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
@@ -82,8 +83,7 @@ sections:
         UFobaa34sgACA+1B
     created_at: 2012-09-19 19:22:17.000000000 Z
     default_code: ''
-    entry: First, we should `print` a statement to prompt the user for input, then
-      set that input to a variable using `gets.chomp`.
+    entry: 首先，我们要使用`print`打印一个信息来提示用户输入，然后使用`gets.chomp`将输入的内容赋值到一个变量。
     expect_error: false
     feedback_stats:
       correctness_test_issue: 2
@@ -91,24 +91,23 @@ sections:
       other: 1
     from_console: false
     hint: ''
-    instruction: ! '1. Use `print` to ask the user for input.
+    instruction: ! '1. 使用`print`向用户提示输入。
 
-      2. Declare a variable called `user_input` and set it equal to the user''s input
-      using `gets.chomp`.'
+      2. 声明一个名叫`user_input`的变量，然后使用`gets.chomp`将用户的输入赋值给这个变量。'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Getting User Input
+    name: 获取用户输入
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "begin\n  user_input\nrescue NameError\n  return \"Did you declare
-      a variable called user_input?\"\nend\n\nif code.scan(\"print\").length == 0
-      || prints.length == 0\n  return \"Make sure to use the print keyword to print
-      a prompt for the user.\"\nend\n\nif code.scan(\"gets.chomp\").length == 0\n
-      \ return \"Make sure to use gets.chomp to capture the user's input.\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"It looks like your syntax isn't quite
-      right. Check the first exercise if you need help!\"\nend\n\nreturn true"
+    test_functions: ! "begin\n  user_input\nrescue NameError\n  return \"你声明了一个名叫user_input的变量吗？
+      \"\nend\n\nif code.scan(\"print\").length == 0
+      || prints.length == 0\n  return \"确保使用print关键字来向用户打印提示。
+      \"\nend\n\nif code.scan(\"gets.chomp\").length == 0\n
+      \ return \"确保使用gets.chomp来获取用户输入。\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。如需帮助可查看第一个练习！
+      \"\nend\n\nreturn true"
     updated_at: 2012-10-11 15:00:22.284000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -116,10 +115,9 @@ sections:
         UFobaa34sgACA+1D
     created_at: 2012-09-19 19:22:17.000000000 Z
     default_code: ''
-    entry: We want to make sure we capture both `"S"` and `"s"` in the user's input.
-      We could write separate `if` / `else` statements to handle this, but we can
-      also use `.downcase!` to convert the user's input to all lower case. That way,
-      we only have to search for `"s"`.
+    entry: 我们要确保将用户输入中的`"S"`和`"s"`都捕获。
+      当然，我们可以使用各自的`if` / `else`语句来处理，但是我们还可以使用
+      `.downcase!`来将用户输入的内容都转换为小写。这样，我们就只需要搜索`"s"`。
     expect_error: false
     feedback_stats:
       correctness_test_issue: 2
@@ -127,20 +125,18 @@ sections:
       instructional_text_issue: 2
     from_console: false
     hint: ''
-    instruction: Call the `.downcase!` method on `user_input`. Make sure to include
-      the `!` so that the user's string is modified in-place; otherwise, Ruby will
-      create a copy of `user_input` and modify that instead.
+    instruction: 对`user_input`调用`.downcase!`方法。确保不要漏掉
+      `!`，这样才能修改字符串本身；否则，Ruby会创建一个`user_input`的副本并修改它。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Downcase!
+    name: 转换为小写！
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Check the first exercise if you need help!\"\nend\n\nif
-      code.scan(\".downcase!\").length == 0\n  return \"Make sure you call the .downcase!
-      method on user_input.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"你的语法貌似不大正确。
+      如需帮助可查看第一个练习！\"\nend\n\nif
+      code.scan(\".downcase!\").length == 0\n  return \"确保对user_input调用.downcase!方法。\"\nend\n\nreturn true"
     updated_at: 2012-10-02 18:55:26.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -148,13 +144,12 @@ sections:
         UFobaqnplwACBBib
     created_at: 2012-09-19 19:22:18.000000000 Z
     default_code: ''
-    entry: ! "All right! Time to add in a little control flow.\n\nFor the `if` half
-      of our branch, we want to check whether the user's input contains an `\"s\"`.
-      We can do that using Ruby's `.include?` method, which evaluates to `true` if
-      it finds what it's looking for and `false` otherwise. (As a general rule, Ruby
-      methods that end with `?` evaluate to the boolean values `true` or `false`.)\n\nThe
-      syntax looks like this:\n\n    if string_to_check.include? \"substring\"\n\nWe
-      want to check `user_input` for the substring `\"s\"`."
+    entry: ! "好的！是时候添加一些控制流了。\n\n
+      在`if`分支，我们想要检查用户的输入是否包含`\"s\"`。
+      我们可以使用Ruby的`.include?`方法，该方法在找到目标时返回`true`，否则返回`false`。
+      （一般而言，以`?`结尾的Ruby方法返回布尔值`true`或者`false`。）\n\n
+      语法是这样的：\n\n    if string_to_check.include? \"substring\"\n\n
+      我们想要检查`user_input`是否包含子串`\"s\"`。"
     expect_error: false
     feedback_stats:
       other: 2
@@ -162,22 +157,20 @@ sections:
       instructional_text_issue: 2
       correctness_test_issue: 5
     from_console: false
-    hint: Feel free to peek back at the first exercise if you need help.
-    instruction: Write an `if` statement in the editor. It should check to see if
-      `user_input` includes `"s"`. For now, have it print a string of your choice
-      to the console if it finds `"s"`.
+    hint: 如果需要帮助，可查看第一个练习。
+    instruction: 在编辑器中编写一个`if`语句。该语句要检查`user_input`是否包含`"s"`。
+      目前，只需在找到`"s"`时向控制台打印一个你想要的字符串。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Setting Up the 'If' Branch, Part 1
+    name: 编写'if'分支，第1部分
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your 'if' statement syntax isn't quite right. Don't forget to end it with an
-      'end'!\"\nend\n\nif code.scan(\"if\").length == 0\n  return \"Make sure to include
-      an 'if' statement.\"\nend\n\nunless code =~ /user_input\\.include\\?\\(?\\s*[\"']s[\"']\\s*\\)?/\n
-      \ return \"Don't forget to call .include? on user_input.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的'if'语句语法不大正确。别忘了以'end'结尾！
+      \"\nend\n\nif code.scan(\"if\").length == 0\n  return \"确保你写了'if'语句。
+      \"\nend\n\nunless code =~ /user_input\\.include\\?\\(?\\s*[\"']s[\"']\\s*\\)?/\n
+      \ return \"别忘了对user_input调用.include?方法。\"\nend\n\nreturn true"
     updated_at: 2012-11-10 17:08:30.203000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -185,33 +178,30 @@ sections:
         UFofIpro+AACBC6k
     created_at: 2012-09-19 19:38:10.000000000 Z
     default_code: ''
-    entry: ! "Good! Now let's complete our `if` statement.\n\nWhen we find `\"s\"`,
-      we want Ruby to replace every instance of `\"s\"` it finds with `\"th\"`. We
-      can do this with the `.gsub!` method, which stands for **g**lobal **sub**stitution.\n\nThe
-      syntax looks like this:\n\n    string_to_change.gsub!(/s/, \"th\")\n\nWhen we
-      get to later lessons, we'll explain why the `/s/` has to be between slashes
-      instead of between quotes. Note: you *cannot* put a space between `gsub!` and
-      the bit in parentheses.\n\nRemember, you want the `!` at the end of the method
-      name so that Ruby will change the string in-place."
+    entry: ! "好！现在我们来完成我们的`if`语句。\n\n
+      我们想要让Ruby将每个找到的`\"s\"`替换成`\"th\"`。我们可以用`.gsub!`方法达到这个目的，该方法
+      的名称是英文 **g**lobal **sub**stitution的缩写，意思是替换所有找到的子串。\n\n
+      语法是这样的：\n\n    string_to_change.gsub!(/s/, \"th\")\n\n
+      在后面的课程中，我们会讲解为什么`s`用放在斜杠`/`里面，而不是引号里面。
+      注意：在`gsub!`和括号里面的内容之间 *不能* 有空格。\n\n
+      记住，方法名后面要加`!`，这样Ruby才会修改字符串本身。"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 3
       total: 3
     from_console: false
     hint: ''
-    instruction: Remove the print statement you added to your `if` statement and replace
-      it with a call to `.gsub!` on `user_input`. Have it replace `/s/` with `"th"`.
+    instruction: 去掉`if`语句里面的print语句，然后对`user_input`调用`.gsub!`方法，将`/s/`替换为`"th"`。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Setting Up the 'If' Branch, Part 2
+    name: 编写'if'分支，第2部分
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Feel free to look back at the syntax in the first
-      exercise if you need help!\"\nend\n\nunless code =~ /user_input\\.gsub!\\(?\\s*\\/s\\/\\s*,\\s*['\"]th['\"]\\s*\\)?/\n
-      \ return \"Make sure you're using .gsub! to replace every 's' with 'th'.\"\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可随时查看第一个练习的语法！
+      \"\nend\n\nunless code =~ /user_input\\.gsub!\\(?\\s*\\/s\\/\\s*,\\s*['\"]th['\"]\\s*\\)?/\n
+      \ return \"确保使用.gsub!方法将每个's'替换为'th'。\"\nend\n\nreturn
       true"
     updated_at: 2012-10-15 17:51:34.501000000 Z
     view: console_and_editor
@@ -220,8 +210,7 @@ sections:
         UFoba0GIOQACA+hf
     created_at: 2012-09-19 19:22:19.000000000 Z
     default_code: ''
-    entry: The hard part's over! Now we just need to let the user know if we don't
-      find any instances of the letter "s".
+    entry: 最难的部分过去了！现在我们只需要在没有找到"s"字母的时候让用户知道就可以了。
     expect_error: false
     feedback_stats:
       correctness_test_issue: 1
@@ -229,20 +218,19 @@ sections:
       other: 1
     from_console: false
     hint: ''
-    instruction: Add an `else` statement that displays a string to the user to let
-      them know if there are no "s"s in their string.
+    instruction: 添加一个`else`语句，当用户输入的字符串中不包含"s"的时候，显示一个字符串信息让用户知道这一情况。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Setting Up the 'Else' Branch
+    name: 编写'else'分支
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Check the first exercise if you need help!\"\nend\n\nif
-      code.scan(\"else\").length == 0\n  return \"Make sure to add an else statement!\"\nend\n\nif
-      prints.length == 0\n  return \"It doesn't look like you printed anything to
-      the console.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可查看第一个练习！
+      \"\nend\n\nif
+      code.scan(\"else\").length == 0\n  return \"确保添加了else语句！\"\nend\n\nif
+      prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。
+      \"\nend\n\nreturn true"
     updated_at: 2012-11-10 17:18:12.080000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -250,10 +238,10 @@ sections:
         UFoba634sgACA+2A
     created_at: 2012-09-19 19:22:19.000000000 Z
     default_code: ''
-    entry: ! "Home stretch—now we want to display the Daffy Duckified string to the
-      user. You can do that using the string interpolation we learned earlier:\n\n
-      \   my_string = \"muchachos\"\n    print \"Adios, #{my_string}!\"\n    # ==>
-      \"Adios, muchachos!\"\n"
+    entry: ! "最后冲刺——现在，我们想要向用户显示带达菲鸭口音的字符串。
+      你可以使用我们前面学过的字符串插入方式：\n\n
+      \   my_string = \"朋友\"\n    print \"再见，#{my_string}！\"\n    # ==>
+      \"再见，朋友！\"\n"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 7
@@ -262,20 +250,19 @@ sections:
       other: 2
     from_console: false
     hint: ''
-    instruction: Add a `puts` statement that uses string interpolation to show the
-      user their transformed string.
+    instruction: 添加一个`puts`语句，使用字符串插入的方式来向用户显示转换后的字符串。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Returning the Final String—Er, "Thtring"
+    name: 返回最终的字符串
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Check the first exercise if you need help!\"\nend\n\nif
-      code.scan(\"puts\").length == 0\n  return \"Make sure to show the user their
-      transformed string using 'puts'.\"\nend\n\nunless prints.grep(user_input)\n
-      \ return \"It looks like you didn't print out the user_input string.\"\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可查看第一个练习！
+      \"\nend\n\nif
+      code.scan(\"puts\").length == 0\n  return \"确保使用'puts'向用户显示转换后的字符串。
+      \"\nend\n\nunless prints.grep(user_input)\n
+      \ return \"貌似你没有打印出user_input字符串。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-10 17:21:28.603000000 Z
     view: console_and_editor
@@ -284,19 +271,17 @@ sections:
         UFobbYqTxQACBAOl
     created_at: 2012-09-19 19:22:21.000000000 Z
     default_code: ''
-    entry: ! 'Great work!
+    entry: ! '干得好！
 
 
-      How might you improve this project? You could:
+      想一想，你能够如何改进这个项目呢？我认为你可以：
 
 
-      * Add an additional `if` statement to re-prompt the user for input if they don''t
-      enter anything
+      * 再添加一个`if`语句，当用户输入空白内容时再次提示用户输入
 
-      * Think about how you might account for words in which the letter "c" sounds
-      like an "s"
+      * 考虑一下，对于有些单词中发音听起来像"s"的字母"c"，如何处理
 
-      * Think about how you might preserve the user''s original capitalization'
+      * 考虑一下如何保持用户输入字符串的首字母大写'
     expect_error: false
     feedback_stats:
       other: 4
@@ -305,12 +290,11 @@ sections:
       positive_feedback: 5
     from_console: false
     hint: ''
-    instruction: Enough pondering for now. When you're ready, click Run to complete
-      this project.
+    instruction: 就考虑这么多吧。当你想好以后，单击Run来完成这个项目。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Congratulationth!
+    name: 祝贺你！
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -322,7 +306,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Thtrings & Things
+  name: 有关字符串的那些事儿
   num_forum_answers: 30
   num_forum_questions: 21
   published: true
