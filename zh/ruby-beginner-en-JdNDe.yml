@@ -162,7 +162,7 @@ sections:
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: 编写'if'分支，第一部分
+    name: 编写'if'分支，第1部分
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -177,33 +177,30 @@ sections:
         UFofIpro+AACBC6k
     created_at: 2012-09-19 19:38:10.000000000 Z
     default_code: ''
-    entry: ! "Good! Now let's complete our `if` statement.\n\nWhen we find `\"s\"`,
-      we want Ruby to replace every instance of `\"s\"` it finds with `\"th\"`. We
-      can do this with the `.gsub!` method, which stands for **g**lobal **sub**stitution.\n\nThe
-      syntax looks like this:\n\n    string_to_change.gsub!(/s/, \"th\")\n\nWhen we
-      get to later lessons, we'll explain why the `/s/` has to be between slashes
-      instead of between quotes. Note: you *cannot* put a space between `gsub!` and
-      the bit in parentheses.\n\nRemember, you want the `!` at the end of the method
-      name so that Ruby will change the string in-place."
+    entry: ! "好！现在我们来完成我们的`if`语句。\n\n
+      我们想要让Ruby将每个找到的`\"s\"`替换成`\"th\"`。我们可以用`.gsub!`方法达到这个目的，该方法
+      的名称是英文 **g**lobal **sub**stitution的缩写，意思是替换所有找到的子串。\n\n
+      语法是这样的：\n\n    string_to_change.gsub!(/s/, \"th\")\n\n
+      在后面的课程中，我们会讲解为什么`s`用放在斜杠`/`里面，而不是引号里面。
+      注意：在`gsub!`和括号里面的内容之间 *不能* 有空格。\n\n
+      记住，方法名后面要加`!`，这样Ruby才会修改字符串本身。"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 3
       total: 3
     from_console: false
     hint: ''
-    instruction: Remove the print statement you added to your `if` statement and replace
-      it with a call to `.gsub!` on `user_input`. Have it replace `/s/` with `"th"`.
+    instruction: 去掉`if`语句里面的print语句，然后对`user_input`调用`.gsub!`方法，将`/s/`替换为`"th"`。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Setting Up the 'If' Branch, Part 2
+    name: 编写'if'分支，第2部分
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Feel free to look back at the syntax in the first
-      exercise if you need help!\"\nend\n\nunless code =~ /user_input\\.gsub!\\(?\\s*\\/s\\/\\s*,\\s*['\"]th['\"]\\s*\\)?/\n
-      \ return \"Make sure you're using .gsub! to replace every 's' with 'th'.\"\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可随时查看第一个练习的语法！
+      \"\nend\n\nunless code =~ /user_input\\.gsub!\\(?\\s*\\/s\\/\\s*,\\s*['\"]th['\"]\\s*\\)?/\n
+      \ return \"确保使用.gsub!方法将每个's'替换为'th'。\"\nend\n\nreturn
       true"
     updated_at: 2012-10-15 17:51:34.501000000 Z
     view: console_and_editor
