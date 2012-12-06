@@ -143,13 +143,12 @@ sections:
         UFobaqnplwACBBib
     created_at: 2012-09-19 19:22:18.000000000 Z
     default_code: ''
-    entry: ! "All right! Time to add in a little control flow.\n\nFor the `if` half
-      of our branch, we want to check whether the user's input contains an `\"s\"`.
-      We can do that using Ruby's `.include?` method, which evaluates to `true` if
-      it finds what it's looking for and `false` otherwise. (As a general rule, Ruby
-      methods that end with `?` evaluate to the boolean values `true` or `false`.)\n\nThe
-      syntax looks like this:\n\n    if string_to_check.include? \"substring\"\n\nWe
-      want to check `user_input` for the substring `\"s\"`."
+    entry: ! "好的！是时候添加一些控制流了。\n\n
+      在`if`分支，我们想要检查用户的输入是否包含`\"s\"`。
+      我们可以使用Ruby的`.include?`方法，该方法在找到目标时返回`true`，否则返回`false`。
+      （一般而言，以`?`结尾的Ruby方法返回布尔值`true`或者`false`。）\n\n
+      语法是这样的：\n\n    if string_to_check.include? \"substring\"\n\n
+      我们想要检查`user_input`是否包含子串`\"s\"`。"
     expect_error: false
     feedback_stats:
       other: 2
@@ -157,22 +156,20 @@ sections:
       instructional_text_issue: 2
       correctness_test_issue: 5
     from_console: false
-    hint: Feel free to peek back at the first exercise if you need help.
-    instruction: Write an `if` statement in the editor. It should check to see if
-      `user_input` includes `"s"`. For now, have it print a string of your choice
-      to the console if it finds `"s"`.
+    hint: 如果需要帮助，可查看第一个练习。
+    instruction: 在编辑器中编写一个`if`语句。该语句要检查`user_input`是否包含`"s"`。
+      目前，只需在找到`"s"`时向控制台打印一个你想要的字符串。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Setting Up the 'If' Branch, Part 1
+    name: 编写'if'分支，第一部分
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your 'if' statement syntax isn't quite right. Don't forget to end it with an
-      'end'!\"\nend\n\nif code.scan(\"if\").length == 0\n  return \"Make sure to include
-      an 'if' statement.\"\nend\n\nunless code =~ /user_input\\.include\\?\\(?\\s*[\"']s[\"']\\s*\\)?/\n
-      \ return \"Don't forget to call .include? on user_input.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的'if'语句语法不大正确。别忘了以'end'结尾！
+      \"\nend\n\nif code.scan(\"if\").length == 0\n  return \"确保你写了'if'语句。
+      \"\nend\n\nunless code =~ /user_input\\.include\\?\\(?\\s*[\"']s[\"']\\s*\\)?/\n
+      \ return \"别忘了对user_input调用.include?方法。\"\nend\n\nreturn true"
     updated_at: 2012-11-10 17:08:30.203000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
