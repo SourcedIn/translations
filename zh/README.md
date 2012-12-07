@@ -17,3 +17,8 @@ Translations
 * Started: 05.12.2012
 * Finished: 06.12.2012
 * Contact: zoogar@163.com
+
+* File: ruby-beginner-en-MxXx5.yml
+* Started: 07.12.2012
+* Finished:
+* Contact: zoogar@163.com
