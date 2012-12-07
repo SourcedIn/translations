@@ -133,12 +133,10 @@ sections:
         UFnm3ZS4YAACAPO1
     created_at: 2012-09-19 15:38:05.000000000 Z
     default_code: ''
-    entry: ! "Good! Now let's try something new. You may have noticed this weird little
-      line of code repeated in our example:\n\n    variable_name = gets.chomp\n\n`gets`
-      is the Ruby method that *gets* input from the user. When getting input, Ruby
-      automatically adds a blank line (or **newline**) after each bit of input; `chomp`
-      removes that extra line. (Your program will work fine without `chomp`, but you'll
-      get extra blank lines everywhere.)"
+    entry: ! "好！现在，让我们尝试一些新东西。你可能注意到我们示例中有一行诡异的代码一直重复：
+      \n\n    variable_name = gets.chomp\n\n
+      `gets`是用来 *获取* 用户输入的Ruby方法。在获取输入的时候，Ruby自动地在每个输入后面添加一个空行（或者叫 **新行** ）；
+      `chomp`方法则去掉那个多余的行。（没有`chomp`，你的程序也能正常工作，不过你会发现到处都是多余的空行。）"
     expect_error: false
     feedback_stats:
       other: 6
@@ -148,17 +146,17 @@ sections:
       positive_feedback: 2
     from_console: false
     hint: ''
-    instruction: Declare a variable `first_name` and set it equal to `gets.chomp`.
+    instruction: 声明一个变量`first_name`，然后将其赋值为`gets.chomp`。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Getting Input
+    name: 获取输入
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "begin\n  first_name\nrescue NameError\n  return \"Did you declare
-      a variable called first_name?\"\nend\n\nif code.scan(\"gets.chomp\").length
-      == 0\n  return \"It looks like you didn't use gets.chomp in your code.\"\nend\n\nreturn
+    test_functions: ! "begin\n  first_name\nrescue NameError\n  return \"你声明了一个名叫first_name的变量吗？
+      \"\nend\n\nif code.scan(\"gets.chomp\").length
+      == 0\n  return \"貌似你的代码没有使用gets.chomp。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-02 08:50:51.929000000 Z
     view: console_and_editor
