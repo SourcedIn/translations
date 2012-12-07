@@ -105,8 +105,7 @@ sections:
         UFnm3KnplwACAQTq
     created_at: 2012-09-19 15:38:04.000000000 Z
     default_code: ''
-    entry: First, let's write the code we're already familiar with. In order to get
-      input from the user, we'll first need to `print` a prompt on the screen.
+    entry: 首先，让我们来编写我们熟悉的代码。为了获得用户的输入，我们先要使用`print`来向屏幕打印提示。
     expect_error: false
     feedback_stats:
       positive_feedback: 2
@@ -114,19 +113,19 @@ sections:
       correctness_test_issue: 1
     from_console: false
     hint: ''
-    instruction: ! '`print` the question `"What''s your first name?"` to the screen.
-      Feel free to peek back at the first exercise if you need a syntax reminder.'
+    instruction: ! '使用`print`向屏幕打印一个问题`"What''s your first name?"`。
+      如果忘记了语法，可随时查看第一个练习。'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Prompting the User
+    name: 提示用户
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nunless
-      code.include? \"print\"\n  return \"Make sure to use the 'print' keyword.\"\nend\n\nif
-      prints.length == 0\n  return \"It looks like you didn't print anything to the
-      console.\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你没有编写任何代码！\"\nend\n\nunless
+      code.include? \"print\"\n  return \"确保使用'print'关键字。\"\nend\n\nif
+      prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。
+      \"\nend\n\nreturn true"
     updated_at: 2012-10-12 11:02:17.423000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
