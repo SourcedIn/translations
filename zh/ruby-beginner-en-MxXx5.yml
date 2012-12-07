@@ -4,15 +4,15 @@ classification: :game
 created_at: 2012-09-19 15:37:00.000000000 Z
 domain: :freestyle
 down_votes: 213
-entry: Now that you know a little bit of Ruby, let's put together your first project!
-  In this one, we'll write a small program that will format a user's input.
+entry: 既然你已经对Ruby有所了解，那么让我们用所学内容做第一个项目吧！
+  在这个项目中，我们将写一个小程序，该程序格式化用户的输入。
 feedback_total: 149
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
   raw_data: !binary |-
     TyFOXyFuzxlcRMGV
 level: :beginner
-locale: en
+locale: zh
 name: Putting the Form in Formatter
 num_exercises: 7
 num_published_exercises: 7
@@ -44,8 +44,7 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 15:37:00.000000000 Z
   default_view: console_and_editor
-  entry: We'll take advantage of Ruby's powerful string formatting methods to whip
-    a user's input into shape. No incorrect capitalization for us!
+  entry: 我们将利用Ruby强大的字符串格式化方法来格式化用户的输入。我们不要错误的首字母大写！
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
@@ -80,10 +79,8 @@ sections:
 
 
       puts "Your name is #{first_name} #{last_name} and you''re from #{city}, #{state}!"'
-    entry: This project will help you create a small program that will read a user's
-      input and correct his or her capitalization. Users can provide an almost infinite
-      range of input, so it makes our lives easier as programmers to make their input
-      standard before doing anything with it.
+    entry: 这个项目将帮助你创建一个小程序，该程序读取用户的输入，然后纠正其首字母大写错误。
+      用户可以输入几乎任何内容，所以为了降低编程难度，我们要将用户的输入标准化。
     expect_error: false
     feedback_stats:
       positive_feedback: 6
@@ -92,12 +89,11 @@ sections:
       other: 7
     from_console: false
     hint: ''
-    instruction: Check out the code in the editor—we've added some new things that
-      we'll be teaching you. Can you guess what it does? Click Run to find out!
+    instruction: 阅读编辑器中的代码——我们添加了一些新东西，我们稍后会教你这些内容。你能猜出它的功能是什么吗？单击Run看看！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: What You'll Be Building
+    name: 你将要建造的东西
     solution_code: ''
     solution_entry: ''
     tabs: []
