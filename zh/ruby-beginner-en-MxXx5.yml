@@ -165,8 +165,7 @@ sections:
         UFnm4oqTxQACAPNc
     created_at: 2012-09-19 15:38:10.000000000 Z
     default_code: ''
-    entry: All right! Now we need to repeat what we've done for `last_name`, `city`,
-      and `state`.
+    entry: 好的！现在，我们需要为`last_name`、`city`和`state`这些变量编写同样的代码。
     expect_error: false
     feedback_stats:
       other: 11
@@ -177,25 +176,24 @@ sections:
       positive_feedback: 1
     from_console: false
     hint: ''
-    instruction: ! 'Add `print` prompts, variables, and `gets.chomp`s for the user''s
-      last name, city, and state/province. Use `last_name` as the variable for the
-      user''s last name, `city` for their city, and `state` for their state or province.
-      (Hint: prompt the user to provide an abbreviation for their state or province,
-      such as "NY" for New York. This will naturally lead us to use `.upcase` later!)'
+    instruction: ! '使用`print`来打印提示，使用`gets.chomp`来获取用户输入并将其赋值给用户的
+      last name、city和state/province变量。使用`last_name`来存放用户的姓氏，
+      `city`存放所在城市，`state`存放所在州或省。
+      （提示：向用户提示将州或省的名称写成缩写的形式，例如New York写成"NY"。这样，我们后面就会想到用`.upcase`方法！）'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Repeat for More Input
+    name: 用同样的方式输入更多内容
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "begin\n  last_name\nrescue NameError\n  return \"Did you declare
-      a variable called last_name?\"\nend\n\nbegin\n  city\nrescue NameError\n  return
-      \"Did you declare a variable called city?\"\nend\n\nbegin\n  state\nrescue NameError\n
-      \ return \"Did you declare a variable called state?\"\nend\n\nif code.scan(\"print\").length
-      < 4\n  return \"Did you include a print statement for each of your four variables?\"\nend\n\nif
-      code.scan(\"gets.chomp\").length < 4\n  return \"Did you include a gets.chomp
-      for each of your four variables?\"\nend\n\nreturn true"
+    test_functions: ! "begin\n  last_name\nrescue NameError\n  return \"你声明了一个名为last_name的变量吗？
+      \"\nend\n\nbegin\n  city\nrescue NameError\n  return
+      \"你声明了一个名为city的变量吗？\"\nend\n\nbegin\n  state\nrescue NameError\n
+      \ return \"你声明了一个名为state的变量吗？\"\nend\n\nif code.scan(\"print\").length
+      < 4\n  return \"在获取每个变量之前你都使用了一个print语句来打印提示吗？\"\nend\n\nif
+      code.scan(\"gets.chomp\").length < 4\n  return \"你使用了gets.chomp来获取每个用户输入吗？
+      \"\nend\n\nreturn true"
     updated_at: 2012-11-02 08:54:22.270000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
