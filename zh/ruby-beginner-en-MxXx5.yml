@@ -201,15 +201,14 @@ sections:
         UFnm5CbViwACAO6S
     created_at: 2012-09-19 15:38:12.000000000 Z
     default_code: ''
-    entry: ! "As you might have noticed, Ruby's not really returning any feedback
-      to us. We want to be able to see our string formatting in action! For this,
-      we'll need one more new piece of syntax.\n\nIf you define a variable `monkey`
-      that's equal to the string `\"Curious George\"`, and then you have a string
-      that says `\"I took #{monkey} to the zoo\"`, Ruby will do something called **string
-      interpolation** and replace the `#{monkey}` bit with the value of `monkey`—that
-      is, it will print `\"I took Curious George to the zoo\"`. We can do the same
-      thing here! For example:\n\n    first_name = \"Kevin\"\n    puts \"Your name
-      is #{first_name}!\"\n\nwill print \"Your name is Kevin!\""
+    entry: ! "你可能已经注意到，Ruby并没有做我们的输入作出回应。
+      我们想要立即看到我们输入字符串的情况！
+      要达到这个目的，我们需要一个新的语法。\n\n
+      如果你定义了一个变量`monkey`，然后令其等于字符串`\"孙悟空\"`，然后你写一个这样的字符串：
+      `\"我把#{monkey}带到了南天门\"`，Ruby就会进行一种叫做 **字符串插入替换** 的操作，
+      将`#{monkey}`替换成`monkey`的值——也就是说，它会打印`\"我把孙悟空带到了南天门\"`。
+      我们可以做类似这样的事情！比如：\n\n    first_name = \"张三\"\n    puts \"我的名字叫#{first_name}！\"\n\n
+      上述代码将会打印\"我的名字叫张三！\""
     expect_error: false
     feedback_stats:
       instructional_text_issue: 5
@@ -219,22 +218,20 @@ sections:
       typo: 4
       positive_feedback: 2
     from_console: false
-    hint: ! "Remember, your string interpolation always has to be inside quotation
-      marks, like so:\n\n    n = \"bacon\"\n    puts \"#{n}\"\n    puts \"I love #{n}!\""
-    instruction: Let's use this syntax to print out the values of `first_name`, `last_name`,
-      `city`, and `state` using `#{}` syntax.
+    hint: ! "记住，字符串插入替换操作永远用在引号里面，像这样：
+      \n\n    n = \"肥肠\"\n    puts \"#{n}\"\n    puts \"我喜欢吃#{n}！\""
+    instruction: 让我们使用`#{}`语法来打印`first_name`、`last_name`、`city`和`state`的值。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Printing the Output
+    name: 打印输出
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Check the Hint if you need help!\"\nend\n\nif
-      code.scan('#{').length == 0 || code.scan('}').length == 0\n  return 'Make sure
-      to use #{} for string interpolation!'\nend\n\nif prints.length == 0\n  return
-      \"It looks like you didn't print anything to the console.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可查看提示！\"\nend\n\nif
+      code.scan('#{').length == 0 || code.scan('}').length == 0\n  return '确保
+      使用#{}来进行字符串插入替换！'\nend\n\nif prints.length == 0\n  return
+      \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn true"
     updated_at: 2012-11-02 09:05:21.897000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
