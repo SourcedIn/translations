@@ -13,7 +13,7 @@ language_id: !ruby/object:Moped::BSON::ObjectId
     TyFOXyFuzxlcRMGV
 level: :beginner
 locale: zh
-name: Putting the Form in Formatter
+name: 设计字符串格式化程序
 num_exercises: 7
 num_published_exercises: 7
 num_published_sections: 1
@@ -44,7 +44,7 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 15:37:00.000000000 Z
   default_view: console_and_editor
-  entry: 我们将利用Ruby强大的字符串格式化方法来格式化用户的输入。我们不要错误的首字母大写！
+  entry: 我们将利用Ruby强大的字符串格式化方法来格式化用户的输入。我们要正确的单词首字母大写！
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
@@ -79,8 +79,8 @@ sections:
 
 
       puts "Your name is #{first_name} #{last_name} and you''re from #{city}, #{state}!"'
-    entry: 这个项目将帮助你创建一个小程序，该程序读取用户的输入，然后纠正其首字母大写错误。
-      用户可以输入几乎任何内容，所以为了降低编程难度，我们要将用户的输入标准化。
+    entry: 这个项目将帮助你创建一个小程序，该程序读取用户的输入，然后纠正其首字母大小写错误。
+      原则上用户几乎可以输入任何内容，但是为了降低编程难度，我们要对用户的输入加以限定。
     expect_error: false
     feedback_stats:
       positive_feedback: 6
@@ -89,7 +89,8 @@ sections:
       other: 7
     from_console: false
     hint: ''
-    instruction: 阅读编辑器中的代码——我们添加了一些新东西，我们稍后会教你这些内容。你能猜出它的功能是什么吗？单击Run看看！
+    instruction: 阅读编辑器中的代码——我们添加了一些新东西，这些内容我们稍后会教你。
+      你能猜出这些代码的功能吗？单击Run看看！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
@@ -105,7 +106,7 @@ sections:
         UFnm3KnplwACAQTq
     created_at: 2012-09-19 15:38:04.000000000 Z
     default_code: ''
-    entry: 首先，让我们来编写我们熟悉的代码。为了获得用户的输入，我们先要使用`print`来向屏幕打印提示。
+    entry: 首先，让我们来编写我们熟悉的代码。为了获得用户的输入，我们首先要使用`print`来向屏幕打印提示。
     expect_error: false
     feedback_stats:
       positive_feedback: 2
@@ -136,7 +137,7 @@ sections:
     entry: ! "好！现在，让我们尝试一些新东西。你可能注意到我们示例中有一行诡异的代码一直重复：
       \n\n    variable_name = gets.chomp\n\n
       `gets`是用来 *获取* 用户输入的Ruby方法。在获取输入的时候，Ruby自动地在每个输入后面添加一个空行（或者叫 **新行** ）；
-      `chomp`方法则去掉那个多余的行。（没有`chomp`，你的程序也能正常工作，不过你会发现到处都是多余的空行。）"
+      `chomp`方法则去掉那个多余的行。（不使用`chomp`，你的程序也能正常工作，但是你会发现到处都是多余的空行。）"
     expect_error: false
     feedback_stats:
       other: 6
@@ -165,7 +166,7 @@ sections:
         UFnm4oqTxQACAPNc
     created_at: 2012-09-19 15:38:10.000000000 Z
     default_code: ''
-    entry: 好的！现在，我们需要为`last_name`、`city`和`state`这些变量编写同样的代码。
+    entry: 好的！现在，我们需要重复上一个练习的做法，用同样的方式来处理`last_name`、`city`和`state`。
     expect_error: false
     feedback_stats:
       other: 11
@@ -176,10 +177,10 @@ sections:
       positive_feedback: 1
     from_console: false
     hint: ''
-    instruction: ! '使用`print`来打印提示，使用`gets.chomp`来获取用户输入并将其赋值给用户的
-      last name、city和state/province变量。使用`last_name`来存放用户的姓氏，
-      `city`存放所在城市，`state`存放所在州或省。
-      （提示：向用户提示将州或省的名称写成缩写的形式，例如New York写成"NY"。这样，我们后面就会想到用`.upcase`方法！）'
+    instruction: ! '为用户的姓氏、用户所在城市和用户所在州/省添加`print`提示语句、相应的变量以及`gets.chomp`语句。
+      `last_name`变量存放用户的姓氏，`city`变量存放用户所在城市，`state`变量存放用户所在州/省。
+      （提示：向用户提示将州/省的名称写成缩写的形式，例如New York写成"NY"。
+      这样，我们在后面就只需使用`.upcase`方法！）'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
@@ -201,13 +202,13 @@ sections:
         UFnm5CbViwACAO6S
     created_at: 2012-09-19 15:38:12.000000000 Z
     default_code: ''
-    entry: ! "你可能已经注意到，Ruby并没有做我们的输入作出回应。
-      我们想要立即看到我们输入字符串的情况！
+    entry: ! "你可能已经从运行结果上注意到，Ruby程序并没有做我们的输入作出任何回应。
+      我们希望能看到字符串格式化的结果！
       要达到这个目的，我们需要一个新的语法。\n\n
       如果你定义了一个变量`monkey`，然后令其等于字符串`\"孙悟空\"`，然后你写一个这样的字符串：
       `\"我把#{monkey}带到了南天门\"`，Ruby就会进行一种叫做 **字符串插入替换** 的操作，
       将`#{monkey}`替换成`monkey`的值——也就是说，它会打印`\"我把孙悟空带到了南天门\"`。
-      我们可以做类似这样的事情！比如：\n\n    first_name = \"张三\"\n    puts \"我的名字叫#{first_name}！\"\n\n
+      同样地，我们也可以写类似的代码！比如：\n\n    first_name = \"张三\"\n    puts \"我的名字叫#{first_name}！\"\n\n
       上述代码将会打印\"我的名字叫张三！\""
     expect_error: false
     feedback_stats:
@@ -266,7 +267,7 @@ sections:
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: 使用字符串方法来改变样式
+    name: 使用字符串方法来格式化
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -282,7 +283,8 @@ sections:
         UFnm5pGJpQACAQIB
     created_at: 2012-09-19 15:38:14.000000000 Z
     default_code: ''
-    entry: 非常完美！短短的几个步骤，你就已经创建了属于你自己的Ruby实用程序！现在，你可以随意对其功能加以修改或者向它添加新功能。
+    entry: 非常完美！短短的几个步骤，你就已经创建了属于你自己的Ruby实用程序！
+      现在，你可以随意对其功能加以修改或者向它添加新功能。
     expect_error: false
     feedback_stats:
       positive_feedback: 11
