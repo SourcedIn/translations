@@ -239,22 +239,17 @@ sections:
         UFnm5UeBkwACAPfz
     created_at: 2012-09-19 15:38:13.000000000 Z
     default_code: ''
-    entry: ! 'Great! Now we''ve got our output, but as you can see, we haven''t used
-      string methods to properly capitalize everything yet.
+    entry: ! '很好！现在我们得到了一些输出，但正如你所见，我们还没有使用字符串方法来正确地实现单词首字母大写。
 
 
-      We taught you about `.upcase` and `.downcase`, but there''s another really useful
-      string method: `.capitalize`. It capitalizes the first letter of a string and
-      makes the rest of the letters lower case. Convenient, right?
+      你学习了关于`.upcase`方法和`.downcase`方法的使用，但是还有一个非常有用的字符串方法：
+      `.capitalize`。该方法把字符串中单词的首字母变为大写，其余字母变为小写。很方便吧？
 
 
-      Here''s another handy trick. When you call something like `.capitalize` on a
-      string, you''re not capitalizing that *exact* string; Ruby makes a *copy* of
-      the string, capitalizes *that*, and that''s what it returns. If you want to
-      capitalize the string you''ve already got, though, you can make one small change:
-      add a `!` to the end of the method name. `.capitalize!` capitalizes the string
-      **in-place** instead of making a copy. The original non-capitalized string is
-      gone forever, but now you have your shiny new capitalized one in its place.'
+      这里有一个诀窍。当你对字符串调用一些方法像`.capitalize`的时候，你并不是对字符串 *本身* 进行首字母大写操作； 事实上，Ruby拷贝了字符串的一个 *副本* ，然后对这个副本进行首字母大写操作，并返回这个副本。
+      如果你想对字符串本身进行首字母大写操作，你可以稍加修改：
+      在方法名后面添加一个`!`。`.capitalize!`方法对字符串 **本身** 进行首字母大写操作，而不是创建一个副本。
+      原来的未经首字母大写操作的字符串已不复存在，取而代之的是一个全新的首字母大写的字符串。'
     expect_error: false
     feedback_stats:
       correctness_test_issue: 14
@@ -265,21 +260,20 @@ sections:
       typo: 1
     from_console: false
     hint: ''
-    instruction: After each `print` prompt and `gets.chomp`, add the appropriate string
-      method. You'll want `.capitalize!` for `first_name`, `last_name`, and `city`,
-      but since we want the user to provide an abbreviation for their state or province,
-      it's best to use `.upcase!` for that one.
+    instruction: 在每个`print`提示和`gets.chomp`后面，添加恰当的字符串方法。
+      你可能会想用`.capitalize!`方法来处理`first_name`、`last_name`和`city`，
+      不过因为我们希望用户提供州或省的英文简写，这时最好用`.upcase!`方法。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Formatting with String Methods
+    name: 使用字符串方法来改变样式
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code.scan(\".capitalize!\").length < 3\n  return \"Make
-      sure to call capitalize! on first_name, last_name, and city.\"\nend\n\nif code.scan(\".upcase!\").length
-      == 0\n  return \"Make sure to call upcase! on state.\"\nend\n\nif prints.length
-      == 0\n  return \"It looks like you didn't print anything to the console.\"\nend\n\nreturn
+    test_functions: ! "if code.scan(\".capitalize!\").length < 3\n  return \"确保
+      对first_name、last_name和city调用capitalize!方法。\"\nend\n\nif code.scan(\".upcase!\").length
+      == 0\n  return \"确保对state调用upcase!方法。\"\nend\n\nif prints.length
+      == 0\n  return \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-13 09:34:58.857000000 Z
     view: console_and_editor
