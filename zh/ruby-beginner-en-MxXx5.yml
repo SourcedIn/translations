@@ -282,9 +282,7 @@ sections:
         UFnm5pGJpQACAQIB
     created_at: 2012-09-19 15:38:14.000000000 Z
     default_code: ''
-    entry: Perfect! In just a few short steps, you've created your own Ruby program
-      with real-world applications. Feel free to add to your program or change it
-      as much as you like.
+    entry: 非常完美！短短的几个步骤，你就已经创建了属于你自己的Ruby实用程序！现在，你可以随意对其功能加以修改或者向它添加新功能。
     expect_error: false
     feedback_stats:
       positive_feedback: 11
@@ -295,11 +293,11 @@ sections:
       instructional_text_issue: 2
     from_console: false
     hint: ''
-    instruction: When you're ready, click Run to complete this project.
+    instruction: 当你准备好以后，单击Run来完成这个项目。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Great Work!
+    name: 漂亮的作品！
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -311,7 +309,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Methods, Methods Everywhere
+  name: 处处皆方法
   num_forum_answers: 68
   num_forum_questions: 36
   published: true
