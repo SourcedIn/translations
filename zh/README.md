@@ -20,5 +20,5 @@ Translations
 
 * File: ruby-beginner-en-MxXx5.yml
 * Started: 07.12.2012
-* Finished:
+* Finished: 15.12.2012
 * Contact: zoogar@163.com
