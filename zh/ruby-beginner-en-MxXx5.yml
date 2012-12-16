@@ -4,16 +4,16 @@ classification: :game
 created_at: 2012-09-19 15:37:00.000000000 Z
 domain: :freestyle
 down_votes: 213
-entry: Now that you know a little bit of Ruby, let's put together your first project!
-  In this one, we'll write a small program that will format a user's input.
+entry: 既然你已经对Ruby有所了解，那么让我们用所学内容做第一个项目吧！
+  在这个项目中，我们将写一个小程序，该程序格式化用户的输入。
 feedback_total: 149
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
   raw_data: !binary |-
     TyFOXyFuzxlcRMGV
 level: :beginner
-locale: en
-name: Putting the Form in Formatter
+locale: zh
+name: 设计字符串格式化程序
 num_exercises: 7
 num_published_exercises: 7
 num_published_sections: 1
@@ -44,8 +44,7 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 15:37:00.000000000 Z
   default_view: console_and_editor
-  entry: We'll take advantage of Ruby's powerful string formatting methods to whip
-    a user's input into shape. No incorrect capitalization for us!
+  entry: 我们将利用Ruby强大的字符串格式化方法来格式化用户的输入。我们要正确的单词首字母大写！
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
@@ -80,10 +79,8 @@ sections:
 
 
       puts "Your name is #{first_name} #{last_name} and you''re from #{city}, #{state}!"'
-    entry: This project will help you create a small program that will read a user's
-      input and correct his or her capitalization. Users can provide an almost infinite
-      range of input, so it makes our lives easier as programmers to make their input
-      standard before doing anything with it.
+    entry: 这个项目将帮助你创建一个小程序，该程序读取用户的输入，然后纠正其首字母大小写错误。
+      原则上用户几乎可以输入任何内容，但是为了降低编程难度，我们要对用户的输入加以限定。
     expect_error: false
     feedback_stats:
       positive_feedback: 6
@@ -92,12 +89,12 @@ sections:
       other: 7
     from_console: false
     hint: ''
-    instruction: Check out the code in the editor—we've added some new things that
-      we'll be teaching you. Can you guess what it does? Click Run to find out!
+    instruction: 阅读编辑器中的代码——我们添加了一些新东西，这些内容我们稍后会教你。
+      你能猜出这些代码的功能吗？单击Run看看！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: What You'll Be Building
+    name: 你将要建造的东西
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -109,8 +106,7 @@ sections:
         UFnm3KnplwACAQTq
     created_at: 2012-09-19 15:38:04.000000000 Z
     default_code: ''
-    entry: First, let's write the code we're already familiar with. In order to get
-      input from the user, we'll first need to `print` a prompt on the screen.
+    entry: 首先，让我们来编写我们熟悉的代码。为了获得用户的输入，我们首先要使用`print`来向屏幕打印提示。
     expect_error: false
     feedback_stats:
       positive_feedback: 2
@@ -118,19 +114,19 @@ sections:
       correctness_test_issue: 1
     from_console: false
     hint: ''
-    instruction: ! '`print` the question `"What''s your first name?"` to the screen.
-      Feel free to peek back at the first exercise if you need a syntax reminder.'
+    instruction: ! '使用`print`向屏幕打印一个问题`"What''s your first name?"`。
+      如果忘记了语法，可随时查看第一个练习。'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Prompting the User
+    name: 提示用户
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nunless
-      code.include? \"print\"\n  return \"Make sure to use the 'print' keyword.\"\nend\n\nif
-      prints.length == 0\n  return \"It looks like you didn't print anything to the
-      console.\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你没有编写任何代码！\"\nend\n\nunless
+      code.include? \"print\"\n  return \"确保使用'print'关键字。\"\nend\n\nif
+      prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。
+      \"\nend\n\nreturn true"
     updated_at: 2012-10-12 11:02:17.423000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -138,12 +134,10 @@ sections:
         UFnm3ZS4YAACAPO1
     created_at: 2012-09-19 15:38:05.000000000 Z
     default_code: ''
-    entry: ! "Good! Now let's try something new. You may have noticed this weird little
-      line of code repeated in our example:\n\n    variable_name = gets.chomp\n\n`gets`
-      is the Ruby method that *gets* input from the user. When getting input, Ruby
-      automatically adds a blank line (or **newline**) after each bit of input; `chomp`
-      removes that extra line. (Your program will work fine without `chomp`, but you'll
-      get extra blank lines everywhere.)"
+    entry: ! "好！现在，让我们尝试一些新东西。你可能注意到我们示例中有一行诡异的代码一直重复：
+      \n\n    variable_name = gets.chomp\n\n
+      `gets`是用来 *获取* 用户输入的Ruby方法。在获取输入的时候，Ruby自动地在每个输入后面添加一个空行（或者叫 **新行** ）；
+      `chomp`方法则去掉那个多余的行。（不使用`chomp`，你的程序也能正常工作，但是你会发现到处都是多余的空行。）"
     expect_error: false
     feedback_stats:
       other: 6
@@ -153,17 +147,17 @@ sections:
       positive_feedback: 2
     from_console: false
     hint: ''
-    instruction: Declare a variable `first_name` and set it equal to `gets.chomp`.
+    instruction: 声明一个变量`first_name`，然后将其赋值为`gets.chomp`。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Getting Input
+    name: 获取输入
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "begin\n  first_name\nrescue NameError\n  return \"Did you declare
-      a variable called first_name?\"\nend\n\nif code.scan(\"gets.chomp\").length
-      == 0\n  return \"It looks like you didn't use gets.chomp in your code.\"\nend\n\nreturn
+    test_functions: ! "begin\n  first_name\nrescue NameError\n  return \"你声明了一个名叫first_name的变量吗？
+      \"\nend\n\nif code.scan(\"gets.chomp\").length
+      == 0\n  return \"貌似你的代码没有使用gets.chomp。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-02 08:50:51.929000000 Z
     view: console_and_editor
@@ -172,8 +166,7 @@ sections:
         UFnm4oqTxQACAPNc
     created_at: 2012-09-19 15:38:10.000000000 Z
     default_code: ''
-    entry: All right! Now we need to repeat what we've done for `last_name`, `city`,
-      and `state`.
+    entry: 好的！现在，我们需要重复上一个练习的做法，用同样的方式来处理`last_name`、`city`和`state`。
     expect_error: false
     feedback_stats:
       other: 11
@@ -184,25 +177,24 @@ sections:
       positive_feedback: 1
     from_console: false
     hint: ''
-    instruction: ! 'Add `print` prompts, variables, and `gets.chomp`s for the user''s
-      last name, city, and state/province. Use `last_name` as the variable for the
-      user''s last name, `city` for their city, and `state` for their state or province.
-      (Hint: prompt the user to provide an abbreviation for their state or province,
-      such as "NY" for New York. This will naturally lead us to use `.upcase` later!)'
+    instruction: ! '为用户的姓氏、用户所在城市和用户所在州/省添加`print`提示语句、相应的变量以及`gets.chomp`语句。
+      `last_name`变量存放用户的姓氏，`city`变量存放用户所在城市，`state`变量存放用户所在州/省。
+      （提示：向用户提示将州/省的名称写成缩写的形式，例如New York写成"NY"。
+      这样，我们在后面就只需使用`.upcase`方法！）'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Repeat for More Input
+    name: 用同样的方式输入更多内容
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "begin\n  last_name\nrescue NameError\n  return \"Did you declare
-      a variable called last_name?\"\nend\n\nbegin\n  city\nrescue NameError\n  return
-      \"Did you declare a variable called city?\"\nend\n\nbegin\n  state\nrescue NameError\n
-      \ return \"Did you declare a variable called state?\"\nend\n\nif code.scan(\"print\").length
-      < 4\n  return \"Did you include a print statement for each of your four variables?\"\nend\n\nif
-      code.scan(\"gets.chomp\").length < 4\n  return \"Did you include a gets.chomp
-      for each of your four variables?\"\nend\n\nreturn true"
+    test_functions: ! "begin\n  last_name\nrescue NameError\n  return \"你声明了一个名为last_name的变量吗？
+      \"\nend\n\nbegin\n  city\nrescue NameError\n  return
+      \"你声明了一个名为city的变量吗？\"\nend\n\nbegin\n  state\nrescue NameError\n
+      \ return \"你声明了一个名为state的变量吗？\"\nend\n\nif code.scan(\"print\").length
+      < 4\n  return \"在获取每个变量之前你都使用了一个print语句来打印提示吗？\"\nend\n\nif
+      code.scan(\"gets.chomp\").length < 4\n  return \"你使用了gets.chomp来获取每个用户输入吗？
+      \"\nend\n\nreturn true"
     updated_at: 2012-11-02 08:54:22.270000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -210,15 +202,14 @@ sections:
         UFnm5CbViwACAO6S
     created_at: 2012-09-19 15:38:12.000000000 Z
     default_code: ''
-    entry: ! "As you might have noticed, Ruby's not really returning any feedback
-      to us. We want to be able to see our string formatting in action! For this,
-      we'll need one more new piece of syntax.\n\nIf you define a variable `monkey`
-      that's equal to the string `\"Curious George\"`, and then you have a string
-      that says `\"I took #{monkey} to the zoo\"`, Ruby will do something called **string
-      interpolation** and replace the `#{monkey}` bit with the value of `monkey`—that
-      is, it will print `\"I took Curious George to the zoo\"`. We can do the same
-      thing here! For example:\n\n    first_name = \"Kevin\"\n    puts \"Your name
-      is #{first_name}!\"\n\nwill print \"Your name is Kevin!\""
+    entry: ! "你可能已经从运行结果上注意到，Ruby程序并没有做我们的输入作出任何回应。
+      我们希望能看到字符串格式化的结果！
+      要达到这个目的，我们需要一个新的语法。\n\n
+      如果你定义了一个变量`monkey`，然后令其等于字符串`\"孙悟空\"`，然后你写一个这样的字符串：
+      `\"我把#{monkey}带到了南天门\"`，Ruby就会进行一种叫做 **字符串插入替换** 的操作，
+      将`#{monkey}`替换成`monkey`的值——也就是说，它会打印`\"我把孙悟空带到了南天门\"`。
+      同样地，我们也可以写类似的代码！比如：\n\n    first_name = \"张三\"\n    puts \"我的名字叫#{first_name}！\"\n\n
+      上述代码将会打印\"我的名字叫张三！\""
     expect_error: false
     feedback_stats:
       instructional_text_issue: 5
@@ -228,22 +219,20 @@ sections:
       typo: 4
       positive_feedback: 2
     from_console: false
-    hint: ! "Remember, your string interpolation always has to be inside quotation
-      marks, like so:\n\n    n = \"bacon\"\n    puts \"#{n}\"\n    puts \"I love #{n}!\""
-    instruction: Let's use this syntax to print out the values of `first_name`, `last_name`,
-      `city`, and `state` using `#{}` syntax.
+    hint: ! "记住，字符串插入替换操作永远用在引号里面，像这样：
+      \n\n    n = \"肥肠\"\n    puts \"#{n}\"\n    puts \"我喜欢吃#{n}！\""
+    instruction: 让我们使用`#{}`语法来打印`first_name`、`last_name`、`city`和`state`的值。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Printing the Output
+    name: 打印输出
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Check the Hint if you need help!\"\nend\n\nif
-      code.scan('#{').length == 0 || code.scan('}').length == 0\n  return 'Make sure
-      to use #{} for string interpolation!'\nend\n\nif prints.length == 0\n  return
-      \"It looks like you didn't print anything to the console.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可查看提示！\"\nend\n\nif
+      code.scan('#{').length == 0 || code.scan('}').length == 0\n  return '确保
+      使用#{}来进行字符串插入替换！'\nend\n\nif prints.length == 0\n  return
+      \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn true"
     updated_at: 2012-11-02 09:05:21.897000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -251,22 +240,17 @@ sections:
         UFnm5UeBkwACAPfz
     created_at: 2012-09-19 15:38:13.000000000 Z
     default_code: ''
-    entry: ! 'Great! Now we''ve got our output, but as you can see, we haven''t used
-      string methods to properly capitalize everything yet.
+    entry: ! '很好！现在我们得到了一些输出，但正如你所见，我们还没有使用字符串方法来正确地实现单词首字母大写。
 
 
-      We taught you about `.upcase` and `.downcase`, but there''s another really useful
-      string method: `.capitalize`. It capitalizes the first letter of a string and
-      makes the rest of the letters lower case. Convenient, right?
+      你学习了关于`.upcase`方法和`.downcase`方法的使用，但是还有一个非常有用的字符串方法：
+      `.capitalize`。该方法把字符串中单词的首字母变为大写，其余字母变为小写。很方便吧？
 
 
-      Here''s another handy trick. When you call something like `.capitalize` on a
-      string, you''re not capitalizing that *exact* string; Ruby makes a *copy* of
-      the string, capitalizes *that*, and that''s what it returns. If you want to
-      capitalize the string you''ve already got, though, you can make one small change:
-      add a `!` to the end of the method name. `.capitalize!` capitalizes the string
-      **in-place** instead of making a copy. The original non-capitalized string is
-      gone forever, but now you have your shiny new capitalized one in its place.'
+      这里有一个诀窍。当你对字符串调用一些方法像`.capitalize`的时候，你并不是对字符串 *本身* 进行首字母大写操作； 事实上，Ruby拷贝了字符串的一个 *副本* ，然后对这个副本进行首字母大写操作，并返回这个副本。
+      如果你想对字符串本身进行首字母大写操作，你可以稍加修改：
+      在方法名后面添加一个`!`。`.capitalize!`方法对字符串 **本身** 进行首字母大写操作，而不是创建一个副本。
+      原来的未经首字母大写操作的字符串已不复存在，取而代之的是一个全新的首字母大写的字符串。'
     expect_error: false
     feedback_stats:
       correctness_test_issue: 14
@@ -277,21 +261,20 @@ sections:
       typo: 1
     from_console: false
     hint: ''
-    instruction: After each `print` prompt and `gets.chomp`, add the appropriate string
-      method. You'll want `.capitalize!` for `first_name`, `last_name`, and `city`,
-      but since we want the user to provide an abbreviation for their state or province,
-      it's best to use `.upcase!` for that one.
+    instruction: 在每个`print`提示和`gets.chomp`后面，添加恰当的字符串方法。
+      你可能会想用`.capitalize!`方法来处理`first_name`、`last_name`和`city`，
+      不过因为我们希望用户提供州或省的英文简写，这时最好用`.upcase!`方法。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Formatting with String Methods
+    name: 使用字符串方法来格式化
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code.scan(\".capitalize!\").length < 3\n  return \"Make
-      sure to call capitalize! on first_name, last_name, and city.\"\nend\n\nif code.scan(\".upcase!\").length
-      == 0\n  return \"Make sure to call upcase! on state.\"\nend\n\nif prints.length
-      == 0\n  return \"It looks like you didn't print anything to the console.\"\nend\n\nreturn
+    test_functions: ! "if code.scan(\".capitalize!\").length < 3\n  return \"确保
+      对first_name、last_name和city调用capitalize!方法。\"\nend\n\nif code.scan(\".upcase!\").length
+      == 0\n  return \"确保对state调用upcase!方法。\"\nend\n\nif prints.length
+      == 0\n  return \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-13 09:34:58.857000000 Z
     view: console_and_editor
@@ -300,9 +283,8 @@ sections:
         UFnm5pGJpQACAQIB
     created_at: 2012-09-19 15:38:14.000000000 Z
     default_code: ''
-    entry: Perfect! In just a few short steps, you've created your own Ruby program
-      with real-world applications. Feel free to add to your program or change it
-      as much as you like.
+    entry: 非常完美！短短的几个步骤，你就已经创建了属于你自己的Ruby实用程序！
+      现在，你可以随意对其功能加以修改或者向它添加新功能。
     expect_error: false
     feedback_stats:
       positive_feedback: 11
@@ -313,11 +295,11 @@ sections:
       instructional_text_issue: 2
     from_console: false
     hint: ''
-    instruction: When you're ready, click Run to complete this project.
+    instruction: 当你准备好以后，单击Run来完成这个项目。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Great Work!
+    name: 漂亮的作品！
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -329,7 +311,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Methods, Methods Everywhere
+  name: 处处皆方法
   num_forum_answers: 68
   num_forum_questions: 36
   published: true
