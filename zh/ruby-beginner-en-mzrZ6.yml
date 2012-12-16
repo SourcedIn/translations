@@ -4,17 +4,16 @@ classification: :game
 created_at: 2012-09-20 00:19:22.000000000 Z
 domain: :freestyle
 down_votes: 84
-entry: In this project we'll make a program that searches a string of text for your
-  name and, if it finds it, replaces it with the word "redacted." Just like that,
-  you're a spy!
+entry: 在这个项目中，我们将会构建一个程序，该程序在一段文本中搜索你的名字，
+  如果找到，则将其替换成“redacted”（“Redacted”，美国电影。中文译名为“节选修订”）。就这样，你变成了一个间谍！
 feedback_total: 21
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
   raw_data: !binary |-
     TyFOXyFuzxlcRMGV
 level: :beginner
-locale: en
-name: Redacted!
+locale: zh
+name: 节选修订！
 num_exercises: 6
 num_published_exercises: 6
 num_published_sections: 1
@@ -44,37 +43,34 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-20 00:19:22.000000000 Z
   default_view: console_and_editor
-  entry: By splitting a block of text into an array of words and iterating over it,
-    we can find a word of interest and overwrite it as we print it to the console.
+  entry: 将一段文本拆分为一个单词数组，然后迭代这个数组，
+    我们就可以找出特定的单词并将其修改，使得最终向控制台打印的是修改后的文本。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFphC7GlKQACAHKh
     created_at: 2012-09-20 00:19:23.000000000 Z
-    default_code: ! "puts \"Text to search through: \"\ntext = gets.chomp\nputs \"Word
-      to redact: \"\nredact = gets.chomp\n\nwords = text.split(\" \")\n\nwords.each
+    default_code: ! "puts \"待搜索的英文文本：\"\ntext = gets.chomp\nputs \"要修订的英文单词：
+      \"\nredact = gets.chomp\n\nwords = text.split(\" \")\n\nwords.each
       do |word|\n  if word != redact\n    print word + \" \"\n  else\n    print \"REDACTED
       \"\n  end\nend"
-    entry: ! 'Hiding information is a major part of programming: protecting passwords,
-      establishing secure connections, and securing programs against tampering all
-      rely on controlling access to information.
+    entry: ! '信息隐藏是编程的一个重要组成部分：
+      保护密码、建立安全连接以及保护程序免遭篡改，这些都有赖于对信息访问进行控制。
 
 
-      While we won''t be able to really dig into information hiding until after we
-      cover **hashes** in a later course, we *can* write a simple program to change
-      a user''s input with the tools we have now: arrays and iterators.'
+      我们目前还不能真正深入到信息隐藏技术中去，这需要我们后面将学到的关于 **哈希表** 的知识。
+      但是我们 *可以* 写一个简单的程序来修改用户的输入，使用到的工具是：数组和迭代。'
     expect_error: false
     feedback_stats:
       other: 2
       total: 2
     from_console: false
     hint: ''
-    instruction: Hit Run to test out our redactor program and to learn how to build
-      your own.
+    instruction: 单击Run来测试我们的修订程序，然后思考一下如何自己实现这些功能。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: What You'll Be Building
+    name: 你将要实现的功能
     solution_code: ''
     solution_entry: ''
     tabs: []
