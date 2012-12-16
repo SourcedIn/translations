@@ -22,3 +22,8 @@ Translations
 * Started: 07.12.2012
 * Finished: 15.12.2012
 * Contact: zoogar@163.com
+
+* File: ruby-beginner-en-mzrZ6.yml
+* Started: 16.12.2012
+* Finished:
+* Contact: zoogar@163.com
