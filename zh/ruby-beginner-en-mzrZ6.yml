@@ -82,32 +82,28 @@ sections:
         UFphJUssoAACAHo4
     created_at: 2012-09-20 00:19:49.000000000 Z
     default_code: ''
-    entry: ! 'First things first: we''ll need to get the user''s input.'
+    entry: ! '首先，我们需要获取用户输入。'
     expect_error: false
     feedback_stats:
       other: 2
       total: 2
     from_console: false
     hint: ''
-    instruction: Use `puts` to prompt the user for input two times. For the first
-      `puts`, declare a variable called `text` and set it equal to the user's input
-      via `gets.chomp`. For the second `puts`, declare a variable called `redact`
-      and set it equal to the user's input using `gets.chomp`.
+    instruction: 使用`puts`向用户提示两次输入。第一次声明一个`text`变量，并通过`gets.chomp`将用户输入的值赋给它；
+      第二次声明一个`redact`变量，并通过`gets.chomp`将用户输入的值赋给它。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Getting the User's Input
+    name: 获取用户输入
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ text\nrescue NameError\n  return \"Did you declare a variable called text?\"\nend\n\nbegin\n
-      \ redact\nrescue NameErrorf\n  return \"Did you declare a variable called redact?\"\nend\n\nif
-      code.scan(\"puts\").length < 2 || prints.length == 0\n  return \"It looks like
-      you didn't print two prompts for the user to the console using 'puts'.\"\nend\n\nif
-      code.scan(\"gets.chomp\").length < 2\n  return \"Make sure to use gets.chomp
-      twice to get the user's input: the first time for the text to search, and the
-      second time for the word or phrase to redact.\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"貌似你没有写任何代码！\"\nend\n\nbegin\n
+      \ text\nrescue NameError\n  return \"你声明了一个名叫text的变量吗？\"\nend\n\nbegin\n
+      \ redact\nrescue NameErrorf\n  return \"你声明了一个名叫redact的变量吗？\"\nend\n\nif
+      code.scan(\"puts\").length < 2 || prints.length == 0\n  return \"貌似你没有使用'puts'向控制台打印两次用户提示。\"\nend\n\nif
+      code.scan(\"gets.chomp\").length < 2\n  return \"确保使用两次gets.chomp来获取用户的输入：
+      第一次是待搜索文本，第二次是要修改的单词或短语。\"\nend\n\nreturn true"
     updated_at: 2012-10-26 14:24:13.771000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
