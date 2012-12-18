@@ -4,8 +4,8 @@ classification: :game
 created_at: 2012-09-20 00:19:22.000000000 Z
 domain: :freestyle
 down_votes: 84
-entry: 在这个项目中，我们将会构建一个程序，该程序在一段文本中搜索你的名字，
-  如果找到，则将其替换成“redacted”（“Redacted”，美国电影。中文译名为“节选修订”）。就这样，你变成了一个间谍！
+entry: 在这个项目中，我们将会编写一个程序，该程序在一段英文文本中搜索特定的单词，
+  如果找到，则将其替换成“◆敏感词◆”。这样，你拥有了一个英文敏感词过滤程序！
 feedback_total: 21
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
@@ -13,7 +13,7 @@ language_id: !ruby/object:Moped::BSON::ObjectId
     TyFOXyFuzxlcRMGV
 level: :beginner
 locale: zh
-name: 节选修订！
+name: 敏感词！
 num_exercises: 6
 num_published_exercises: 6
 num_published_sections: 1
@@ -43,34 +43,35 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-20 00:19:22.000000000 Z
   default_view: console_and_editor
-  entry: 将一段文本拆分为一个单词数组，然后迭代这个数组，
-    我们就可以找出特定的单词并将其修改，使得最终向控制台打印的是修改后的文本。
+  entry: 将一段英文文本拆分为一个单词数组，然后迭代这个数组，
+    我们就可以找出特定的单词并将其修改，最终向控制台打印出修改后的文本。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFphC7GlKQACAHKh
     created_at: 2012-09-20 00:19:23.000000000 Z
-    default_code: ! "puts \"待搜索的英文文本：\"\ntext = gets.chomp\nputs \"要修订的英文单词：
+    default_code: ! "puts \"待搜索的英文文本：\"\ntext = gets.chomp\nputs \"要过滤的英文单词：
       \"\nredact = gets.chomp\n\nwords = text.split(\" \")\n\nwords.each
-      do |word|\n  if word != redact\n    print word + \" \"\n  else\n    print \"REDACTED
+      do |word|\n  if word != redact\n    print word + \" \"\n  else\n    print \"◆敏感词◆
       \"\n  end\nend"
-    entry: ! '信息隐藏是编程的一个重要组成部分：
-      保护密码、建立安全连接以及保护程序免遭篡改，这些都有赖于对信息访问进行控制。
+    entry: ! '敏感词过滤是网络编程的一个重要组成部分。
+      大部分论坛，为了方便管理，都进行了关于敏感词的设定。
+      敏感词设定功能在贴吧或论坛中都被广泛应用。
 
 
-      我们目前还不能真正深入到信息隐藏技术中去，这需要我们后面将学到的关于 **哈希表** 的知识。
-      但是我们 *可以* 写一个简单的程序来修改用户的输入，使用到的工具是：数组和迭代器。'
+      由于中文并不像英文那样以空格隔开每个单词，因此我们目前还不能对中文实现敏感词过滤。
+      但是我们 *可以* 写一个简单的程序来实现对英文文本的敏感词过滤，使用到的工具是：数组和迭代器。'
     expect_error: false
     feedback_stats:
       other: 2
       total: 2
     from_console: false
     hint: ''
-    instruction: 单击Run来测试我们的修订程序，然后思考一下如何自己实现这些功能。
+    instruction: 单击Run来测试我们的过滤程序，然后思考一下如何自己实现这些功能。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: 你将要实现的功能
+    name: 功能预览
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -103,7 +104,7 @@ sections:
       \ redact\nrescue NameErrorf\n  return \"你声明了一个名叫redact的变量吗？\"\nend\n\nif
       code.scan(\"puts\").length < 2 || prints.length == 0\n  return \"貌似你没有使用'puts'向控制台打印两次用户提示。\"\nend\n\nif
       code.scan(\"gets.chomp\").length < 2\n  return \"确保使用两次gets.chomp来获取用户的输入：
-      第一次是待搜索文本，第二次是要修改的单词或短语。\"\nend\n\nreturn true"
+      第一次是待搜索英文文本，第二次是要过滤的单词或短语。\"\nend\n\nreturn true"
     updated_at: 2012-10-26 14:24:13.771000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -111,10 +112,10 @@ sections:
         UFphJgRSlwACAHO4
     created_at: 2012-09-20 00:19:50.000000000 Z
     default_code: ''
-    entry: ! "接下来，我们将要把用户输入的文本拆分成一个个单词。\n\n
-      Ruby有一个内置的方法`.split`，该方法的参数是一个字符串，返回一个数组。
+    entry: ! "接下来，我们将要把用户输入的英文文本拆分成一个个单词。\n\n
+      Ruby有一个内置的方法`.split`，该方法的参数是一个字符串，返回值是一个数组。
       如果我们在其括弧内放一个字符串，`.split`方法将会以这个字符串为分界，
-      将文本拆分，这个分界的字符串称为 **分隔符** 。
+      将文本拆分，这个用于分界的字符串称为 **分隔符** 。
       例如：\n\n
       \   text.split(\",\")\n\n
       告诉Ruby以逗号为分界将`text`拆分。"
@@ -157,11 +158,11 @@ sections:
     hint: ! "记住，`.each`的语法是：\n\n    array.each { |占位符|
       动作 }\n\n 或者是： \n\n    array.each do |占位符|\n      动作\n
       又一个动作\n      再来一个动作！\n    end"
-    instruction: ! '让我们先从简单的入手：写一个`.each`循环遍历`words`，使用`print`将每个单词打印出来。'
+    instruction: ! '让我们先从简单的入手：写一个`.each`循环遍历`words`，使用`print`将每个英文单词打印出来。'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: 节选修订！
+    name: 敏感词！
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -179,10 +180,10 @@ sections:
     created_at: 2012-09-20 00:19:52.000000000 Z
     default_code: ''
     entry: ! '好！但是我们的输入还有两个问题：1. 单词之间没有空格；
-      2. 我们的程序并没有将我们想要修订的单词替换成`"REDACTED"`。
+      2. 我们的程序并没有将我们想要过滤的敏感单词替换成`"◆敏感词◆"`。
 
 
-      我们可以用`if`/`else`语句来解决这些问题！'
+      我们可以用`if`/`else`语句来解决上述问题！'
     expect_error: false
     feedback_stats:
       correctness_test_issue: 2
@@ -191,21 +192,21 @@ sections:
     from_console: false
     hint: ! "记住，`if`/`else`的语法是这样的：\n\n    if condition\n
       执行这个动作\n    else\n      执行另一个动作\n    end"
-    instruction: 在`.each`循环内部添加一个`if`/`else`语句：如果当前单词不是要修订的单词，
-      则打印该单词加上`" "`；否则，打印`"REDACTED "`（后面的空格确保了"REDACTED"与后续单词的间隔）。
+    instruction: 在`.each`循环内部添加一个`if`/`else`语句：如果当前单词不是要过滤的单词，
+      则打印该单词 + `" "`；否则，打印`"◆敏感词◆ "`（后面的空格确保了"◆敏感词◆"与后续单词的间隔）。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: 控制流秘籍
+    name: 控制流使用技巧
     solution_code: ''
     solution_entry: ''
     tabs: []
     test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确——
       如需帮助可查看提示。\"\nend\n\noutput = \"\"\nwords.each
       do |word|\n  if word != redact\n    output += word + \" \"\n  else\n    output
-      += \"REDACTED \"\n  end\nend\n\nunless prints.include? output\n  return \"
-      确保把用户输入文本中的每个单词打印到控制台，除非这个单词是要修订的单词；
-      如果是要修订的单词，则打印REDACTED（全部大写！）。\"\nend\n\nreturn
+      += \"◆敏感词◆ \"\n  end\nend\n\nunless prints.include? output\n  return \"
+      确保把用户输入文本中的每个单词打印到控制台，除非这个单词是要过滤的单词；
+      如果是要过滤的单词，则打印“◆敏感词◆”。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-19 16:54:59.609000000 Z
     view: console_and_editor
@@ -214,14 +215,14 @@ sections:
         UFphKk1HYwACAHen
     created_at: 2012-09-20 00:19:54.000000000 Z
     default_code: ''
-    entry: ! '完美！随意折腾你的修订程序吧，看看你会得到什么样的结果。考虑以下几点：
+    entry: ! '完美！随意折腾你的过滤程序吧，看看你会得到什么样的结果。考虑以下几点：
 
 
-      * 如何使你的修订程序对单词的大小写不敏感？
+      * 如何使你的过滤程序对英文单词的大小写不敏感？
 
-      * 如何使你的程序能对多个单词进行修订？
+      * 如何使你的程序能对多个英文单词过滤？
 
-      * 如何将一个经过修订的字符串保存为一个变量，而不只是打印到控制台？'
+      * 如何将一个经过过滤的字符串保存为一个变量，而不只是打印到控制台？'
     expect_error: false
     feedback_stats:
       typo: 3
@@ -229,7 +230,7 @@ sections:
       instructional_text_issue: 1
     from_console: false
     hint: ''
-    instruction: 就这些问题了。现在，单击Run来结束这个REDACTED。
+    instruction: 就这些问题了。现在，单击Run来结束这个 ◆敏感词◆ 。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
