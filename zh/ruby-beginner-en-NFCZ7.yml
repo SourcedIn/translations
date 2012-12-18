@@ -438,7 +438,7 @@ sections:
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Or
+    name: 或运算
     tabs: []
     test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保在每个=后面键入true或者false！
       \"\nend\n\nif !boolean_1\n  return \"貌似
@@ -454,26 +454,25 @@ sections:
     created_at: 2012-09-19 16:26:44.000000000 Z
     default_code: ! "# boolean_1 = !true\nboolean_1 = \n\n# boolean_2 = !true && !true\nboolean_2
       = \n\n# boolean_3 = !(700 / 10 == 70)\nboolean_3 = "
-    entry: ! "Finally, Ruby has the boolean operator **not** (`!`). `!` makes `true`
-      values `false`, and vice-versa.\n\n    !true # => false\n    !false # => true\n"
+    entry: ! "最后，Ruby还有一个布尔操作符 **非运算符** （`!`）。`!`使得`true`变成`false`，反之亦然。
+      \n\n    !true # => false\n    !false # => true\n"
     expect_error: false
     feedback_stats:
       positive_feedback: 2
       total: 2
     from_console: false
     hint: ''
-    instruction: Set each variable to `true` or `false` depending on what value you
-      expect the expression to return.
+    instruction: 根据你对表达式的判断，将每个变量赋值为`true`或者`false`。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Not
+    name: 非运算
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
-      type true or false after each =!\"\nend\n\nif boolean_1\n  return \"It looks
-      like your value for boolean_1 isn't correct.\"\nend\n\nif boolean_2\n  return
-      \"It looks like your value for boolean_2 isn't correct.\"\nend\n\nif boolean_3\n
-      \ return \"It looks like your value for boolean_3 isn't correct.\"\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保在每个=后面键入true或者false！
+      \"\nend\n\nif boolean_1\n  return \"貌似
+      你给boolean_1赋的值不正确。\"\nend\n\nif boolean_2\n  return
+      \"貌似你给boolean_2赋的值不正确。\"\nend\n\nif boolean_3\n
+      \ return \"貌似你给boolean_3赋的值不正确。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-02 12:29:44.192000000 Z
     view: console_and_editor
