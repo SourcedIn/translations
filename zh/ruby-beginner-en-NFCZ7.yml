@@ -184,15 +184,13 @@ sections:
       raw_data: !binary |-
         UFnsEQYJ4QACAUz+
     created_at: 2012-09-19 16:00:17.000000000 Z
-    default_code: ! "hungry = false\n\n___ ___\n  puts \"I'm writing Ruby programs!\"\n___\n
-      \ puts \"Time to eat!\"\n___"
-    entry: ! "Sometimes you want to use control flow to check if something is *false*,
-      rather than if it's true. You could reverse your `if`/`else`, but Ruby will
-      do you one better: it will let you use an `unless` statement.\n\nLet's say you
-      don't want to eat *unless* you're hungry. That is, while you're not hungry,
-      you write programs, but if you *are* hungry, you eat. You might write that program
-      in Ruby like this:\n\n    unless hungry\n      # Write some sweet programs\n
-      \   else\n      # Have some noms\n    end"
+    default_code: ! "hungry = false\n\n___ ___\n  puts \"我正在编写Ruby程序！\"\n___\n
+      \ puts \"该吃饭啦！\"\n___"
+    entry: ! "有时候你可能想要在某个条件为 *假* 而不是为真的情况下执行操作。
+      当然，你可以将`if`/`else`反过来写，不过Ruby提供了一个更好的选择：`unless`语句。\n\n
+      比如说你不想吃东西， *除非* 你饿了。也就是说，当你不饿的时候，你写程序；当你饿的时候，你吃东西。写成Ruby程序就是这样：
+      \n\n    unless hungry\n      # 写一些优美的程序\n
+      \   else\n      # 吃个包子\n    end"
     expect_error: false
     feedback_stats:
       other: 3
@@ -202,21 +200,18 @@ sections:
       correctness_test_issue: 2
     from_console: false
     hint: ''
-    instruction: We've started you off in the editor. Replace the `___`s with the
-      correct `unless` statement code so your program prints out `"I'm writing Ruby
-      programs!"`
+    instruction: 我们在编辑器中写了一部分代码。用正确的`unless`语句代码替换`___`，
+      使得程序打印出`"我正在编写Ruby程序！"`
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Unless
+    name: unless
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
-      replace the __s with the correct part of the unless statement!\"\nend\n\nif
-      code.scan(\"unless\").length == 0\n  return \"It looks like you didn't include
-      an unless statement.\"\nend\n\nif code.scan(\"end\").length == 0\n  return \"Don't
-      forget to end your unless statement with an 'end'!\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保用正确的unless语句替换__！\"\nend\n\nif
+      code.scan(\"unless\").length == 0\n  return \"貌似你没有写unless语句。
+      \"\nend\n\nif code.scan(\"end\").length == 0\n  return \"别忘了以'end'结束你的unless语句！\"\nend\n\nreturn true"
     updated_at: 2012-11-24 16:36:25.552000000 Z
     view: console_and_editor
   feedback_total: 46
@@ -224,7 +219,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Introduction to Control Flow
+  name: 控制流入门
   num_forum_answers: 24
   num_forum_questions: 16
   published: true
