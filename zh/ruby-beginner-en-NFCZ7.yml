@@ -285,18 +285,16 @@ sections:
 
 
       test_4 = -11 __ 4'
-    entry: ! 'We can also check to see if one value is less than, less than or equal
-      to, greater than, or greater than or equal to another. Those operators look
-      like this:
+    entry: ! '我们还可以检查数值之间小于、小于等于、大于和大于等于的情况，如下所示：
 
 
-      * Less than: `<`
+      * 小于：`<`
 
-      * Less than or equal to: `<=`
+      * 小于等于：`<=`
 
-      * Greater than: `>`
+      * 大于：`>`
 
-      * Greater than or equal to: `>=`
+      * 大于等于：`>=`
 
 '
     expect_error: false
@@ -309,24 +307,22 @@ sections:
       positive_feedback: 2
     from_console: false
     hint: ''
-    instruction: ! 'We''ve set up a few variables in the editor. We want them all
-      to evaluate to `true`. Your job: replace the `__`s with `<`, `<=`, `>`, or `>=`
-      to make the expression for each variable true!'
+    instruction: ! '我们在编辑器中写了一些变量。我们希望这些变量的值都为`true`。
+      你的任务：将`__`替换为`<`、`<=`、`>`或者`>=`，使得每个表达式的值都是真！'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Less Than or Greater Than
+    name: 小于还是大于
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
-      replace each __ with a comparator.\"\nend\n\nif !test_1\n  return \"It looks
-      like test_1 is false. Make it true!\"\nend\n\nif !test_2\n  return \"It looks
-      like test_2 is false. Make it true!\"\nend\n\nif !test_3\n  return \"It looks
-      like test_3 is false. Make it true!\"\nend\n\nif !test_4\n  return \"It looks
-      like test_4 is false. Make it true!\"\nend\n\nif code.scan(\"<\").length ==
-      0 || code.scan(\">\").length == 0\n  return \"Make sure to use comparators for
-      each expression.\"\nend\n\nif code.scan(\"==\").length > 0 || code.scan(\"!=\").length
-      > 0\n  return \"Let's not use != or == for this exercise—just <, >, <=, and
-      >= for now.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保将每个
+      __替换成一个比较运算符。\"\nend\n\nif !test_1\n  return \"貌似
+      test_1的值是假。使它的值为真！\"\nend\n\nif !test_2\n  return \"貌似
+      test_2的值是假。使它的值为真！\"\nend\n\nif !test_3\n  return \"貌似
+      test_3的值是假。使它的值为真！\"\nend\n\nif !test_4\n  return \"貌似
+      test_4的值是假。使它的值为真！\"\nend\n\nif code.scan(\"<\").length ==
+      0 || code.scan(\">\").length == 0\n  return \"确保在每个表达式中使用比较运算符。
+      \"\nend\n\nif code.scan(\"==\").length > 0 || code.scan(\"!=\").length
+      > 0\n  return \"请不要在这个练习中使用!=或==——还是使用<、>、<=和>=吧。\"\nend\n\nreturn true"
     updated_at: 2012-10-11 06:41:42.371000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
