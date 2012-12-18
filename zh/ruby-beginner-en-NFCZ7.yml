@@ -376,9 +376,8 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 15:57:06.000000000 Z
   default_view: console_and_editor
-  entry: Comparing values is important in Ruby, but what if we want to check more
-    than one condition at once? For instance, what if we want to check if x AND y
-    are true, or x OR y? For that, we'll need boolean operators.
+  entry: 比较数值大小在Ruby中是重要的，但是如果我们想要一次检查多个条件，该怎么做呢？
+    比如，假如我们想要检查是否x和y都为真，或者检查是否x或y都为真，该怎么做？此时我们需要布尔操作符。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
@@ -387,15 +386,13 @@ sections:
     default_code: ! "# boolean_1 = 77 < 78 && 77 < 77\nboolean_1 = \n\n# boolean_2
       = true && 100 >= 100\nboolean_2 = \n\n# boolean_3 = 2**3 == 8 && 3**2 == 9\nboolean_3
       = "
-    entry: ! "Comparators aren't the only operators available to you in Ruby. You
-      can also use **logical** or **boolean operators**. Ruby has three: and (`&&`),
-      or (`||`), and not (`!`). Boolean operators result in boolean values: `true`
-      or `false`.\n\nThe boolean operator **and**, `&&`, only results in `true` when
-      **both** expression on either side of `&&` are `true`. Here's how `&&` works:\n\n
+    entry: ! "比较运算符并不是Ruby中仅有的操作符，你还可以使用 **逻辑操作符** 或者称为 **布尔操作符** 。
+      Ruby有三个布尔操作符：与运算符（`&&`）、或运算符（`||`）以及非运算符（`!`）。
+      布尔操作符的运算结果是布尔值：`true`或者`false`。\n\n
+      布尔操作符 **与** （`&&`）仅在其两边的表达式均为`true`时结果为`true`。下面演示了`&&`的例子：\n\n
       \   true && true # => true\n    true && false # => false\n    false && true
-      # => false\n    false && false # => false\n\nFor example, `1 < 2 && 2 < 3` is
-      `true` because it's true that one is less than two **and** that two is less
-      than three."
+      # => false\n    false && false # => false\n\n
+      例如：`1 < 2 && 2 < 3`得到`true`，因为1小于2 **而且** 2小于3."
     expect_error: false
     feedback_stats:
       positive_feedback: 4
@@ -406,19 +403,16 @@ sections:
       correctness_test_issue: 1
     from_console: false
     hint: ''
-    instruction: Let's practice a bit with `&&`. Check out the boolean expressions
-      and set each variable to `true` or `false` depending on what value you expect
-      the expression to return.
+    instruction: 让我们来练习使用`&&`。查看每个布尔表达式，然后根据你的判断将每个变量赋值为`true`或者`false`。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: And
+    name: 与运算
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
-      type true or false after each =!\"\nend\n\nif boolean_1\n  return \"It looks
-      like your value for boolean_1 isn't correct.\"\nend\n\nif !boolean_2\n  return
-      \"It looks like your value for boolean_2 isn't correct.\"\nend\n\nif !boolean_3\n
-      \ return \"It looks like your value for boolean_3 isn't correct.\"\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保在每个=后面键入true或者false！
+      \"\nend\n\nif boolean_1\n  return \"貌似你给boolean_1赋的值不大正确。\"\nend\n\nif !boolean_2\n  return
+      \"貌似你给boolean_2赋的值不大正确。\"\nend\n\nif !boolean_3\n
+      \ return \"貌似你给boolean_3赋的值不大正确。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-02 12:24:55.145000000 Z
     view: console_and_editor
