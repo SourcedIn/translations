@@ -153,11 +153,10 @@ sections:
         UFnsEIqTxQACAUe7
     created_at: 2012-09-19 16:00:16.000000000 Z
     default_code: ''
-    entry: ! "What if you want more than two options, though? It's `elsif` to the
-      rescue! The `elsif` statement can add any number of alternatives to an `if`/`else`
-      statement, like so:\n\n    if x < y  # Assumes x and y are defined\n      puts
-      \"x is less than y!\"\n    elsif x > y\n      puts \"x is greater than y!\"\n
-      \   else\n      puts \"x equals y!\"\n    end\n"
+    entry: ! "假如你想要更多的选择情况，该怎么做呢？这时可以用`elsif`！
+      `elsif`语句可以向`if`/`else`语句增加无限个选择，像这样：\n\n    if x < y  # 假设x和y均已定义\n      puts
+      \"x小于y！\"\n    elsif x > y\n      puts \"x大于y！\"\n
+      \   else\n      puts \"x等于y！\"\n    end\n"
     expect_error: false
     feedback_stats:
       correctness_test_issue: 2
@@ -168,7 +167,7 @@ sections:
       typo: 1
     from_console: false
     hint: ''
-    instruction: Add an `elsif` block to your `if`/`else` statement in the editor.
+    instruction: 在编辑器中向你的`if`/`else`语句添加一个`elsif`代码块。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
@@ -176,10 +175,9 @@ sections:
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code.scan(\"elsif\").length == 0\n  return \"It looks like
-      you didn't include an elsif statement.\"\nend\n\nif exception.kind_of? SyntaxError\n
-      \ return \"It looks like your 'elsif' block isn't quite right. Check the example
-      in the instructions if you need help!\"\nend\n\nreturn true"
+    test_functions: ! "if code.scan(\"elsif\").length == 0\n  return \"貌似你没有写elsif语句。
+      \"\nend\n\nif exception.kind_of? SyntaxError\n
+      \ return \"貌似你的'elsif'代码块不大正确。如需帮助可查看左边的例程！\"\nend\n\nreturn true"
     updated_at: 2012-11-02 12:33:22.806000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
