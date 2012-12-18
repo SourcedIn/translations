@@ -483,12 +483,11 @@ sections:
     default_code: ! "# boolean_1 = (3 < 4 || false) && (false || true)\nboolean_1
       = \n\n# boolean_2 = !true && (!true || 100 != 5**2)\nboolean_2 = \n\n# boolean_3
       = true || !(true || false)\nboolean_3 = "
-    entry: ! "You can combine boolean operators in your expressions. Combinations
-      like\n\n    (x && (y || w)) && z\n\nare not only legal expressions, but are
-      extremely useful tools for your programs.\n\nThese expression may take some
-      getting used to, but you can always use parentheses to control the order of
-      evaluation. Expressions in parentheses are always evaluated before anything
-      outside parentheses."
+    entry: ! "你可以将几个布尔操作符结合起来使用，像这样：
+      \n\n    (x && (y || w)) && z\n\n
+      这个表达式不仅是合法的，而且是非常有用的。\n\n
+      你可能需要一些时间来适应这种用法，不过你随时可以使用括弧来控制计算优先级。
+      括弧内的表达式总是比外面的先计算。"
     expect_error: false
     feedback_stats:
       correctness_test_issue: 1
@@ -498,18 +497,17 @@ sections:
       positive_feedback: 3
     from_console: false
     hint: ''
-    instruction: Last one! Set each variable to `true` or `false` depending on what
-      value you expect the expression to return.
+    instruction: 最后一个！根据你对表达式的判断，将每个变量赋值为`true`或者`false`。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Combining Boolean Operators
+    name: 多个布尔操作符结合起来
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
-      type true or false after each =!\"\nend\n\nunless boolean_1\n  return \"It looks
-      like your value for boolean_1 isn't correct.\"\nend\n\nif boolean_2\n  return
-      \"It looks like your value for boolean_2 isn't correct.\"\nend\n\nunless boolean_3\n
-      \ return \"It looks like your value for boolean_3 isn't correct.\"\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保在每个=后面键入true或者false！
+      \"\nend\n\nunless boolean_1\n  return \"貌似
+      你给boolean_1赋的值不正确。\"\nend\n\nif boolean_2\n  return
+      \"貌似你给boolean_2赋的值不正确。\"\nend\n\nunless boolean_3\n
+      \ return \"貌似你给boolean_3赋的值不正确。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-02 12:39:05.278000000 Z
     view: console_and_editor
@@ -518,7 +516,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Boolean Operators
+  name: 布尔操作符
   num_forum_answers: 13
   num_forum_questions: 8
   published: true
