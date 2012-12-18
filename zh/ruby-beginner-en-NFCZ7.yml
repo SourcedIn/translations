@@ -84,18 +84,14 @@ sections:
         UFnsDoqTxQACAUdn
     created_at: 2012-09-19 16:00:14.000000000 Z
     default_code: ''
-    entry: ! "Ruby's `if` statement takes an **expression**, which is just a fancy
-      word for something that has a value (like `4`, `true`, or `pants`). If that
-      expression is `true`, Ruby executes the block of code that follows the `if`.
-      If it's not true (that is, `false`), Ruby doesn't execute that block of code:
-      it skips it and goes on to the next thing.\n\nHere's an example of an `if` statement
-      in action:\n\n    if 1 < 2\n      print \"I'm getting printed because one is
-      less than two!\"\n    end\n\nRuby doesn't care about **whitespace** (spaces
-      and blank lines), so the indentation of the print statement isn't *necessary*.
-      However, it's a convention that Rubyists (Ruby enthusiasts) follow, so it's
-      good to get in the habit now. The block of code following an `if` should be
-      indented two spaces.\n\nWhen you're done with your `if`, you have to tell Ruby
-      by typing `end`."
+    entry: ! "Ruby的`if`语句使用一个 **expression** 作为判断条件。如果表达式的值是`true`，则Ruby执行紧跟`if`语句的代码块。
+      如果其值不是true（也就是说是`false`），那么Ruby不执行那个代码块：
+      它跳过该代码块到达下面的语句。\n\n下面是`if`语句的一个例子：\n\n
+      if 1 < 2\n      print \"我正在被打印出来，因为1小于2！\"\n    end\n\n
+      Ruby对 **空白** （空格和空行）不感兴趣，所以打印语句的缩进不是 *必须的* 。
+      不过Ruby程序员都遵循这个惯例，所以最好养成这个好习惯。
+      紧跟`if`后面的代码块应该缩进两个空格。\n\n
+      当你完成`if`语句时，应该以`end`来结尾。"
     expect_error: false
     feedback_stats:
       correctness_test_issue: 3
@@ -105,22 +101,20 @@ sections:
       instructional_text_issue: 1
     from_console: false
     hint: ''
-    instruction: Write your own `if` statement in the editor. It can take any expression
-      you want (even just `true`!), but it should evaluate to `true`. When it does,
-      it should print a string of your choice to the console (using `print` or `puts`).
+    instruction: 在编辑器中写你自己的`if`语句。你可以给它写任何表达式作为判断条件（甚至是`true`！），
+      但该表达式的值必须是`true`。然后，在随后的代码块中打印一个字符串（随便你写什么）到控制台（使用`print`或`puts`）。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: If
+    name: if
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      code.scan(\"if\").length == 0\n  return \"Make sure to use an 'if' statement!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"It looks like your 'if' statement
-      syntax isn't quite right. Take a look at the example if you need help!\"\nend\n\nif
-      prints.length == 0\n  return \"It looks like you didn't print anything to the
-      console.\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你没有写任何代码！\"\nend\n\nif
+      code.scan(\"if\").length == 0\n  return \"确保使用'if'语句！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"貌似你的'if'语句语法不大正确。
+      如需帮助请看第一个练习的例程！\"\nend\n\nif
+      prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn true"
     updated_at: 2012-10-02 03:40:05.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
