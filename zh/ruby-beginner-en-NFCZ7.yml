@@ -85,7 +85,7 @@ sections:
     created_at: 2012-09-19 16:00:14.000000000 Z
     default_code: ''
     entry: ! "Ruby的`if`语句使用一个 **expression** 作为判断条件。如果表达式的值是`true`，则Ruby执行紧跟`if`语句的代码块。
-      如果其值不是true（也就是说是`false`），那么Ruby不执行那个代码块：
+      如果其值不是真（也就是说是`false`），那么Ruby不执行那个代码块：
       它跳过该代码块到达下面的语句。\n\n下面是`if`语句的一个例子：\n\n
       if 1 < 2\n      print \"我正在被打印出来，因为1小于2！\"\n    end\n\n
       Ruby对 **空白** （空格和空行）不感兴趣，所以打印语句的缩进不是 *必须的* 。
@@ -113,7 +113,7 @@ sections:
     test_functions: ! "if code == nil\n  return \"你没有写任何代码！\"\nend\n\nif
       code.scan(\"if\").length == 0\n  return \"确保使用'if'语句！\"\nend\n\nif
       exception.kind_of? SyntaxError\n  return \"貌似你的'if'语句语法不大正确。
-      如需帮助请看第一个练习的例程！\"\nend\n\nif
+      如需帮助可查看左边的例程！\"\nend\n\nif
       prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn true"
     updated_at: 2012-10-02 03:40:05.000000000 Z
     view: console_and_editor
@@ -122,11 +122,10 @@ sections:
         UFnsD5S4YAACAUgi
     created_at: 2012-09-19 16:00:15.000000000 Z
     default_code: ''
-    entry: ! "The partner to the `if` statement is the `else` statement. An `if`/`else`
-      statement says to Ruby: \"If this expression is true, run this code block; otherwise,
-      run the code after the `else` statement.\" Here's an example:\n\n    if 1 >
-      2\n      print \"I won't get printed because one is less than two.\"\n    else\n
-      \     print \"That means I'll get printed!\"\n    end\n"
+    entry: ! "`if`语句的搭档是`else`语句。一个`if`/`else`语句的含义是：
+      \"如果这个表达式的值是真，那么运行这个代码块；否则，运行`else`语句后面的代码块。\" 下面是一个例子：\n\n
+      if 1 > 2\n      print \"我不会被打印，因为1小于2。\"\n    else\n
+      \     print \"我会被打印！\"\n    end\n"
     expect_error: false
     feedback_stats:
       other: 2
@@ -134,22 +133,19 @@ sections:
       correctness_test_issue: 1
     from_console: false
     hint: ''
-    instruction: Try it yourself in the editor! Use any expression you like in your
-      `if`/`else` statement, but make sure both branches print a string of your choice
-      to the console.
+    instruction: 你自己在编辑器中试一试！你可以在`if`/`else`语句中使用任何表达式，
+      只是要确保在两个分支中都打印一个字符串（随便写什么）到控制台。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Else
+    name: else
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Check out the example to the left if you need
-      help!\"\nend\n\nif code.scan(\"if\").length == 0 || code.scan(\"else\").length
-      == 0\n  return \"It looks like you didn't use both 'if' and 'else'.\"\nend\n\nif
-      prints.length == 0\n  return \"It looks like you didn't print anything to the
-      console.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可查看左边的例程！
+      \"\nend\n\nif code.scan(\"if\").length == 0 || code.scan(\"else\").length
+      == 0\n  return \"貌似你没有同时使用'if'和'else'。\"\nend\n\nif
+      prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn true"
     updated_at: 2012-10-01 01:04:41.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
