@@ -178,37 +178,34 @@ sections:
         UFphKLVyRwACAIAi
     created_at: 2012-09-20 00:19:52.000000000 Z
     default_code: ''
-    entry: ! 'Good! There were two problems with our output, though: we didn''t have
-      spaces between our words, and our program didn''t actually replace the word
-      we wanted to redact with the word `"REDACTED"`.
+    entry: ! '好！但是我们的输入还有两个问题：1. 单词之间没有空格；
+      2. 我们的程序并没有将我们想要修订的单词替换成`"REDACTED"`。
 
 
-      We can fix that with some `if`/`else` magic!'
+      我们可以用`if`/`else`语句来解决这些问题！'
     expect_error: false
     feedback_stats:
       correctness_test_issue: 2
       total: 3
       other: 1
     from_console: false
-    hint: ! "Remember, `if`/`else` looks like this:\n\n    if condition\n      take
-      this action\n    else\n      take this other action\n    end"
-    instruction: Add an `if`/`else` statement inside your `.each`. Write it so that
-      if the word it encounters isn't the word to be redacted, your program just prints
-      that word + `" "`; otherwise, your program should print `"REDACTED "` (the extra
-      space ensures that "REDACTED" doesn't crash into the word that follows it).
+    hint: ! "记住，`if`/`else`的语法是这样的：\n\n    if condition\n
+      执行这个动作\n    else\n      执行另一个动作\n    end"
+    instruction: 在`.each`循环内部添加一个`if`/`else`语句：如果当前单词不是要修订的单词，
+      则打印该单词加上`" "`；否则，打印`"REDACTED "`（后面的空格确保了"REDACTED"与后续单词的间隔）。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Control Flow Know-How
+    name: 控制流秘籍
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Your syntax doesn't
-      look quite right--check the Hint if you need help.\"\nend\n\noutput = \"\"\nwords.each
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确——
+      如需帮助可查看提示。\"\nend\n\noutput = \"\"\nwords.each
       do |word|\n  if word != redact\n    output += word + \" \"\n  else\n    output
-      += \"REDACTED \"\n  end\nend\n\nunless prints.include? output\n  return \"Make
-      sure to print each word from the user's text to the console unless that word
-      is the word to be redacted; if it is, print REDACTED (all caps!).\"\nend\n\nreturn
+      += \"REDACTED \"\n  end\nend\n\nunless prints.include? output\n  return \"
+      确保把用户输入文本中的每个单词打印到控制台，除非这个单词是要修订的单词；
+      如果是要修订的单词，则打印REDACTED（全部大写！）。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-19 16:54:59.609000000 Z
     view: console_and_editor
