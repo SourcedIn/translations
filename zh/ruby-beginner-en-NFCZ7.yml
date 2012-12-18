@@ -410,9 +410,9 @@ sections:
     name: 与运算
     tabs: []
     test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保在每个=后面键入true或者false！
-      \"\nend\n\nif boolean_1\n  return \"貌似你给boolean_1赋的值不大正确。\"\nend\n\nif !boolean_2\n  return
-      \"貌似你给boolean_2赋的值不大正确。\"\nend\n\nif !boolean_3\n
-      \ return \"貌似你给boolean_3赋的值不大正确。\"\nend\n\nreturn
+      \"\nend\n\nif boolean_1\n  return \"貌似你给boolean_1赋的值不正确。\"\nend\n\nif !boolean_2\n  return
+      \"貌似你给boolean_2赋的值不正确。\"\nend\n\nif !boolean_3\n
+      \ return \"貌似你给boolean_3赋的值不正确。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-02 12:24:55.145000000 Z
     view: console_and_editor
@@ -423,9 +423,9 @@ sections:
     default_code: ! "# boolean_1 = 2**3 != 3**2 || true\nboolean_1 = \n\n# boolean_2
       = false || -10 > -9\nboolean_2 = \n\n# boolean_3 = false || false\nboolean_3
       = "
-    entry: ! "Ruby also has the **or** operator (`||`). Ruby's `||` is called an **inclusive
-      or** because it evaluates to `true` when one or the other *or both* expressions
-      are true. Check it out:\n\n    true || true # => true\n    true || false # =>
+    entry: ! "Ruby还具有 **或** 运算（`||`）。Ruby的`||`符号称为 **或逻辑运算** ，
+      因为当符号两端的表达式只要有一个为真，它就得到`true`。
+      如下所示：\n\n    true || true # => true\n    true || false # =>
       true\n    false || true # => true\n    false || false # => false\n"
     expect_error: false
     feedback_stats:
@@ -434,18 +434,17 @@ sections:
       positive_feedback: 3
     from_console: false
     hint: ''
-    instruction: Set each variable to `true` or `false` depending on what value you
-      expect the expression to return.
+    instruction: 根据你对表达式的值的判断，设置每个变量的值为`true`或者`false`。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
     name: Or
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
-      type true or false after each =!\"\nend\n\nif !boolean_1\n  return \"It looks
-      like your value for boolean_1 isn't correct.\"\nend\n\nif boolean_2\n  return
-      \"It looks like your value for boolean_2 isn't correct.\"\nend\n\nif boolean_3\n
-      \ return \"It looks like your value for boolean_3 isn't correct.\"\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保在每个=后面键入true或者false！
+      \"\nend\n\nif !boolean_1\n  return \"貌似
+      你给boolean_1赋的值不正确。\"\nend\n\nif boolean_2\n  return
+      \"貌似你给boolean_2赋的值不正确。\"\nend\n\nif boolean_3\n
+      \ return \"貌似你给boolean_3赋的值不正确。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-02 12:27:40.905000000 Z
     view: console_and_editor
