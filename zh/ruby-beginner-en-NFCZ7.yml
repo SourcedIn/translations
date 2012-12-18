@@ -4,16 +4,15 @@ classification: :lesson
 created_at: 2012-09-19 15:55:55.000000000 Z
 domain: :freestyle
 down_votes: 225
-entry: Now that we know how to write simple programs, let's learn how to write more
-  complex programs that can respond to user input.
+entry: 我们已经知道怎样编写简单的程序，现在让我们学习编写复杂一点的程序：对用户输入作出响应。
 feedback_total: 123
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
   raw_data: !binary |-
     TyFOXyFuzxlcRMGV
 level: :beginner
-locale: en
-name: Control Flow in Ruby
+locale: zh
+name: Ruby的控制流
 num_exercises: 17
 num_published_exercises: 17
 num_published_sections: 4
@@ -44,27 +43,21 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 15:55:55.000000000 Z
   default_view: console_and_editor
-  entry: Control flow lets us make our programs respond to changes in its environment,
-    whether from the user, from local variables, or from other programs. Let's get
-    started!
+  entry: 控制流让程序可以对其所处环境的变化作出响应，这些变化可能是来自于用户、本地变量或者是其它程序。好了，让我们开始吧！
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFnrDJro+AACATQ9
     created_at: 2012-09-19 15:55:56.000000000 Z
-    default_code: ! "print \"Integer please: \"\nuser_num = Integer(gets.chomp)\n\nif
-      user_num < 0\n  puts \"You picked a negative integer!\"\nelsif user_num > 0\n
-      \ puts \"You picked a positive integer!\"\nelse\n  puts \"You picked zero!\"\nend"
-    entry: ! 'You may have noticed that the kinds of programs we''ve written so far
-      in Ruby aren''t very flexible. Sure, they can take user input, but they always
-      produce the same result based on that input; they don''t change their behavior
-      in reaction to the **environment** (the collection of all variables and their
-      values that exist in the program at a given time).
+    default_code: ! "print \"请输入整数：\"\nuser_num = Integer(gets.chomp)\n\nif
+      user_num < 0\n  puts \"你输入了一个负整数！\"\nelsif user_num > 0\n
+      \ puts \"你输入了一个正整数！\"\nelse\n  puts \"你输入了零！\"\nend"
+    entry: ! '你可能已经注意到迄今为止我们所写的Ruby程序都不大灵活。
+      没错，这些程序接受用户的输入，但是它们总是输出一样的结果；
+      它们并不改变自身行为来响应 **环境** （一个程序中特定时间内所有变量及其值的集合）。
 
 
-      **Control flow** gives us the flexibility we''re looking for. We can select
-      different outcomes depending on information the user types, the result of a
-      computation, or the value returned by another part of the program.'
+      **控制流** 使程序具有了灵活性。我们可以根据用户输入的信息来输出不同的内容：一个计算结果，或是由程序的另一个部分返回的值。'
     expect_error: false
     feedback_stats:
       instructional_text_issue: 1
@@ -74,19 +67,16 @@ sections:
       other: 1
     from_console: false
     hint: ''
-    instruction: Check out the code in the editor. There's some new syntax there,
-      but we'll bet you can guess what it does. Click Run to see the program in action!
-      (Go ahead and give Ruby an integer—that is, a positive or negative number with
-      no decimal bit.)
+    instruction: 阅读编辑器中的代码。我们用到了一些新语法，不过我们相信你可以看懂。
+      单击Run来看看程序执行的结果！（然后输入一个整数——也就是说一个负数或者整数，不带小数点。）
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: How It Works
+    name: 工作原理
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? ArgumentError\n  return \"Make sure to
-      enter an integer!\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? ArgumentError\n  return \"确保输入一个整数！\"\nend\n\nreturn true"
     updated_at: 2012-10-20 17:11:49.373000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
