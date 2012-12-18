@@ -232,9 +232,7 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 15:56:59.000000000 Z
   default_view: console_and_editor
-  entry: You've probably noticed that Ruby can compare numeric values using familiar
-    signs like < and >. These are called comparators or relational operators, and
-    Ruby has more than just these two!
+  entry: 你可能已经注意到Ruby可以使用“>”和“<”来比较数值大小。这些符号称为比较运算符或者关系操作符，而Ruby还有许多这样的符号！
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
@@ -244,13 +242,11 @@ sections:
 
 
       is_false = 2 __ 3'
-    entry: ! "In Ruby, we assign values to variables using `=`, the **assignment operator**.
-      But if we've already used `=` for assignment, how do we check to see if two
-      things are equal? Well, we use `==`, which is a **comparator** (also called
-      a **relational operator**). `==` means \"is equal to.\" When you type\n\n    x
-      = 2\n    y = 2\n    if x == y\n      print \"x and y are equal!\"\n    end\n\nyou're
-      saying: \"if x equals y, print 'x and y are equal!'\" You can also check to
-      see if two values are *not* equal using the `!=` comparator."
+    entry: ! "在Ruby中，我们为变量赋值时使用`=`，即 **赋值运算符** 。
+      既然我们已经使用`=`来赋值，那么我们用什么符号来检查两个值是否相等呢？
+      我们使用`==`，即 **比较运算符** （也叫做 **关系操作符** ）。
+      `==`的意思是\"等于\"。当你键入：\n\n    x = 2\n    y = 2\n    if x == y\n      print \"x和y是相等的！\"\n    end\n\n
+      这段代码的意思是：\"如果x等于y，则打印'x和y是相等的！'\" 同时，你可以使用`!=`来检查两个值是否 *不相等* 。"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 1
@@ -260,19 +256,18 @@ sections:
       other: 2
     from_console: false
     hint: ''
-    instruction: ! 'We''ve got two variables in the editor: `is_true` and `is_false`.
-      Replace the `__` with `==` or `!=` to make `is_true` evaluate to `true` and
-      `is_false` evaluate to `false`.'
+    instruction: ! '我们在编辑器中有两个变量：`is_true`和`is_false`。
+      将`__`替换为`==`或`!=`，使得`is_true`的值为`true`，`is_false`的值为`false`。'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Equal or Not?
+    name: 相等还是不相等？
     tabs: []
-    test_functions: ! "if code.scan(\"!=\").length == 0\n  return \"It looks like
-      you didn't use != in your code.\"\nend\n\nif code.scan(\"==\").length == 0\n
-      \ return \"It looks like you didn't use == in your code.\"\nend\n\nunless is_true\n
-      \ return \"It looks like is_true is false. It should be true!\"\nend\n\nif is_false\n
-      \ return \"It looks like is_false is true! It should be false.\"\nend\n\nreturn
+    test_functions: ! "if code.scan(\"!=\").length == 0\n  return \"貌似你没有在代码中使用!=。
+      \"\nend\n\nif code.scan(\"==\").length == 0\n
+      \ return \"貌似你没有在代码中使用==。\"\nend\n\nunless is_true\n
+      \ return \"貌似is_true的值是false。它应该是true！\"\nend\n\nif is_false\n
+      \ return \"貌似is_false的值是true。它应该是false！\"\nend\n\nreturn
       true"
     updated_at: 2012-11-02 12:25:27.310000000 Z
     view: console_and_editor
