@@ -27,3 +27,8 @@ Translations
 * Started: 16.12.2012
 * Finished: 18.12.2012
 * Contact: zoogar@163.com
+
+* File: ruby-beginner-en-NFCZ7.yml
+* Started: 18.12.2012
+* Finished:
+* Contact: zoogar@163.com
