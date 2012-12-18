@@ -25,5 +25,5 @@ Translations
 
 * File: ruby-beginner-en-mzrZ6.yml
 * Started: 16.12.2012
-* Finished:
+* Finished: 18.12.2012
 * Contact: zoogar@163.com
