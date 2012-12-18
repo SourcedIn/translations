@@ -214,17 +214,14 @@ sections:
         UFphKk1HYwACAHen
     created_at: 2012-09-20 00:19:54.000000000 Z
     default_code: ''
-    entry: ! 'Perfect! Feel free to mess around with your redactor to see what sorts
-      of results you get. Think about the following:
+    entry: ! '完美！随意折腾你的修订程序吧，看看你会得到什么样的结果。考虑以下几点：
 
 
-      * What could you do to make sure your redactor redacts a word regardless of
-      whether it''s upper case or lower case?
+      * 如何使你的修订程序对单词的大小写不敏感？
 
-      * How could you make your program take multiple, separate words to REDACT?
+      * 如何使你的程序能对多个单词进行修订？
 
-      * How might you make a new redacted string and save it as a variable, rather
-      than just printing it to the console?'
+      * 如何将一个经过修订的字符串保存为一个变量，而不只是打印到控制台？'
     expect_error: false
     feedback_stats:
       typo: 3
@@ -232,12 +229,11 @@ sections:
       instructional_text_issue: 1
     from_console: false
     hint: ''
-    instruction: These are the questions. In the meantime, click Run to finish this
-      REDACTED.
+    instruction: 就这些问题了。现在，单击Run来结束这个REDACTED。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Great Work!
+    name: 漂亮的作品！
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -249,7 +245,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Iteration Obfuscation
+  name: 敏感词过滤
   num_forum_answers: 38
   num_forum_questions: 22
   published: true
