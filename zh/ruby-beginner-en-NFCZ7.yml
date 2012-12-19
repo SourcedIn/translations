@@ -602,29 +602,28 @@ sections:
         UFoCsqnplwACApAN
     created_at: 2012-09-19 17:36:50.000000000 Z
     default_code: ''
-    entry: Good! Now let's review the `unless` statement.
+    entry: 好！现在让我们复习`unless`语句。
     expect_error: false
     feedback_stats:
       instructional_text_issue: 2
       total: 2
     from_console: false
-    hint: ! "Remember, `unless` syntax looks like this:\n\n    unless condition\n
-      \     # Do something!\n    end\n\nFor `unless`, the `# Do something!` bit will
-      execute if the condition evaluates to `false`."
-    instruction: Create an `unless` statement in the editor. The statement should
-      print something to the console.
+    hint: ! "记住，`unless`的语法是这样的：\n\n    unless 条件\n
+      \     # 做一些事情！\n    end\n\n
+      对于`unless`语句，`# 做一些事情！`这段代码将会在条件为`false`时执行。"
+    instruction: 在编辑器中写一个`unless`语句。该语句应向控制台打印一些东西。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Unless
+    name: unless
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"It looks like your syntax isn't quite
-      right. Check the Hint if you need help!\"\nend\n\nif code.scan(\"unless\").length
-      == 0\n  return \"Make sure to include an 'unless' statement!\"\nend\n\nif prints.length
-      == 0\n  return \"It looks like you didn't print anything to the console.\"\nend\n\nreturn
+    test_functions: ! "if code == nil\n  return \"你没有写任何代码！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可查看提示！
+      \"\nend\n\nif code.scan(\"unless\").length
+      == 0\n  return \"确保写了'unless'语句！\"\nend\n\nif prints.length
+      == 0\n  return \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn
       true"
     updated_at: 2012-10-01 01:16:02.000000000 Z
     view: console_and_editor
