@@ -4,16 +4,15 @@ classification: :lesson
 created_at: 2012-09-28 16:51:57.000000000 Z
 domain: :freestyle
 down_votes: 44
-entry: In this project, we'll design a single Ruby method to sort large quantities
-  of data in either ascending or descending order.
+entry: 在这个项目中，我们将设计一个Ruby方法，该方法将海量数据排序为升序或降序。
 feedback_total: 25
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
   raw_data: !binary |-
     TyFOXyFuzxlcRMGV
 level: :beginner
-locale: en
-name: Ordering Your Library
+locale: zh
+name: 整理你的图书馆
 num_exercises: 6
 num_published_exercises: 6
 num_published_sections: 1
@@ -41,8 +40,7 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-28 16:51:57.000000000 Z
   default_view: console_and_editor
-  entry: With the ability to write our own methods, we can extend Ruby's ability to
-    help solve any problem we need to tackle.
+  entry: 一旦我们具备了自己写方法的能力，我们就能扩展Ruby来解决任何碰到的问题。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
@@ -53,22 +51,20 @@ sections:
       }\n  end\nend\n\nbooks = [\"Heart of Darkness\", \"Code Complete\", \"The Lorax\",
       \"The Prophet\", \"Absalom, Absalom!\"]\n\nputs \"A-Z: #{alphabetize(books)}\"\nputs
       \"Z-A: #{alphabetize(books, true)}\"\n"
-    entry: We noticed in the last lesson that `.sort!` didn't have a built-in way
-      of handling sorting in reverse alphabetical order. Now that we know how to write
-      our own Ruby methods, we can fix that!
+    entry: 我们在上一节课中注意到，`.sort!`方法并没有一种内建的方式来处理字母反序排序。
+      既然现在我们知道怎样自己写Ruby方法，那儿我们就可以解决这个问题！
     expect_error: false
     feedback_stats:
       positive_feedback: 1
       total: 1
     from_console: false
     hint: ''
-    instruction: The code in the editor should look familiar—there's only one new
-      idea (on line 1). When you're ready, click Run to execute the code and start
-      building your own method.
+    instruction: 编辑器中的代码应该看起来很熟悉——唯一没见过的地方是第1行。
+      当你准备好后，单击Run来执行代码，然后着手编写你自己的方法。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: What You'll Be Building
+    name: 你将要实现的功能
     tabs: []
     test_functions: ! 'undef alphabetize
 
