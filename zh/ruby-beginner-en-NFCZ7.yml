@@ -665,9 +665,9 @@ sections:
       raw_data: !binary |-
         UFoC1gYJ4QACApdQ
     created_at: 2012-09-19 17:37:26.000000000 Z
-    default_code: ! "# test_1 should be true\ntest_1 = \n\n# test_2 = should be true\ntest_2
-      = \n\n# test_3 = should be false\ntest_3 = "
-    entry: Home stretch! Let's go over boolean operators.
+    default_code: ! "# test_1应为true\ntest_1 = \n\n# test_2应为true\ntest_2
+      = \n\n# test_3应为false\ntest_3 = "
+    entry: 最后冲刺！让我们来复习布尔操作符。
     expect_error: false
     feedback_stats:
       correctness_test_issue: 1
@@ -678,24 +678,22 @@ sections:
       positive_feedback: 1
     from_console: false
     hint: ''
-    instruction: The code in the editor indicates what value (`true` or `false`) we
-      want each variable to have, and your job is to add an expression that evaluates
-      to the correct value using boolean operators (`&&`, `||`, or `!`).
+    instruction: 编辑器中的代码注释给出了每个变量应为的值（`true`或者`false`），
+      你的任务是将一个含布尔操作符（`&&`、`||`或者`!`）的表达式赋值给每个变量，使得它们得到正确的值。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Billions of Booleans
+    name: N多布尔操作符
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"Make sure to put an expression after
-      each =!\"\nend\n\nif code.scan(\"&&\").length == 0 && code.scan(\"||\").length
-      == 0 && code.scan(\"!\").length == 0\n  return \"Make sure to use boolean operators
-      in your expressions.\"\nend\n\nunless test_1\n  return \"It looks like your
-      value for test_1 isn't correct.\"\nend\n\nunless test_2\n  return \"It looks
-      like your value for test_2 isn't correct.\"\nend\n\nif test_3\n  return \"It
-      looks like your value for test_3 isn't correct.\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你没有写任何代码！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"确保在每个=后面写一个表达式！
+      \"\nend\n\nif code.scan(\"&&\").length == 0 && code.scan(\"||\").length
+      == 0 && code.scan(\"!\").length == 0\n  return \"确保在你的表达式中使用布尔操作符。
+      \"\nend\n\nunless test_1\n  return \"貌似你给test_1赋的值不正确。
+      \"\nend\n\nunless test_2\n  return \"貌似你给test_2赋的值不正确。\"\nend\n\nif test_3\n  return \"
+      貌似你给test_3赋的值不正确。\"\nend\n\nreturn true"
     updated_at: 2012-11-10 23:42:35.097000000 Z
     view: console_and_editor
   feedback_total: 23
@@ -703,7 +701,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Review
+  name: 复习
   num_forum_answers: 16
   num_forum_questions: 11
   published: true
