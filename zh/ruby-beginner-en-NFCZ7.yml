@@ -631,10 +631,9 @@ sections:
       raw_data: !binary |-
         UFoCs7c8swACAman
     created_at: 2012-09-19 17:36:51.000000000 Z
-    default_code: ! "# test_1 should be false\ntest_1 = \n\n# test_2 = should be false\ntest_2
-      = \n\n# test_3 = should be true\ntest_3 = "
-    entry: Now let's review comparators / relational operators. We've turned the tables
-      a bit!
+    default_code: ! "# test_1应为false\ntest_1 = \n\n# test_2应为false\ntest_2
+      = \n\n# test_3应为true\ntest_3 = "
+    entry: 现在让我们来复习比较运算符/关系操作符。
     expect_error: false
     feedback_stats:
       instructional_text_issue: 3
@@ -642,25 +641,23 @@ sections:
       typo: 4
       correctness_test_issue: 1
     from_console: false
-    hint: Remember, comparators are `==`, `!=`, `>`, `>=`, `<`, and `<=`.
-    instruction: We're letting you know what value (`true` or `false`) we want each
-      variable to have, and your job is to add an expression that evaluates to the
-      correct value using comparators.
+    hint: 记住，比较运算符是`==`、`!=`、`>`、`>=`、`<`和`<=`。
+    instruction: 我们给出了变量应有的值（`true`或者`false`），你的任务是将一个比较运算表达式赋值给变量，使得变量得到正确的值。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Dare to Compare
+    name: 敢于比较
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"Make sure to put an expression after
-      each =!\"\nend\n\nif code.scan(\">\").length == 0 && code.scan(\"<\").length
+    test_functions: ! "if code == nil\n  return \"你没有写任何代码！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"确保在每个=后面写一个表达式！
+      \"\nend\n\nif code.scan(\">\").length == 0 && code.scan(\"<\").length
       == 0 && code.scan(\"!=\").length == 0 && code.scan(\"==\").length == 0\n  return
-      \"Make sure to use comparators in your expressions.\"\nend\n\nif test_1\n  return
-      \"It looks like your value for test_1 isn't correct.\"\nend\n\nif test_2\n  return
-      \"It looks like your value for test_2 isn't correct.\"\nend\n\nif !test_3\n
-      \ return \"It looks like your value for test_3 isn't correct.\"\nend\n\nreturn
+      \"确保在你的表达式中使用比较运算符。\"\nend\n\nif test_1\n  return
+      \"貌似你给test_1赋的值不正确。\"\nend\n\nif test_2\n  return
+      \"貌似你给test_2赋的值不正确。\"\nend\n\nif !test_3\n
+      \ return \"貌似你给test_3赋的值不正确。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-10 23:44:54.095000000 Z
     view: console_and_editor
