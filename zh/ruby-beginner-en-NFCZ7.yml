@@ -567,8 +567,7 @@ sections:
         UFoCra34sgACAoVx
     created_at: 2012-09-19 17:36:45.000000000 Z
     default_code: ''
-    entry: All right! You're all on your lonesome. (Well, not *quite*. Check the Hint
-      if you need a syntax refresher.)
+    entry: 太好了！你已经自学成才。（如果需要语法提醒，可查看提示。）
     expect_error: false
     feedback_stats:
       instructional_text_issue: 2
@@ -576,26 +575,25 @@ sections:
       typo: 2
       other: 1
     from_console: false
-    hint: ! "The syntax for `if`/`elsif`/`else` looks like this:\n\n    if expression\n
-      \     # Do something\n    elsif expression\n      # Do something else\n    else\n
-      \     # Do yet another thing\n    end"
-    instruction: Create an `if`/`else` statement in the editor. Make sure to include
-      at least one `elsif`. Each branch of the statement should print something to
-      the console.
+    hint: ! "`if`/`elsif`/`else`的语法是这样的：\n\n    if expression\n
+      \     # 做一些事情\n    elsif expression\n      # 做一些其它事情\n    else\n
+      \     # 再做另外一些事情\n    end"
+    instruction: 在编辑器中编写一个`if`/`else`语句。确保带有至少一个
+      `elsif`。每个分支语句都要向控制台打印一些东西。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: If, Else, and Elsif
+    name: if、else和elsif
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"It looks like your syntax isn't quite
-      right. Check the Hint if you need help!\"\nend\n\nif code.scan(\"if\").length
-      == 0\n  return \"Make sure to include an 'if' statement!\"\nend\n\nif code.scan(\"elsif\").length
-      == 0\n  return \"Did you include at least one 'elsif'?\"\nend\n\nif code.scan(\"else\").length
-      == 0\n  return \"Don't forget your 'else'!\"\nend\n\nif prints.length == 0\n
-      \ return \"It looks like you didn't print anything to the console.\"\nend\n\nreturn
+    test_functions: ! "if code == nil\n  return \"你没有编写任何代码！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可查看提示！
+      \"\nend\n\nif code.scan(\"if\").length
+      == 0\n  return \"确保写了'if'语句！\"\nend\n\nif code.scan(\"elsif\").length
+      == 0\n  return \"你写了至少一个'elsif'吗？\"\nend\n\nif code.scan(\"else\").length
+      == 0\n  return \"别忘了'else'！\"\nend\n\nif prints.length == 0\n
+      \ return \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn
       true"
     updated_at: 2012-10-09 18:40:53.125000000 Z
     view: console_and_editor
