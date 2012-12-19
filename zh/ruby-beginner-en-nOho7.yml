@@ -76,24 +76,21 @@ sections:
         UGXZZRaqegACDKju
     created_at: 2012-09-28 17:07:49.000000000 Z
     default_code: ''
-    entry: First, we'll need to define our `alphabetize` method.
+    entry: 首先，我们需要定义我们的`alphabetize`方法。
     expect_error: false
     feedback_stats: {}
     from_console: false
-    hint: ! "Don't forget:\n\n    method_name(optional parameters)\n      # Do something\n
+    hint: ! "别忘了方法定义的语法：\n\n    method_name(可选参数)\n      # 做一些事情\n
       \   end"
-    instruction: Define `alphabetize` in the editor to the right. It shouldn't take
-      any arguments yet, and there doesn't need to be anything in the body of the
-      method.
+    instruction: 在右边的编辑器中定义`alphabetize`方法。它现在还没有参数，方法内部也不需要做任何事情。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Defining Our Method
+    name: 定义我们的方法
     tabs: []
-    test_functions: ! "begin\n  alphabetize\nrescue NameError\n  return \"Did you
-      define a method called alphabetize?\"\nend\n\nif exception.kind_of? SyntaxError\n
-      \ return \"It looks like your syntax isn't quite right. Check the first exercise
-      if you need help!\"\nend\n\nreturn true"
+    test_functions: ! "begin\n  alphabetize\nrescue NameError\n  return \"你定义了一个名叫alphabetize的方法吗？
+      \"\nend\n\nif exception.kind_of? SyntaxError\n
+      \ return \"貌似你的语法不大正确。如需帮助可查看第一个练习！\"\nend\n\nreturn true"
     updated_at: 2012-09-28 20:13:10.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
