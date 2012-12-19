@@ -529,22 +529,21 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 15:57:11.000000000 Z
   default_view: console_and_editor
-  entry: Let's go over the new Ruby syntax we've learned.
+  entry: 让我们复习一下我们学习的Ruby新语法。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFnrWZVv1gACATPZ
     created_at: 2012-09-19 15:57:13.000000000 Z
     default_code: ''
-    entry: ! 'Great work! So far you''ve learned:
+    entry: ! '干得很好！到目前为止，我们学习了：
 
 
-      * How to use `if`, `else`, and `elsif`
+      * `if`、`else`和`elsif`的使用方法
 
-      * How to use comparators / relational operators like `==`, `!=`, `<`, `<=`,
-      `>`, and `>=`
+      * 比较运算符/关系操作符`==`、`!=`、`<`、`<=`、`>`和`>=`的使用方法
 
-      * How to use boolean / logical operators like `&&`, `||`, and `!`'
+      * 布尔/逻辑操作符`&&`、`||`和`!`的使用方法'
     expect_error: false
     feedback_stats:
       instructional_text_issue: 1
@@ -552,12 +551,11 @@ sections:
       positive_feedback: 1
     from_console: false
     hint: ''
-    instruction: Take a second to reflect on what you've learned so far. When you're
-      ready, hit Run to start the review exercises.
+    instruction: 花点时间来复习所学内容。当你准备好以后，单击Run来开始复习练习。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Nice Work!
+    name: 干得漂亮！
     solution_code: ''
     solution_entry: ''
     tabs: []
