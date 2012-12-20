@@ -132,14 +132,13 @@ sections:
         UGXZZ/TJvAACDJ9Z
     created_at: 2012-09-28 17:07:51.000000000 Z
     default_code: ''
-    entry: ! "Great! Now we need to add the right logic to our method.\n\nIf our method
-      sees that `rev` is `true`, it should go ahead and reverse the sort. That is,
-      it should use the combined comparison operator (also called the **spaceship
-      operator** because... well, it looks like a spaceship) to order the array it
-      receives in descending order. Remember, we can do that like this:\n\n    array.sort!
-      { |item1, item2| item2 <=> item1}\n\nIn the context of alphabetizing, this says:
-      \"Hey Ruby! Sort the array in-place. Whenever you see two items, compare them
-      and put the one further along in the alphabet first.\""
+    entry: ! "很好！现在，我们需要为我们的方法添加正确的逻辑。\n\n
+      如果我们的方法发现`rev`的值是`true`，那么它应该执行反序排序。
+      也就是说，它应该使用通用比较操作符（也叫做 **飞船操作符** ，因为...它看起来像一个飞船）来将接收到的数组进行降序排序。
+      记住，我们可以这样做：\n\n    array.sort!
+      { |item1, item2| item2 <=> item1}\n\n
+      在字母排序的语境中，这段代码的含义是：
+      \"嘿Ruby！对数组自身进行排序。在任何时候，当你碰到两个元素时，比较它们，然后将字母序靠前的元素放在后面。\""
     expect_error: false
     feedback_stats:
       correctness_test_issue: 5
@@ -148,37 +147,30 @@ sections:
       instructional_text_issue: 3
       positive_feedback: 1
     from_console: false
-    hint: ! "For sorting in alphabetical order, you can do\n\n    arr.sort! { |item1,
-      item2| item1 <=> item2}\n\nbut this is unnecessary, since `.sort!`'s default
-      behavior is to sort alphabetically."
-    instruction: ! '1. Add an `if`/`else` statement inside your method. If `rev` is
-      true, it should sort the array reverse-alphabetically; if `rev` is false (which
-      happens if the user passes `false` or doesn''t pass an argument for `rev` at
-      all), it should sort the array in alphabetical order.
+    hint: ! "要进行字母排序，你可以这样做：\n\n    arr.sort! { |item1,
+      item2| item1 <=> item2}\n\n
+      当这是不必要的，因为`.sort!`方法的默认行为就是字母序排序。"
+    instruction: ! '1. 在你的方法内部添加一个`if`/`else`语句。如果`rev`的值为true，它将对数组进行字母反序排序；
+      如果`rev`的值为false（用户传入`false`或者根本没有传入`rev`参数），它将对数组进行字母序排序。
 
-      2. Outside your method, `puts` the sorted array. (This is so you can see all
-      the fine work your method did.)
+      2. 在你的方法外部，使用`puts`输出排序后的数组。（这样你可以看到你的方法的运行情况。）
 
-      3. Call your method on an array of your choice to see it in action!'
+      3. 随意写一个数组，然后调用你的方法并查看结果！'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Sorting With Control Flow
+    name: 用控制流排序
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Check the first exercise if you need help!\"\nend\n\nunless
-      code.include? \"<=>\"\n  return \"It looks like you didn't use the spaceship
-      operator in your code.\"\nend\n\ntest_array = [\"cockroaches\", \"ants\", \"bees\"]\n\nunless
-      alphabetize(test_array) == [\"ants\", \"bees\", \"cockroaches\"]\n  return \"It
-      looks like your method doesn't default to alphabetizing an array when it doesn't
-      receive a second parameter.\"\nend\n\nunless alphabetize(test_array, false)
-      == [\"ants\", \"bees\", \"cockroaches\"]\n  return \"It looks like your method
-      doesn't alphabetize an array when it receives 'false' as a second parameter.\"\nend\n\nunless
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可查看第一个练习！\"\nend\n\nunless
+      code.include? \"<=>\"\n  return \"貌似你没有在你的代码中使用飞船操作符。
+      \"\nend\n\ntest_array = [\"cockroaches\", \"ants\", \"bees\"]\n\nunless
+      alphabetize(test_array) == [\"ants\", \"bees\", \"cockroaches\"]\n  return \"
+      貌似你的方法在没有接收到第二个参数时并不是默认地对数组进行字母序排序。
+      \"\nend\n\nunless alphabetize(test_array, false)
+      == [\"ants\", \"bees\", \"cockroaches\"]\n  return \"貌似你的方法在接收到第二个为'false'时并不是对数组进行字母序排序。\"\nend\n\nunless
       alphabetize(test_array, true) == [\"cockroaches\", \"bees\", \"ants\"]\n  return
-      \"It looks like your method doensn't reverse-alphabetize an array when it receives
-      'true' as a parameter.\"\nend\n\nif prints.length == 0\n  return \"It looks
-      like you didn't print anything to the console. Does your method use 'puts' to
-      print the sorted array, and did you remember to call your method?\"\nend\n\nreturn
+      \"貌似你的方法在接收到第二个为'true'时并不是对数组进行字母反序排序。\"\nend\n\nif prints.length == 0\n  return \"
+      貌似你没有向控制台打印任何东西。你使用了'puts'来打印排序后的数组吗？\"\nend\n\nreturn
       true"
     updated_at: 2012-10-29 01:00:13.183000000 Z
     view: console_and_editor
