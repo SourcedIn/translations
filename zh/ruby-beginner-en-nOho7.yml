@@ -218,14 +218,12 @@ sections:
         UGXZaXyuVgACDMUf
     created_at: 2012-09-28 17:07:53.000000000 Z
     default_code: ''
-    entry: ! 'Well done! You now have your very own method that adds functionality
-      that Ruby didn''t have before.
+    entry: ! '干得好！你现在已经拥有属于自己的Ruby方法，从而扩展了Ruby的功能。
 
 
-      Building your own methods is great for using code over and over without having
-      to retype things, but it''s also great for **abstracting** or **simplifying**
-      your program. Once you write `alphabetize`, you don''t ever have to think about
-      how it works—you just call it whenever you need it.'
+      编写自己的方法对于一些需要调用很多次的代码大有好处，避免了重复性代码。
+      但更重要的是这样做对你的程序的 **抽象** 和 **简化** 大有帮助。
+      当你使用`alphabetize`方法时，你甚至根本不需要考虑它的工作原理——你要做的只是调用它而已。'
     expect_error: false
     feedback_stats:
       instructional_text_issue: 1
@@ -234,12 +232,11 @@ sections:
       correctness_test_issue: 1
     from_console: false
     hint: ''
-    instruction: Click Run to finish this project and continue your journey toward
-      Ruby Method Mastery.
+    instruction: 单击Run来完成这个课程，并继续你的“Ruby方法大师”之旅。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: You Did It! (For Real This Time)
+    name: 你成功了！
     tabs: []
     test_functions: return true
     updated_at: 2012-10-25 22:30:28.976000000 Z
@@ -249,7 +246,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Methodical Sorting
+  name: 排序方法
   num_forum_answers: 20
   num_forum_questions: 6
   published: true
