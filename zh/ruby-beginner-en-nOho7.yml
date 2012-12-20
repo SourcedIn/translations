@@ -98,34 +98,33 @@ sections:
         UGXZZjT1DgACDKkk
     created_at: 2012-09-28 17:07:50.000000000 Z
     default_code: ''
-    entry: ! "Let's start with the new bit of code you saw in exercise 1:\n\n    def
-      alphabetize(arr, rev=false)\n\nThe first part makes sense—we're defining a method,
-      `alphabetize`. We can guess that the first parameter is an `arr`ay, but what's
-      this `rev=false` business?\n\nWhat this does is tell Ruby that `alphabetize`
-      has a second parameter, `rev` (for \"reverse\") that will **default** to `false`
-      if the user doesn't type in two arguments. You might have noticed that our first
-      call to `alphabetize` in exercise 1 was just\n\n    alphabetize(books)\n\nRuby
-      didn't see a `rev`, so it gave it the default value of `false`."
+    entry: ! "让我们以第一个练习中没见过的那句代码开始：\n\n    def
+      alphabetize(arr, rev=false)\n\n
+      前面部分很好理解——这是在定义一个方法，名为`alphabetize`。
+      我们可以猜到第一个参数是一个数组（`arr`ay），但是
+      `rev=false`是干什么用的？\n\n
+      它的作用是告诉Ruby，`alphabetize`方法一个参数`rev`（\"reverse\"的缩写，反序的意思），
+      且如果用户在调用该方法时没有提供这个参数，则该参数 **默认值** 是`false`。
+      你可能已经注意到练习1中对`alphabetize`的第一次调用是这样的：\n\n    alphabetize(books)\n\n
+      没有提供`rev`参数，所以该参数得到默认值`false`。"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 1
       total: 1
     from_console: false
     hint: ! '`arr`, we be pirates.'
-    instruction: ! 'Update your `alphabetize` method with two parameters: `arr`, representing
-      the array to be passed in, and `rev`, a boolean that defaults to `false`.'
+    instruction: ! '修改你的`alphabetize`方法，添加两个参数：一个是`arr`，代表传入的数组；
+      另一个是`rev`，默认值是`false`的布尔变量。'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Default Parameters
+    name: 默认参数
     tabs: []
     test_functions: ! "begin\n  alphabetize([1,2,3], true)\nrescue ArgumentError\n
-      \ return \"Make sure your method now takes two arguments: an array and a boolean,
-      with the boolean defaulting to false.\"\nend\n\nif method(:alphabetize).parameters[1]
-      == nil || code.scan(\"false\").length == 0\n  return \"Did you make a second
-      argument, rev, that defaults to false?\"\nend\n\nif exception.kind_of? SyntaxError\n
-      \ return \"It looks like your syntax isn't quite right. Check the first exercise
-      if you need help!\"\nend\n\nreturn true"
+      \ return \"确保你的方法有两个参数：一个数组和一个默认值为false的布尔变量。\"\nend\n\nif method(:alphabetize).parameters[1]
+      == nil || code.scan(\"false\").length == 0\n  return \"你定义了名为rev，默认值为false的第二个参数吗？
+      \"\nend\n\nif exception.kind_of? SyntaxError\n
+      \ return \"貌似你的语法不大正确。如需帮助可查看第一个练习！\"\nend\n\nreturn true"
     updated_at: 2012-10-04 10:56:40.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
