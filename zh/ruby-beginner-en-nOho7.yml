@@ -179,13 +179,12 @@ sections:
         UGXZZzT1DgACDKkp
     created_at: 2012-09-28 17:07:51.000000000 Z
     default_code: ''
-    entry: ! 'You did it! Great work.
+    entry: ! '你做到了！干得好。
 
 
-      However, there''s a simpler way to go about this. Instead of using `<=>`, couldn''t
-      we use a normal `.sort` if `rev` is false, and then just call `.reverse` on
-      our `.sort` if it turns out `rev` is true? (Ruby makes things almost *too* easy
-      for us.)'
+      然而，还有一个更简单的办法。除了使用`<=>`，难道我们不能在`rev`为false时仅使用`.sort`，
+      而在`rev`为true时进一步使用`.reverse`将排序后的数组反序吗？
+      （Ruby真的是什么都替我们想好了。）'
     expect_error: false
     feedback_stats:
       correctness_test_issue: 4
@@ -194,27 +193,23 @@ sections:
       other: 1
     from_console: false
     hint: ''
-    instruction: Rewrite your method to use `.reverse` on the `.sort`ed array if `rev`
-      is `true`.
+    instruction: 修改你的方法，如果`rev`的值是`true`则对排序后的数组使用`.reverse`方法。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Victory! (Almost)
+    name: 成功在即！
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Check the first exercise if you need help!\"\nend\n\nunless
-      code.include? \".reverse\"\n  return \"It looks like you didn't use the .reverse
-      method in your code.\"\nend\n\ntest_array = [\"cockroaches\", \"ants\", \"bees\"]\n\nunless
-      alphabetize(test_array) == [\"ants\", \"bees\", \"cockroaches\"]\n  return \"It
-      looks like your method doesn't default to alphabetizing an array when it doesn't
-      receive a second parameter.\"\nend\n\nunless alphabetize(test_array, false)
-      == [\"ants\", \"bees\", \"cockroaches\"]\n  return \"It looks like your method
-      doesn't alphabetize an array when it receives 'false' as a second parameter.\"\nend\n\nunless
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可查看第一个练习！\"\nend\n\nunless
+      code.include? \".reverse\"\n  return \"貌似你没有在你的代码中使用.reverse方法。
+      \"\nend\n\ntest_array = [\"cockroaches\", \"ants\", \"bees\"]\n\nunless
+      alphabetize(test_array) == [\"ants\", \"bees\", \"cockroaches\"]\n  return \"
+      貌似你的方法在没有接收到第二个参数时并不是默认地对数组进行字母序排序。
+      \"\nend\n\nunless alphabetize(test_array, false)
+      == [\"ants\", \"bees\", \"cockroaches\"]\n  return \"
+      貌似你的方法在接收到第二个为'false'时并不是对数组进行字母序排序。\"\nend\n\nunless
       alphabetize(test_array, true) == [\"cockroaches\", \"bees\", \"ants\"]\n  return
-      \"It looks like your method doensn't reverse-alphabetize an array when it receives
-      'true' as a parameter.\"\nend\n\nif prints.length == 0\n  return \"It looks
-      like you didn't print anything to the console. Does your method use 'puts' to
-      print the sorted array, and did you remember to call your method?\"\nend\n\nreturn
+      \"貌似你的方法在接收到第二个为'true'时并不是对数组进行字母反序排序。
+      \"\nend\n\nif prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。你使用了'puts'来打印排序后的数组吗？\"\nend\n\nreturn
       true"
     updated_at: 2012-10-05 09:41:24.000000000 Z
     view: console_and_editor
