@@ -35,5 +35,5 @@ Translations
 
 * File: ruby-beginner-en-nOho7.yml
 * Started: 19.12.2012
-* Finished:
+* Finished: 20.12.2012
 * Contact: zoogar@163.com
