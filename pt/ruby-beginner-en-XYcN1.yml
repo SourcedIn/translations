@@ -1,0 +1,731 @@
+--- !ruby/hash:Moped::BSON::Document
+avg_user_rating: 4.46354961832061
+classification: :lesson
+created_at: 2012-09-19 20:38:44.000000000 Z
+domain: :freestyle
+down_votes: 160
+entry: 使用循环和迭代器， Ruby可以为您快捷简单地自动完成重复的任务。
+feedback_total: 191
+is_project: false
+language_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TyFOXyFuzxlcRMGV
+level: :beginner
+locale: zh
+name: 循环和迭代器
+num_exercises: 18
+num_published_exercises: 18
+num_published_sections: 4
+num_readiness_feedbacks: 30
+num_sections: 4
+num_user_ratings: 2620
+published: true
+published_at: 2012-09-20 03:25:54.000000000 Z
+rating: 696.1796455799896
+read_feedback_total: 141
+readiness: 92.2528735632184
+recommended: false
+review_status: :approved
+roles:
+  manager: []
+  editor: []
+submitted_at: 2012-09-20 01:47:08.000000000 Z
+topic_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    T5Ws8pVtgwADABwX
+total_user_rating: 11694.5
+up_votes: 887
+updated_at: 2012-11-26 15:38:08.199000000 Z
+user_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    TwTxhHBXEgADAGwS
+sections:
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 20:38:44.000000000 Z
+  default_view: console_and_editor
+  entry: 'while' 和 'until' 循环都能使你能重复一个动作， 前者是只要条件是
+    true 就继续循环，后者则是直到一个条件是 true 就停止循环。
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFotVvx4EQACAAkX
+    created_at: 2012-09-19 20:38:46.000000000 Z
+    default_code: ! "counter = 1\nwhile counter < 11\n  puts counter\n  counter =
+      counter + 1\nend"
+    entry: ! '有时你想要在Ruby里重复一个动作当一个明确的条件是 true 的时候, 但你不知道这个动作需要重复多少次
+      一个很好的例子就是提示用户输入一种明确的数据： 如果用户总是输入错误的数据， 
+      在用户提供正确数据之前，你就需要重复提示用户输入数据几次。
+
+
+      完成这个功能我们使用`while`循环。 它能检查一个条件是否为 true， 并且如果 `while` 为 true， 循环会继续下去。 
+      只要这个条件不再是 true 了, 循环就会停止！'
+    expect_error: false
+    feedback_stats: {}
+    from_console: false
+    hint: ''
+    instruction: 请看旁边编辑器里面的代码。 你能猜出它的作用吗？ 
+      想好后， 请点击 Run 来看结果。
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: 'While' 循环
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-09-19 21:42:15.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFouE1Rp9QACABWm
+    created_at: 2012-09-19 20:41:55.000000000 Z
+    default_code: ! "i = 0\nwhile i < 5\n  puts i\n  # 在此输入你的代码！\n  \nend"
+    entry: ! '你看到了吗？ 这个循环打印了数字 1 到 10， 之后便停止了。
+      这是由于这个循环继续的条件是 `counter` 小于 11; 由于 `counter` 
+      每次循环都会比前一次多 1 ， 于是循环在 `counter` 叠加到 11 的时候就停止了。
+
+
+      如果我们忘记 `counter` 的增量那会怎么样？  那它就会永远停在 1, 
+      循环会一直检查是否 `counter` 比 11 小 （1 永远比 11 小），
+      于是循环便永远不会停止。 这叫做 **死循环** 它会使你的程序崩溃。 
+      一定要避免这种错误！'
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 3
+      total: 4
+      correctness_test_issue: 1
+    from_console: false
+    hint: ! "你的循环语句里应该包括一些类似于这样的东西:\n\n    i = i + 1"
+    instruction: 编辑器里面的 `while` 循环目前是个死循环。纠正它使它能结束！ 
+      （请小心： 如果你现在点击 Run， 你会开始运行一个死循环， 你将不得不
+      刷新当前页面。）
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: ! '危险： 死循环！'
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"看起来你的 'while' 
+      循环不太对。 如果你需要提示 请点击 Hint！\"\nend\n\nif
+      i == 0\n  return \"看起来你并没有改变 i 的值。\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-11 03:31:58.333000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFouE7BzSgACABNU
+    created_at: 2012-09-19 20:41:55.000000000 Z
+    default_code: ! "counter = 1\nuntil counter __ 10\n  puts counter\n  # Add code
+      to update 'counter' here!\n  \nend"
+    entry: ! '与 `while` 循环相对应的是 `until` 循环。 它的功能与 `while` 正相反： 它会
+      在已知条件为 `false` 的时候执行代码。 一旦条件变成 true， 循环便会停止。'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 5
+      total: 7
+      instructional_text_issue: 2
+    from_console: false
+    hint: ! "你的 `until` 循环应该看起来像这样：\n\n    until # Counter
+      比 10 大\n      puts counter\n      # 使counter增加\n    end"
+    instruction: 完成编辑器里面的 `until` 循环， 并使之打印出数字 1 到 10。 
+      一定要特别注意死循环！
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: 'Until' 循环
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"看起来
+      你的 'until' 循环并不正确。 如果你需要提示 请点击 Hint！\"\nend\n\nif
+      counter == 1\n  return \"看起来你并没有改变 counter 的值。\"\nend\n\nfor
+      num in (1..10).to_a\n  unless prints.include? num.to_s\n    return \"看起来
+      你的代码并没有打印出数字 1 到 10。\"\n  end\nend\n\nreturn
+      true"
+    updated_at: 2012-10-18 04:13:31.106000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFovH6gnngACACgx
+    created_at: 2012-09-19 20:46:23.000000000 Z
+    default_code: ! "counter = 1\nwhile counter < 11\n  puts counter\n  counter =
+      counter + 1\nend"
+    entry: ! "我们一直在使用 `counter = counter + 1` 这样的语句， 这样并没有错， 但
+      你会发现在Ruby语言中， 我们总有另一种达到目的的方法。\n\n
+      一个简单的方法是使用 **赋值运算符**。 你已经知道了一种赋值运算符：
+      `=`， 它被用来给变量赋值。 你可以用复合的赋值运算符来更新一个变量的值，
+      `+=`、 `-=`、 `*=`、 和 `/=`这些都是复合的赋值运算符。 比如说，
+      当你输入 \n\n    counter += 1\n\n就等同于你告诉Ruby： \"给 `counter` 的值加 1,
+      然后把那个新的值赋值给 `counter`。\" 这给我们提供了一种简洁的改变变量值的方法。\n\n有一些语言中
+      使用类似 `++` 和 `--` 的赋值运算符（其功能也是把变量值 加1 或者 减1）， 但是这种语句并不适用Ruby。
+      在Ruby中达到同等效果你需要使用 `+=` and `-=`！"
+    expect_error: false
+    feedback_stats:
+      positive_feedback: 2
+      total: 5
+      instructional_text_issue: 1
+      correctness_test_issue: 1
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: 编辑器里显示的是第一课里使用过的循环。 请使用复合的赋值运算符
+      来重新写一下这个循环。
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: More Assignment Operators
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"你的语句
+      不正确。 你的 += 运算符和教程里面的一样吗？ \"\nend\n\nif code.scan(\"+=\").length == 0\n  return \"请确定
+      你在你的代码中使用了 += 运算符。\"\nend\n\nreturn true"
+    updated_at: 2012-10-26 15:01:12.446000000 Z
+    view: console_and_editor
+  feedback_total: 16
+  index: 0
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: ! '''While'' 和 ''Until'' 循环'
+  num_forum_answers: 10
+  num_forum_questions: 8
+  published: true
+  read_feedback_total: 1
+  updated_at: 2012-10-26 15:01:12.510000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 20:39:54.000000000 Z
+  default_view: console_and_editor
+  entry: 使用 'for' 循环， 你可以重复一个动作， 并且这个动作的执行次数是可以被控制的。 
+    或者你可以使得动作在一定数值范围内循环。
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFotnZnaTAACAA7h
+    created_at: 2012-09-19 20:39:57.000000000 Z
+    default_code: ! "for num in 1...10\n  puts num\nend"
+    entry: 有时你 *明确* 知道你将要循环的次数， 这种情况下， 你就会用到
+      `for` 循环。
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 1
+      total: 2
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: 看一下编辑器里的 `for` 循环的例子。 你能猜出它的作用吗？ 
+      想好后， 请点击 Run 来看结果。
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: 'For' 循环
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-10-04 19:41:11.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoxLFRp9QACAEuc
+    created_at: 2012-09-19 20:55:08.000000000 Z
+    default_code: ! "for num in 1...10\n  puts num\nend"
+    entry: ! '在上一个练习中你已经看到了新的表达语句： `for num in 1...10`.
+      它的作用是告诉Rub： "如果变量 `num` 在 1 到 10 的范围内， 执行
+      以下语句。" 也就是 `print "#{num}"`, 于是随着 `num` 取值从 
+      1 到 9， 依次地， 这些数字就被打印到终端里了。
+
+
+      Ruby数到 9 而并不是 10 的原因是我们用了在定义取值范围时用了三个小数点（`...`）;
+      这告诉Ruby *不包括* 取值范围的最后一个数字： `for num
+      in 1...10` 意味着 "取值最大 *但是不包括* 数字10." 如果我们使用两个小数点， 这
+      告诉Ruby *包括* 取值范围内的最大数字。'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 12
+      total: 20
+      instructional_text_issue: 5
+      typo: 2
+      other: 1
+    from_console: false
+    hint: ''
+    instruction: ! '按照以下两个提示编辑编辑器里的 `for` 循环：
+
+
+      1. 使之打印出数字 1 到 15， 包括 15。
+
+      2. 使之使用 `..` 而不是 `...`。'
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Inclusive and Exclusive Ranges
+    tabs: []
+    test_functions: ! "if code.scan(\"...\").length > 0\n  return \"请确定你在取值范围中
+      使用的是两个小数点，而不是三个！\"\nend\n\nfor num in (1..15).to_a\n  unless
+      prints.include? num.to_s\n    return \"看起来你的代码并没有输出所有的从 1 到 15
+      （并包括15）的数字。\"\n  end\nend\n\nif prints.include?
+      \"16\"\n  return \"看起来你的代码输出了数字 16。 请只输出到15的数字！\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-07 17:42:40.000000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoxMbBzSgACAEAb
+    created_at: 2012-09-19 20:55:13.000000000 Z
+    default_code: ''
+    entry: 干得好！ 你已经可以创建自己的 `for` 循环了。
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 19
+      total: 24
+      instructional_text_issue: 2
+      other: 1
+      typo: 1
+      positive_feedback: 1
+    from_console: false
+    hint: ! "你的 `for` 循环应该看起来像这样： \n\n    for variable
+      in range #.. 或者 ...\n      puts variable\n    end"
+    instruction: 写一个 `for` 循环，并使之 `puts` 从 1 到 20 的数字， *包括 20*，
+      请使用 `..` 或 `...`。 如果你需要提示 请点击 Hint！
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: Building Your Own
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"你需要输入些东西！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"看起来你的 'for' 循环语句并不正确。
+      如果你需要提示 请点击 Hint！\"\nend\n\nif code.scan(\"print\").length
+      > 0 || code.scan(\"puts\").length == 0\n  return \"请确定使用 'puts' 而不是
+      'print'.\"\nend\n\nfor num in (1..20).to_a\n  unless prints.include? num.to_s\n
+      \   return \"看起来你的代码并没有打印出从1 到 20, 包括20, 的数字。
+      \"\n  end\nend\n\nif prints.include? \"21\"\n  return \"你的输出
+      包括了数字 21， 不要在错误的道路上越走越远， 骚年！\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-13 12:36:18.492000000 Z
+    view: console_and_editor
+  feedback_total: 45
+  index: 1
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: ! '''For'' 循环'
+  num_forum_answers: 5
+  num_forum_questions: 1
+  published: true
+  read_feedback_total: 6
+  updated_at: 2012-10-13 12:36:18.611000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 20:40:35.000000000 Z
+  default_view: console_and_editor
+  entry: 迭代器允许你指定一个重复的动作， 使用一个叫做 块 的结构。
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFotxZnaTAACABDj
+    created_at: 2012-09-19 20:40:37.000000000 Z
+    default_code: ! "i = 20\n___ ___\n  i -= 1\n  print \"#{i}\"\n  ___ if i <= 0\nend"
+    entry: ! "目前位置我们学习了一种重复动作的方法： 使用循环。
+      在Ruby中总有不止一种达到目的的方法。 这次， 我们可以使用 **迭代器** 来达到重复动作的目的。
+      \n\n迭代器是一种Ruby的方法。 它能重复调用一块代码。 这块代码正是包括了需要循环的代码结构， 
+      这些代码结构可以是你需要的任何代码。\n\n
+      最简单的迭代器就是 `loop` 方法。 简单地输入下面代码， 你就可以创建一个基本的循环（不是死循环！）
+      \n\n    loop { print \"Hello, world!\" }\n\n在Ruby中， 
+      花括号 (`{}`) 基本上可以被关键字 `do` （表示代码块的开始）
+      和 `end` （表示代码块的结束）。 知道了这些，我们可以写一个比上边例子更好的循环： \n\n
+      i = 0\n    loop do\n      i += 1\n      print \"#{i}\"\n
+      \     break if i > 5\n    end\n\n 关键字 `break` 就是我们逃离监狱的钥匙：
+      它使得循环在达到条件后结束。"
+    expect_error: false
+    feedback_stats:
+      other: 1
+      total: 2
+      correctness_test_issue: 1
+    from_console: false
+    hint: 缺失的关键字是： `loop`, `do`, 和 `break`。 看一看例子来确定你的使用顺序没有错！
+    instruction: 用适当的关键字来代替编辑器中的 `___` 。
+      如果你需要提示 请点击 Hint！
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: The Loop Method
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"请确定你用正确的
+      关键字代替了 ___ ！\"\nend\n\nif exception.kind_of?
+      NameError\n  return \"请确定你用正确的关键字代替了 ___ ！\"\nend\n\nunless
+      prints.include? \"191817161514131211109876543210\"\n  return \"看起来
+      你的循环并没有打印出数字 19 到 0。\"\nend\n\nreturn true"
+    updated_at: 2012-10-09 20:05:10.716000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpFoE4dGgACAAdw
+    created_at: 2012-09-19 22:22:24.000000000 Z
+    default_code: ''
+    entry: ! "关键字 `next` 被用来跳过循环里的一步。
+      例如， 如果我们不想输出偶数， 我们可以这样写\n\n
+      \   i = 20\n    loop do\n      i -= 1\n      next if i % 2 == 0\n      print
+      \"#{i}\"\n      break if i <= 0\n    end\n\n请记住模除 (`%`) 会返回
+      被除数除以除数的余数; 如果一个数字被2除并且没有余数， 那么它一定是偶数。"
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 10
+      total: 27
+      correctness_test_issue: 11
+      typo: 3
+      other: 2
+      positive_feedback: 1
+    from_console: false
+    hint: ''
+    instruction: 编辑你的代码， 使用 `next` 关键字使得代码跳过输出 *单数* 。
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: Next!
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"请确定你用正确的
+      关键字代替了 ___ ！\"\nend\n\nif code.scan(\"next\").length
+      == 0\n  return \"请确定你使用了 'next' 关键字来跳过单数的输出！
+      \"\nend\n\nunless prints.include? \"181614121086420\"\n  return
+      \"看起来你的代码并没有输出 18 到 0。 \"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-10 15:35:09.599000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpJ+8u5IAACADCZ
+    created_at: 2012-09-19 22:40:59.000000000 Z
+    default_code: ''
+    entry: ! '比如说我们想要在一个变量里保存一定范围的数字。 
+      这要怎么达成呢？ 一个变量只能保存一个数值， 对吧？
+      
+      在Ruby中， 使用 **数组** ， 我们就可以把多个数值打包存进一个单一的变量。
+      一个数组就是一组在中括号中的内容， 比如： `[1, 2, 3, 4]`。 这些内容没有按顺序排列的必要， 
+      比如： `[10, 31, 19, 400]`.'
+    expect_error: false
+    feedback_stats:
+      other: 2
+      total: 2
+    from_console: false
+    hint: ''
+    instruction: 创建一个叫做 `my_array` 的变量， 并将 1 至 5 的数字（包括1和5）按顺序赋值给它。
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: 保存多个数值
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "begin\n  my_array\nrescue NameError\n  return \"你声明了一个
+      叫做 my_array 的变量了吗？\"\nend\n\nunless my_array == [1,2,3,4,5]\n  return
+      \"看起来你的 my_array 变量并不等于 [1,2,3,4,5]。\"\nend\n\nreturn true"
+    updated_at: 2012-10-22 14:26:33.163000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoulVqbHAACACBP
+    created_at: 2012-09-19 20:44:05.000000000 Z
+    default_code: ! "array = [1,2,3,4,5]\n\narray.each do |x|\n  x += 10\n  print
+      \"#{x}\"\nend"
+    entry: ! "好样的！ 你已经找到了窍门儿了！\n\n迭代器 `loop` 是最简单的，
+      也是功能最少的。 一个更常用的迭代器是 `.each` 方法， 它能把一个表达式依次应用给对象中的
+      每一个元素。 语法类似于这样： \n\n    object.each { |item| # Do
+      something }\n\n你也可以使用关键字 `do` 代替 `{}`:\n\n    object.each
+      do |item| # Do something end\n\n在符号 `| |` 之间的变量名可以是任何你喜欢的：
+      它就好比你使用 `.each` 的对象的每一个元素的占位符。"
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 5
+      total: 8
+      other: 2
+      typo: 1
+    from_console: false
+    hint: ''
+    instruction: 看一下编辑器里面的代码。 当你确定你知道它的作用后， 点击 Run 来验证。
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: The .each Iterator
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: return true
+    updated_at: 2012-11-24 16:13:38.399000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFpJ/DyATAACADSv
+    created_at: 2012-09-19 22:41:00.000000000 Z
+    default_code: ! 'odds = [1,3,5,7,9]
+
+
+      # 在下面添加你的代码！
+
+
+'
+    entry: 很棒， 不是吗？ 现在轮到你来试着使用 `.each` 方法了。
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 12
+      total: 21
+      instructional_text_issue: 3
+      other: 3
+      typo: 2
+      positive_feedback: 1
+    from_console: false
+    hint: ! "你的迭代器应该看起来像这样：\n\n    odds.each do |placeholder|\n
+      \     # 双倍 placeholder 的数值\n      # 打印出 placeholder\n    end"
+    instruction: 对我们提供的数组使用 `.each` 方法， 并且 `print` 出数组里面每个值的双倍结果。
+      请确定使用 `print` 而不是 `puts`， 这样你的输出会出现在一行上。 如果你想不出答案 请点击 Hint！
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: 自己试试！
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"看起来你的
+      迭代器语法并不正确——如果你需要提示 请点击 Hint！\"\nend\n\nunless
+      prints.include? \"26101418\"\n  return \"看起来你的迭代器并没有输出
+      数组中每个元素的双倍结果。\"\nend\n\nreturn
+      true"
+    updated_at: 2012-11-07 11:19:36.050000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoumJNohwACABci
+    created_at: 2012-09-19 20:44:08.000000000 Z
+    default_code: ''
+    entry: ! "`.times` 方法就像一个简略的 `for` 循环： 它可以执行it can perform
+      a task on each item in an object a specified number of times.\n\n例如，
+      如果我们想要打印 `\"Chunky bacon!\"` 十次， 我们可以这样写\n\n    10.times
+      { print \"Chunky bacon!\" }\n\n我们不知道 *为什么* 要那么写， 但我们
+      *可以* 那么写。"
+    expect_error: false
+    feedback_stats:
+      instructional_text_issue: 1
+      total: 5
+      positive_feedback: 2
+      correctness_test_issue: 2
+    from_console: false
+    hint: ''
+    instruction: 使用 `.times` 来 `print` 任何你喜欢的字符串， 多少次都可以， 随你喜欢。
+      如果你需要帮助， 请仔细看上边举得例子。
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: .times 迭代器
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"喂！白卷可是过不了关的啊！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"你的语法貌似不对——请仔细看左边举得例子。
+      \"\nend\n\nif code.scan(\".times\").length
+      == 0\n  return \"请确定你在代码中使用了 .times 方法。\"\nend\n\nif
+      prints.length == 0\n  return \"看起来你的代码什么都没有输出
+      \"\nend\n\nreturn true"
+    updated_at: 2012-10-06 15:05:03.000000000 Z
+    view: console_and_editor
+  feedback_total: 65
+  index: 2
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: 迭代器和块
+  num_forum_answers: 30
+  num_forum_questions: 19
+  published: true
+  read_feedback_total: 7
+  updated_at: 2012-11-24 16:13:38.432000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
+- !ruby/hash:Moped::BSON::Document
+  created_at: 2012-09-19 20:41:06.000000000 Z
+  default_view: console_and_editor
+  entry: 我们学得差不多了！ 现在让我们来复习一下学过的新语法。
+  exercises:
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFot48mNZgACAA/V
+    created_at: 2012-09-19 20:41:07.000000000 Z
+    default_code: ''
+    entry: 好， 我们来看看你的新知识运用的如何！
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 4
+      total: 13
+      instructional_text_issue: 3
+      other: 6
+    from_console: false
+    hint: ''
+    instruction: 使用 `while` 循环来 `print` 数字 1 到 50， 包括1和50。
+      使用 `print` 而不是 `puts`， 并且避免死循环！
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: 使用 'While' 循环
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"你的语法不正确。
+      如果需要的话， 可以看看之前的练习。\"\nend\n\nif code.scan(\"while\").length
+      == 0\n  return \"请确定你在你的代码里使用了 'while' 循环。\"\nend\n\noxnard
+      = 1\nmontalvo = \"\"\nwhile oxnard < 51\n  montalvo += oxnard.to_s\n  oxnard
+      += 1\nend\n\nunless prints.include? montalvo\n  return \"看起来你的代码并没有
+      打印数字 1 到 50， 包括1和50。\"\nend\n\nreturn true"
+    updated_at: 2012-10-13 13:02:47.295000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoxlqPyfAACAErF
+    created_at: 2012-09-19 20:56:54.000000000 Z
+    default_code: ''
+    entry: 好样的！
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 11
+      total: 15
+      other: 3
+      instructional_text_issue: 1
+    from_console: false
+    hint: ''
+    instruction: 使用 `until` 来重新写你的 `while` 循环。
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: 使用 'Until' 循环
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"你的语法不正确。
+      如果需要的话， 可以看看之前的练习。
+      \"\nend\n\nif code.scan(\"until\").length == 0\n  return \"请确定你在代码中使用了
+      'until' 循环。\"\nend\n\noxnard = 1\nmontalvo = \"\"\nwhile
+      oxnard < 51\n  montalvo += oxnard.to_s\n  oxnard += 1\nend\n\nunless prints.include?
+      montalvo\n  return \"看起来你的代码并没有
+      打印数字 1 到 50， 包括1和50。\"\nend\n\nreturn true"
+    updated_at: 2012-10-30 11:07:13.082000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoxmLBzSgACAEbk
+    created_at: 2012-09-19 20:56:56.000000000 Z
+    default_code: ''
+    entry: ! 'In case you''re not picking up on the theme of Ruby having a gajillion
+      ways to do any given task: 再来改变一下我们的循环。'
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 9
+      total: 10
+      instructional_text_issue: 1
+    from_console: false
+    hint: ! "记住， 一个 `for` 循环看起来像这样：\n\n    for variable in (range)\n
+      \     # Do something\n    end"
+    instruction: `print` 输出数字 1 到 50， 包括1和50。
+      请使用 `for` 循环而不是 `until` 循环。
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: true
+    name: 使用 'For' 循环
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"你的语法不正确。
+      如果需要的话， 可以看看之前的练习。
+      \"\nend\n\nif code.scan(\"for\").length == 0 || code.scan(\"..\").length
+      == 0\n  return \"请确定你在代码中使用了 'for' 循环。\"\nend\n\noxnard
+      = 1\nmontalvo = \"\"\nwhile oxnard < 51\n  montalvo += oxnard.to_s\n  oxnard
+      += 1\nend\n\nunless prints.include? montalvo\n  return \"看起来你的代码并没有
+      打印数字 1 到 50， 包括1和50。\"\nend\n\nreturn true"
+    updated_at: 2012-10-09 21:35:51.606000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoxw87lHAACAEyJ
+    created_at: 2012-09-19 20:57:39.000000000 Z
+    default_code: ''
+    entry: 干得好！ 这次我们玩点儿数字以外的。
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 9
+      total: 18
+      instructional_text_issue: 6
+      other: 2
+      typo: 1
+    from_console: false
+    hint: ! "你的 `loop` 循环应该看起来像这样：\n\n    counter = 0\n    loop
+      do\n      counter += 1\n      print \"Ruby\"\n      break if i > # The value
+      to stop at\n    end"
+    instruction: 使用 `loop` 迭代器来 `print` 30 次字符串 `"Ruby!"` 。
+      请确定打印正确的字符串。
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: 用 Loop 迭代器 来循环
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"你的语法不正确。
+      如果需要的话， 可以看看之前的练习。\"\nend\n\nif code.scan(\"loop\").length
+      == 0\n  return \"请确定你在代码中使用了 'loop' 循环。\"\nend\n\nif
+      code.scan(\"break\").length == 0\n  return \"当你已经打印 'Ruby!' 30 次时，
+      请确定使用了 'break' 语句来结束循环！\"\nend\n\ndagget
+      = \"\"\n30.times do\n  dagget += \"Ruby!\"\nend\n\nunless prints.include? dagget\n
+      \ return \"看起来你并没有输出字符串 'Ruby!' 30 次。\"\nend\n\nreturn
+      true"
+    updated_at: 2012-11-18 04:12:41.817000000 Z
+    view: console_and_editor
+  - _id: !ruby/object:Moped::BSON::ObjectId
+      raw_data: !binary |-
+        UFoxuPx4EQACAEl4
+    created_at: 2012-09-19 20:57:28.000000000 Z
+    default_code: ''
+    entry: 最后， 让我们来使用 `.times` 迭代器来代替 `loop`。
+    expect_error: false
+    feedback_stats:
+      correctness_test_issue: 4
+      total: 8
+      other: 1
+      positive_feedback: 2
+      instructional_text_issue: 1
+    from_console: false
+    hint: ''
+    instruction: 使用 `.times` 迭代器来 `print` `"Ruby!"` 30
+      次。 点击 Run 来运行你的代码结束这节课程！
+    library:
+    - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+    load_submission_from_previous_exercise: false
+    name: .times 迭代器
+    solution_code: ''
+    solution_entry: ''
+    tabs: []
+    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"你的语法不正确。
+      如果需要的话， 可以看看之前的练习。\"\nend\n\nif code.scan(\".times\").length
+      == 0\n  return \"请确定你在代码中使用了 '.times' 迭代器。\"\nend\n\ndagget
+      = \"\"\n30.times do\n  dagget += \"Ruby!\"\nend\n\nunless prints.include? dagget\n
+      \ return \"看起来你并没有将字符串 'Ruby!' 输出 30 次。\"\nend\n\nreturn
+      true"
+    updated_at: 2012-10-08 05:46:39.000000000 Z
+    view: console_and_editor
+  feedback_total: 64
+  index: 3
+  language_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TyFOXyFuzxlcRMGV
+  name: Review
+  num_forum_answers: 34
+  num_forum_questions: 22
+  published: true
+  read_feedback_total: 20
+  updated_at: 2012-11-18 04:12:41.871000000 Z
+  user_id: !ruby/object:Moped::BSON::ObjectId
+    raw_data: !binary |-
+      TwTxhHBXEgADAGwS
+  viewable: false
