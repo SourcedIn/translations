@@ -4,16 +4,15 @@ classification: :lesson
 created_at: 2012-09-19 15:55:55.000000000 Z
 domain: :freestyle
 down_votes: 225
-entry: Now that we know how to write simple programs, let's learn how to write more
-  complex programs that can respond to user input.
+entry: 我们已经知道怎样编写简单的程序，现在让我们学习编写复杂一点的程序：对用户输入作出响应。
 feedback_total: 123
 is_project: false
 language_id: !ruby/object:Moped::BSON::ObjectId
   raw_data: !binary |-
     TyFOXyFuzxlcRMGV
 level: :beginner
-locale: en
-name: Control Flow in Ruby
+locale: zh
+name: Ruby的控制流
 num_exercises: 17
 num_published_exercises: 17
 num_published_sections: 4
@@ -44,27 +43,21 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 15:55:55.000000000 Z
   default_view: console_and_editor
-  entry: Control flow lets us make our programs respond to changes in its environment,
-    whether from the user, from local variables, or from other programs. Let's get
-    started!
+  entry: 控制流让程序可以对其所处环境的变化作出响应，这些变化可能是来自于用户、本地变量或者是其它程序。好了，让我们开始吧！
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFnrDJro+AACATQ9
     created_at: 2012-09-19 15:55:56.000000000 Z
-    default_code: ! "print \"Integer please: \"\nuser_num = Integer(gets.chomp)\n\nif
-      user_num < 0\n  puts \"You picked a negative integer!\"\nelsif user_num > 0\n
-      \ puts \"You picked a positive integer!\"\nelse\n  puts \"You picked zero!\"\nend"
-    entry: ! 'You may have noticed that the kinds of programs we''ve written so far
-      in Ruby aren''t very flexible. Sure, they can take user input, but they always
-      produce the same result based on that input; they don''t change their behavior
-      in reaction to the **environment** (the collection of all variables and their
-      values that exist in the program at a given time).
+    default_code: ! "print \"请输入整数：\"\nuser_num = Integer(gets.chomp)\n\nif
+      user_num < 0\n  puts \"你输入了一个负整数！\"\nelsif user_num > 0\n
+      \ puts \"你输入了一个正整数！\"\nelse\n  puts \"你输入了零！\"\nend"
+    entry: ! '你可能已经注意到迄今为止我们所写的Ruby程序都不大灵活。
+      没错，这些程序接受用户的输入，但是它们总是输出一样的结果；
+      它们并不改变自身行为来响应 **环境** （一个程序中特定时间内所有变量及其值的集合）。
 
 
-      **Control flow** gives us the flexibility we''re looking for. We can select
-      different outcomes depending on information the user types, the result of a
-      computation, or the value returned by another part of the program.'
+      **控制流** 使程序具有了灵活性。我们可以根据用户输入的信息来输出不同的内容：一个计算结果，或是由程序的另一个部分返回的值。'
     expect_error: false
     feedback_stats:
       instructional_text_issue: 1
@@ -74,19 +67,16 @@ sections:
       other: 1
     from_console: false
     hint: ''
-    instruction: Check out the code in the editor. There's some new syntax there,
-      but we'll bet you can guess what it does. Click Run to see the program in action!
-      (Go ahead and give Ruby an integer—that is, a positive or negative number with
-      no decimal bit.)
+    instruction: 阅读编辑器中的代码。我们用到了一些新语法，不过我们相信你可以看懂。
+      单击Run来看看程序执行的结果！（然后输入一个整数——也就是说一个负数或者整数，不带小数点。）
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: How It Works
+    name: 工作原理
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? ArgumentError\n  return \"Make sure to
-      enter an integer!\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? ArgumentError\n  return \"确保输入一个整数！\"\nend\n\nreturn true"
     updated_at: 2012-10-20 17:11:49.373000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -94,18 +84,14 @@ sections:
         UFnsDoqTxQACAUdn
     created_at: 2012-09-19 16:00:14.000000000 Z
     default_code: ''
-    entry: ! "Ruby's `if` statement takes an **expression**, which is just a fancy
-      word for something that has a value (like `4`, `true`, or `pants`). If that
-      expression is `true`, Ruby executes the block of code that follows the `if`.
-      If it's not true (that is, `false`), Ruby doesn't execute that block of code:
-      it skips it and goes on to the next thing.\n\nHere's an example of an `if` statement
-      in action:\n\n    if 1 < 2\n      print \"I'm getting printed because one is
-      less than two!\"\n    end\n\nRuby doesn't care about **whitespace** (spaces
-      and blank lines), so the indentation of the print statement isn't *necessary*.
-      However, it's a convention that Rubyists (Ruby enthusiasts) follow, so it's
-      good to get in the habit now. The block of code following an `if` should be
-      indented two spaces.\n\nWhen you're done with your `if`, you have to tell Ruby
-      by typing `end`."
+    entry: ! "Ruby的`if`语句使用一个 **expression** 作为判断条件。如果表达式的值是`true`，则Ruby执行紧跟`if`语句的代码块。
+      如果其值不是真（也就是说是`false`），那么Ruby不执行那个代码块：
+      它跳过该代码块到达下面的语句。\n\n下面是`if`语句的一个例子：\n\n
+      if 1 < 2\n      print \"我正在被打印出来，因为1小于2！\"\n    end\n\n
+      Ruby对 **空白** （空格和空行）不感兴趣，所以打印语句的缩进不是 *必须的* 。
+      不过Ruby程序员都遵循这个惯例，所以最好养成这个好习惯。
+      紧跟`if`后面的代码块应该缩进两个空格。\n\n
+      当你完成`if`语句时，应该以`end`来结尾。"
     expect_error: false
     feedback_stats:
       correctness_test_issue: 3
@@ -115,22 +101,20 @@ sections:
       instructional_text_issue: 1
     from_console: false
     hint: ''
-    instruction: Write your own `if` statement in the editor. It can take any expression
-      you want (even just `true`!), but it should evaluate to `true`. When it does,
-      it should print a string of your choice to the console (using `print` or `puts`).
+    instruction: 在编辑器中写你自己的`if`语句。你可以给它写任何表达式作为判断条件（甚至是`true`！），
+      但该表达式的值必须是`true`。然后，在随后的代码块中打印一个字符串（随便你写什么）到控制台（使用`print`或`puts`）。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: If
+    name: if
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      code.scan(\"if\").length == 0\n  return \"Make sure to use an 'if' statement!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"It looks like your 'if' statement
-      syntax isn't quite right. Take a look at the example if you need help!\"\nend\n\nif
-      prints.length == 0\n  return \"It looks like you didn't print anything to the
-      console.\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你没有写任何代码！\"\nend\n\nif
+      code.scan(\"if\").length == 0\n  return \"确保使用'if'语句！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"貌似你的'if'语句语法不大正确。
+      如需帮助可查看左边的例程！\"\nend\n\nif
+      prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn true"
     updated_at: 2012-10-02 03:40:05.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -138,11 +122,10 @@ sections:
         UFnsD5S4YAACAUgi
     created_at: 2012-09-19 16:00:15.000000000 Z
     default_code: ''
-    entry: ! "The partner to the `if` statement is the `else` statement. An `if`/`else`
-      statement says to Ruby: \"If this expression is true, run this code block; otherwise,
-      run the code after the `else` statement.\" Here's an example:\n\n    if 1 >
-      2\n      print \"I won't get printed because one is less than two.\"\n    else\n
-      \     print \"That means I'll get printed!\"\n    end\n"
+    entry: ! "`if`语句的搭档是`else`语句。一个`if`/`else`语句的含义是：
+      \"如果这个表达式的值是真，那么运行这个代码块；否则，运行`else`语句后面的代码块。\" 下面是一个例子：\n\n
+      if 1 > 2\n      print \"我不会被打印，因为1小于2。\"\n    else\n
+      \     print \"我会被打印！\"\n    end\n"
     expect_error: false
     feedback_stats:
       other: 2
@@ -150,22 +133,19 @@ sections:
       correctness_test_issue: 1
     from_console: false
     hint: ''
-    instruction: Try it yourself in the editor! Use any expression you like in your
-      `if`/`else` statement, but make sure both branches print a string of your choice
-      to the console.
+    instruction: 你自己在编辑器中试一试！你可以在`if`/`else`语句中使用任何表达式，
+      只是要确保在两个分支中都打印一个字符串（随便写什么）到控制台。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
-    name: Else
+    name: else
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"It looks like
-      your syntax isn't quite right. Check out the example to the left if you need
-      help!\"\nend\n\nif code.scan(\"if\").length == 0 || code.scan(\"else\").length
-      == 0\n  return \"It looks like you didn't use both 'if' and 'else'.\"\nend\n\nif
-      prints.length == 0\n  return \"It looks like you didn't print anything to the
-      console.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可查看左边的例程！
+      \"\nend\n\nif code.scan(\"if\").length == 0 || code.scan(\"else\").length
+      == 0\n  return \"貌似你没有同时使用'if'和'else'。\"\nend\n\nif
+      prints.length == 0\n  return \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn true"
     updated_at: 2012-10-01 01:04:41.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -173,11 +153,10 @@ sections:
         UFnsEIqTxQACAUe7
     created_at: 2012-09-19 16:00:16.000000000 Z
     default_code: ''
-    entry: ! "What if you want more than two options, though? It's `elsif` to the
-      rescue! The `elsif` statement can add any number of alternatives to an `if`/`else`
-      statement, like so:\n\n    if x < y  # Assumes x and y are defined\n      puts
-      \"x is less than y!\"\n    elsif x > y\n      puts \"x is greater than y!\"\n
-      \   else\n      puts \"x equals y!\"\n    end\n"
+    entry: ! "假如你想要更多的选择情况，该怎么做呢？这时可以用`elsif`！
+      `elsif`语句可以向`if`/`else`语句增加无限个选择，像这样：\n\n    if x < y  # 假设x和y均已定义\n      puts
+      \"x小于y！\"\n    elsif x > y\n      puts \"x大于y！\"\n
+      \   else\n      puts \"x等于y！\"\n    end\n"
     expect_error: false
     feedback_stats:
       correctness_test_issue: 2
@@ -188,7 +167,7 @@ sections:
       typo: 1
     from_console: false
     hint: ''
-    instruction: Add an `elsif` block to your `if`/`else` statement in the editor.
+    instruction: 在编辑器中向你的`if`/`else`语句添加一个`elsif`代码块。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: true
@@ -196,25 +175,22 @@ sections:
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code.scan(\"elsif\").length == 0\n  return \"It looks like
-      you didn't include an elsif statement.\"\nend\n\nif exception.kind_of? SyntaxError\n
-      \ return \"It looks like your 'elsif' block isn't quite right. Check the example
-      in the instructions if you need help!\"\nend\n\nreturn true"
+    test_functions: ! "if code.scan(\"elsif\").length == 0\n  return \"貌似你没有写elsif语句。
+      \"\nend\n\nif exception.kind_of? SyntaxError\n
+      \ return \"貌似你的'elsif'代码块不大正确。如需帮助可查看左边的例程！\"\nend\n\nreturn true"
     updated_at: 2012-11-02 12:33:22.806000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFnsEQYJ4QACAUz+
     created_at: 2012-09-19 16:00:17.000000000 Z
-    default_code: ! "hungry = false\n\n___ ___\n  puts \"I'm writing Ruby programs!\"\n___\n
-      \ puts \"Time to eat!\"\n___"
-    entry: ! "Sometimes you want to use control flow to check if something is *false*,
-      rather than if it's true. You could reverse your `if`/`else`, but Ruby will
-      do you one better: it will let you use an `unless` statement.\n\nLet's say you
-      don't want to eat *unless* you're hungry. That is, while you're not hungry,
-      you write programs, but if you *are* hungry, you eat. You might write that program
-      in Ruby like this:\n\n    unless hungry\n      # Write some sweet programs\n
-      \   else\n      # Have some noms\n    end"
+    default_code: ! "hungry = false\n\n___ ___\n  puts \"我正在编写Ruby程序！\"\n___\n
+      \ puts \"该吃饭啦！\"\n___"
+    entry: ! "有时候你可能想要在某个条件为 *假* 而不是为真的情况下执行操作。
+      当然，你可以将`if`/`else`反过来写，不过Ruby提供了一个更好的选择：`unless`语句。\n\n
+      比如说你不想吃东西， *除非* 你饿了。也就是说，当你不饿的时候，你写程序；当你饿的时候，你吃东西。写成Ruby程序就是这样：
+      \n\n    unless hungry\n      # 写一些优美的程序\n
+      \   else\n      # 吃个包子\n    end"
     expect_error: false
     feedback_stats:
       other: 3
@@ -224,21 +200,18 @@ sections:
       correctness_test_issue: 2
     from_console: false
     hint: ''
-    instruction: We've started you off in the editor. Replace the `___`s with the
-      correct `unless` statement code so your program prints out `"I'm writing Ruby
-      programs!"`
+    instruction: 我们在编辑器中写了一部分代码。用正确的`unless`语句代码替换`___`，
+      使得程序打印出`"我正在编写Ruby程序！"`
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Unless
+    name: unless
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
-      replace the __s with the correct part of the unless statement!\"\nend\n\nif
-      code.scan(\"unless\").length == 0\n  return \"It looks like you didn't include
-      an unless statement.\"\nend\n\nif code.scan(\"end\").length == 0\n  return \"Don't
-      forget to end your unless statement with an 'end'!\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保用正确的unless语句替换__！\"\nend\n\nif
+      code.scan(\"unless\").length == 0\n  return \"貌似你没有写unless语句。
+      \"\nend\n\nif code.scan(\"end\").length == 0\n  return \"别忘了以'end'结束你的unless语句！\"\nend\n\nreturn true"
     updated_at: 2012-11-24 16:36:25.552000000 Z
     view: console_and_editor
   feedback_total: 46
@@ -246,7 +219,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Introduction to Control Flow
+  name: 控制流入门
   num_forum_answers: 24
   num_forum_questions: 16
   published: true
@@ -259,9 +232,7 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 15:56:59.000000000 Z
   default_view: console_and_editor
-  entry: You've probably noticed that Ruby can compare numeric values using familiar
-    signs like < and >. These are called comparators or relational operators, and
-    Ruby has more than just these two!
+  entry: 你可能已经注意到Ruby可以使用“>”和“<”来比较数值大小。这些符号称为比较运算符或者关系操作符，而Ruby还有许多这样的符号！
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
@@ -271,13 +242,11 @@ sections:
 
 
       is_false = 2 __ 3'
-    entry: ! "In Ruby, we assign values to variables using `=`, the **assignment operator**.
-      But if we've already used `=` for assignment, how do we check to see if two
-      things are equal? Well, we use `==`, which is a **comparator** (also called
-      a **relational operator**). `==` means \"is equal to.\" When you type\n\n    x
-      = 2\n    y = 2\n    if x == y\n      print \"x and y are equal!\"\n    end\n\nyou're
-      saying: \"if x equals y, print 'x and y are equal!'\" You can also check to
-      see if two values are *not* equal using the `!=` comparator."
+    entry: ! "在Ruby中，我们为变量赋值时使用`=`，即 **赋值运算符** 。
+      既然我们已经使用`=`来赋值，那么我们用什么符号来检查两个值是否相等呢？
+      我们使用`==`，即 **比较运算符** （也叫做 **关系操作符** ）。
+      `==`的意思是\"等于\"。当你键入：\n\n    x = 2\n    y = 2\n    if x == y\n      print \"x和y是相等的！\"\n    end\n\n
+      这段代码的意思是：\"如果x等于y，则打印'x和y是相等的！'\" 同时，你可以使用`!=`来检查两个值是否 *不相等* 。"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 1
@@ -287,19 +256,18 @@ sections:
       other: 2
     from_console: false
     hint: ''
-    instruction: ! 'We''ve got two variables in the editor: `is_true` and `is_false`.
-      Replace the `__` with `==` or `!=` to make `is_true` evaluate to `true` and
-      `is_false` evaluate to `false`.'
+    instruction: ! '我们在编辑器中有两个变量：`is_true`和`is_false`。
+      将`__`替换为`==`或`!=`，使得`is_true`的值为`true`，`is_false`的值为`false`。'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Equal or Not?
+    name: 相等还是不相等？
     tabs: []
-    test_functions: ! "if code.scan(\"!=\").length == 0\n  return \"It looks like
-      you didn't use != in your code.\"\nend\n\nif code.scan(\"==\").length == 0\n
-      \ return \"It looks like you didn't use == in your code.\"\nend\n\nunless is_true\n
-      \ return \"It looks like is_true is false. It should be true!\"\nend\n\nif is_false\n
-      \ return \"It looks like is_false is true! It should be false.\"\nend\n\nreturn
+    test_functions: ! "if code.scan(\"!=\").length == 0\n  return \"貌似你没有在代码中使用!=。
+      \"\nend\n\nif code.scan(\"==\").length == 0\n
+      \ return \"貌似你没有在代码中使用==。\"\nend\n\nunless is_true\n
+      \ return \"貌似is_true的值是false。它应该是true！\"\nend\n\nif is_false\n
+      \ return \"貌似is_false的值是true。它应该是false！\"\nend\n\nreturn
       true"
     updated_at: 2012-11-02 12:25:27.310000000 Z
     view: console_and_editor
@@ -317,18 +285,16 @@ sections:
 
 
       test_4 = -11 __ 4'
-    entry: ! 'We can also check to see if one value is less than, less than or equal
-      to, greater than, or greater than or equal to another. Those operators look
-      like this:
+    entry: ! '我们还可以检查数值之间小于、小于等于、大于和大于等于的情况，如下所示：
 
 
-      * Less than: `<`
+      * 小于：`<`
 
-      * Less than or equal to: `<=`
+      * 小于等于：`<=`
 
-      * Greater than: `>`
+      * 大于：`>`
 
-      * Greater than or equal to: `>=`
+      * 大于等于：`>=`
 
 '
     expect_error: false
@@ -341,24 +307,22 @@ sections:
       positive_feedback: 2
     from_console: false
     hint: ''
-    instruction: ! 'We''ve set up a few variables in the editor. We want them all
-      to evaluate to `true`. Your job: replace the `__`s with `<`, `<=`, `>`, or `>=`
-      to make the expression for each variable true!'
+    instruction: ! '我们在编辑器中写了一些变量。我们希望这些变量的值都为`true`。
+      你的任务：将`__`替换为`<`、`<=`、`>`或者`>=`，使得每个表达式的值都是真！'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Less Than or Greater Than
+    name: 小于还是大于
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
-      replace each __ with a comparator.\"\nend\n\nif !test_1\n  return \"It looks
-      like test_1 is false. Make it true!\"\nend\n\nif !test_2\n  return \"It looks
-      like test_2 is false. Make it true!\"\nend\n\nif !test_3\n  return \"It looks
-      like test_3 is false. Make it true!\"\nend\n\nif !test_4\n  return \"It looks
-      like test_4 is false. Make it true!\"\nend\n\nif code.scan(\"<\").length ==
-      0 || code.scan(\">\").length == 0\n  return \"Make sure to use comparators for
-      each expression.\"\nend\n\nif code.scan(\"==\").length > 0 || code.scan(\"!=\").length
-      > 0\n  return \"Let's not use != or == for this exercise—just <, >, <=, and
-      >= for now.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保将每个
+      __替换成一个比较运算符。\"\nend\n\nif !test_1\n  return \"貌似
+      test_1的值是假。使它的值为真！\"\nend\n\nif !test_2\n  return \"貌似
+      test_2的值是假。使它的值为真！\"\nend\n\nif !test_3\n  return \"貌似
+      test_3的值是假。使它的值为真！\"\nend\n\nif !test_4\n  return \"貌似
+      test_4的值是假。使它的值为真！\"\nend\n\nif code.scan(\"<\").length ==
+      0 || code.scan(\">\").length == 0\n  return \"确保在每个表达式中使用比较运算符。
+      \"\nend\n\nif code.scan(\"==\").length > 0 || code.scan(\"!=\").length
+      > 0\n  return \"请不要在这个练习中使用!=或==——还是使用<、>、<=和>=吧。\"\nend\n\nreturn true"
     updated_at: 2012-10-11 06:41:42.371000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -367,8 +331,7 @@ sections:
     created_at: 2012-09-19 16:10:58.000000000 Z
     default_code: ! "# test_1 = 77 != 77\ntest_1 = \n\n# test_2 = -4 <= -4\ntest_2
       = \n\n# test_3 = -44 < -33\ntest_3 = \n\n# test_4 = 100 == 1000\ntest_4 = "
-    entry: ! 'Great work so far! You know what they say: practice makes perfect. Let''s
-      try a few more comparators to make sure you''ve got the hang of this.'
+    entry: ! '干得好！俗话说：熟能生巧。让我们再试几个比较运算以确认你已经掌握这些东西。'
     expect_error: false
     feedback_stats:
       other: 5
@@ -378,23 +341,21 @@ sections:
       positive_feedback: 2
     from_console: false
     hint: ''
-    instruction: ! 'For this round, we''ll show you the comparators and you set each
-      variable to `true` or `false` depending on what value you expect the expression
-      to return. Remember: no quotes around `true` and `false`!'
+    instruction: ! '这一次，我们给出比较运算，而你则根据你对表达式所预期的值给每个变量赋值为`true`或`false`。
+      记住：`true`和`false`两边没有引号！'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Practice Makes Perfect
+    name: 熟能生巧
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
-      type true or false after each =!\"\nend\n\nunless code.include? \"true\"\n  return
-      \"It looks like the boolean 'true' doesn't apear in your code.\"\nend\n\nunless
-      code.include? \"false\"\n  return \"It looks like the boolean 'false' doesn't
-      appear in your code.\"\nend\n\nif test_1\n  return \"It looks like your value
-      for test_1 isn't correct.\"\nend\n\nif !test_2\n  return \"It looks like your
-      value for test_2 isn't correct.\"\nend\n\nif !test_3\n  return \"It looks like
-      your value for test_3 isn't correct.\"\nend\n\nif test_4\n  return \"It looks
-      like your value for test_4 isn't correct.\"\nend\n\nreturn true"
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保在每个=后面键入true或false！
+      \"\nend\n\nunless code.include? \"true\"\n  return
+      \"貌似布尔值'true'没有出现在你的代码里。\"\nend\n\nunless
+      code.include? \"false\"\n  return \"貌似布尔值'false'没有出现在你的代码里。\"\nend\n\nif test_1\n  return \"貌似
+      你给test_1赋的值不正确。\"\nend\n\nif !test_2\n  return \"貌似
+      你给test_2赋的值不正确。\"\nend\n\nif !test_3\n  return \"貌似
+      你给test_3赋的值不正确。\"\nend\n\nif test_4\n  return \"貌似
+      你给test_4赋的值不正确。\"\nend\n\nreturn true"
     updated_at: 2012-11-02 12:25:52.399000000 Z
     view: console_and_editor
   feedback_total: 30
@@ -402,7 +363,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Making Comparisons
+  name: 作比较
   num_forum_answers: 9
   num_forum_questions: 7
   published: true
@@ -415,9 +376,8 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 15:57:06.000000000 Z
   default_view: console_and_editor
-  entry: Comparing values is important in Ruby, but what if we want to check more
-    than one condition at once? For instance, what if we want to check if x AND y
-    are true, or x OR y? For that, we'll need boolean operators.
+  entry: 比较数值大小在Ruby中是重要的，但是如果我们想要一次检查多个条件，该怎么做呢？
+    比如，假如我们想要检查是否x和y都为真，或者检查是否x或y都为真，该怎么做？此时我们需要布尔操作符。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
@@ -426,15 +386,13 @@ sections:
     default_code: ! "# boolean_1 = 77 < 78 && 77 < 77\nboolean_1 = \n\n# boolean_2
       = true && 100 >= 100\nboolean_2 = \n\n# boolean_3 = 2**3 == 8 && 3**2 == 9\nboolean_3
       = "
-    entry: ! "Comparators aren't the only operators available to you in Ruby. You
-      can also use **logical** or **boolean operators**. Ruby has three: and (`&&`),
-      or (`||`), and not (`!`). Boolean operators result in boolean values: `true`
-      or `false`.\n\nThe boolean operator **and**, `&&`, only results in `true` when
-      **both** expression on either side of `&&` are `true`. Here's how `&&` works:\n\n
+    entry: ! "比较运算符并不是Ruby中仅有的操作符，你还可以使用 **逻辑操作符** 或者称为 **布尔操作符** 。
+      Ruby有三个布尔操作符：与运算符（`&&`）、或运算符（`||`）以及非运算符（`!`）。
+      布尔操作符的运算结果是布尔值：`true`或者`false`。\n\n
+      布尔操作符 **与** （`&&`）仅在其两边的表达式均为`true`时结果为`true`。下面演示了`&&`的例子：\n\n
       \   true && true # => true\n    true && false # => false\n    false && true
-      # => false\n    false && false # => false\n\nFor example, `1 < 2 && 2 < 3` is
-      `true` because it's true that one is less than two **and** that two is less
-      than three."
+      # => false\n    false && false # => false\n\n
+      例如：`1 < 2 && 2 < 3`得到`true`，因为1小于2 **而且** 2小于3."
     expect_error: false
     feedback_stats:
       positive_feedback: 4
@@ -445,19 +403,16 @@ sections:
       correctness_test_issue: 1
     from_console: false
     hint: ''
-    instruction: Let's practice a bit with `&&`. Check out the boolean expressions
-      and set each variable to `true` or `false` depending on what value you expect
-      the expression to return.
+    instruction: 让我们来练习使用`&&`。查看每个布尔表达式，然后根据你的判断将每个变量赋值为`true`或者`false`。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: And
+    name: 与运算
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
-      type true or false after each =!\"\nend\n\nif boolean_1\n  return \"It looks
-      like your value for boolean_1 isn't correct.\"\nend\n\nif !boolean_2\n  return
-      \"It looks like your value for boolean_2 isn't correct.\"\nend\n\nif !boolean_3\n
-      \ return \"It looks like your value for boolean_3 isn't correct.\"\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保在每个=后面键入true或者false！
+      \"\nend\n\nif boolean_1\n  return \"貌似你给boolean_1赋的值不正确。\"\nend\n\nif !boolean_2\n  return
+      \"貌似你给boolean_2赋的值不正确。\"\nend\n\nif !boolean_3\n
+      \ return \"貌似你给boolean_3赋的值不正确。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-02 12:24:55.145000000 Z
     view: console_and_editor
@@ -468,9 +423,9 @@ sections:
     default_code: ! "# boolean_1 = 2**3 != 3**2 || true\nboolean_1 = \n\n# boolean_2
       = false || -10 > -9\nboolean_2 = \n\n# boolean_3 = false || false\nboolean_3
       = "
-    entry: ! "Ruby also has the **or** operator (`||`). Ruby's `||` is called an **inclusive
-      or** because it evaluates to `true` when one or the other *or both* expressions
-      are true. Check it out:\n\n    true || true # => true\n    true || false # =>
+    entry: ! "Ruby还具有 **或** 运算（`||`）。Ruby的`||`符号称为 **或逻辑运算** ，
+      因为当符号两端的表达式只要有一个为真，它就得到`true`。
+      如下所示：\n\n    true || true # => true\n    true || false # =>
       true\n    false || true # => true\n    false || false # => false\n"
     expect_error: false
     feedback_stats:
@@ -479,18 +434,17 @@ sections:
       positive_feedback: 3
     from_console: false
     hint: ''
-    instruction: Set each variable to `true` or `false` depending on what value you
-      expect the expression to return.
+    instruction: 根据你对表达式的值的判断，设置每个变量的值为`true`或者`false`。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Or
+    name: 或运算
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
-      type true or false after each =!\"\nend\n\nif !boolean_1\n  return \"It looks
-      like your value for boolean_1 isn't correct.\"\nend\n\nif boolean_2\n  return
-      \"It looks like your value for boolean_2 isn't correct.\"\nend\n\nif boolean_3\n
-      \ return \"It looks like your value for boolean_3 isn't correct.\"\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保在每个=后面键入true或者false！
+      \"\nend\n\nif !boolean_1\n  return \"貌似
+      你给boolean_1赋的值不正确。\"\nend\n\nif boolean_2\n  return
+      \"貌似你给boolean_2赋的值不正确。\"\nend\n\nif boolean_3\n
+      \ return \"貌似你给boolean_3赋的值不正确。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-02 12:27:40.905000000 Z
     view: console_and_editor
@@ -500,26 +454,25 @@ sections:
     created_at: 2012-09-19 16:26:44.000000000 Z
     default_code: ! "# boolean_1 = !true\nboolean_1 = \n\n# boolean_2 = !true && !true\nboolean_2
       = \n\n# boolean_3 = !(700 / 10 == 70)\nboolean_3 = "
-    entry: ! "Finally, Ruby has the boolean operator **not** (`!`). `!` makes `true`
-      values `false`, and vice-versa.\n\n    !true # => false\n    !false # => true\n"
+    entry: ! "最后，Ruby还有一个布尔操作符 **非运算符** （`!`）。`!`使得`true`变成`false`，反之亦然。
+      \n\n    !true # => false\n    !false # => true\n"
     expect_error: false
     feedback_stats:
       positive_feedback: 2
       total: 2
     from_console: false
     hint: ''
-    instruction: Set each variable to `true` or `false` depending on what value you
-      expect the expression to return.
+    instruction: 根据你对表达式的判断，将每个变量赋值为`true`或者`false`。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Not
+    name: 非运算
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
-      type true or false after each =!\"\nend\n\nif boolean_1\n  return \"It looks
-      like your value for boolean_1 isn't correct.\"\nend\n\nif boolean_2\n  return
-      \"It looks like your value for boolean_2 isn't correct.\"\nend\n\nif boolean_3\n
-      \ return \"It looks like your value for boolean_3 isn't correct.\"\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保在每个=后面键入true或者false！
+      \"\nend\n\nif boolean_1\n  return \"貌似
+      你给boolean_1赋的值不正确。\"\nend\n\nif boolean_2\n  return
+      \"貌似你给boolean_2赋的值不正确。\"\nend\n\nif boolean_3\n
+      \ return \"貌似你给boolean_3赋的值不正确。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-02 12:29:44.192000000 Z
     view: console_and_editor
@@ -530,12 +483,11 @@ sections:
     default_code: ! "# boolean_1 = (3 < 4 || false) && (false || true)\nboolean_1
       = \n\n# boolean_2 = !true && (!true || 100 != 5**2)\nboolean_2 = \n\n# boolean_3
       = true || !(true || false)\nboolean_3 = "
-    entry: ! "You can combine boolean operators in your expressions. Combinations
-      like\n\n    (x && (y || w)) && z\n\nare not only legal expressions, but are
-      extremely useful tools for your programs.\n\nThese expression may take some
-      getting used to, but you can always use parentheses to control the order of
-      evaluation. Expressions in parentheses are always evaluated before anything
-      outside parentheses."
+    entry: ! "你可以将几个布尔操作符结合起来使用，像这样：
+      \n\n    (x && (y || w)) && z\n\n
+      这个表达式不仅是合法的，而且是非常有用的。\n\n
+      你可能需要一些时间来适应这种用法，不过你随时可以使用括弧来控制计算优先级。
+      括弧内的表达式总是比外面的先计算。"
     expect_error: false
     feedback_stats:
       correctness_test_issue: 1
@@ -545,18 +497,17 @@ sections:
       positive_feedback: 3
     from_console: false
     hint: ''
-    instruction: Last one! Set each variable to `true` or `false` depending on what
-      value you expect the expression to return.
+    instruction: 最后一个！根据你对表达式的判断，将每个变量赋值为`true`或者`false`。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Combining Boolean Operators
+    name: 多个布尔操作符结合起来
     tabs: []
-    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"Make sure to
-      type true or false after each =!\"\nend\n\nunless boolean_1\n  return \"It looks
-      like your value for boolean_1 isn't correct.\"\nend\n\nif boolean_2\n  return
-      \"It looks like your value for boolean_2 isn't correct.\"\nend\n\nunless boolean_3\n
-      \ return \"It looks like your value for boolean_3 isn't correct.\"\nend\n\nreturn
+    test_functions: ! "if exception.kind_of? SyntaxError\n  return \"确保在每个=后面键入true或者false！
+      \"\nend\n\nunless boolean_1\n  return \"貌似
+      你给boolean_1赋的值不正确。\"\nend\n\nif boolean_2\n  return
+      \"貌似你给boolean_2赋的值不正确。\"\nend\n\nunless boolean_3\n
+      \ return \"貌似你给boolean_3赋的值不正确。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-02 12:39:05.278000000 Z
     view: console_and_editor
@@ -565,7 +516,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Boolean Operators
+  name: 布尔操作符
   num_forum_answers: 13
   num_forum_questions: 8
   published: true
@@ -578,22 +529,21 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 15:57:11.000000000 Z
   default_view: console_and_editor
-  entry: Let's go over the new Ruby syntax we've learned.
+  entry: 让我们复习一下我们学习的Ruby新语法。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFnrWZVv1gACATPZ
     created_at: 2012-09-19 15:57:13.000000000 Z
     default_code: ''
-    entry: ! 'Great work! So far you''ve learned:
+    entry: ! '干得很好！到目前为止，我们学习了：
 
 
-      * How to use `if`, `else`, and `elsif`
+      * `if`、`else`和`elsif`的使用方法
 
-      * How to use comparators / relational operators like `==`, `!=`, `<`, `<=`,
-      `>`, and `>=`
+      * 比较运算符/关系操作符`==`、`!=`、`<`、`<=`、`>`和`>=`的使用方法
 
-      * How to use boolean / logical operators like `&&`, `||`, and `!`'
+      * 布尔/逻辑操作符`&&`、`||`和`!`的使用方法'
     expect_error: false
     feedback_stats:
       instructional_text_issue: 1
@@ -601,12 +551,11 @@ sections:
       positive_feedback: 1
     from_console: false
     hint: ''
-    instruction: Take a second to reflect on what you've learned so far. When you're
-      ready, hit Run to start the review exercises.
+    instruction: 花点时间来复习所学内容。当你准备好以后，单击Run来开始复习练习。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Nice Work!
+    name: 干得漂亮！
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -618,8 +567,7 @@ sections:
         UFoCra34sgACAoVx
     created_at: 2012-09-19 17:36:45.000000000 Z
     default_code: ''
-    entry: All right! You're all on your lonesome. (Well, not *quite*. Check the Hint
-      if you need a syntax refresher.)
+    entry: 太好了！你已经自学成才。（如果需要语法提醒，可查看提示。）
     expect_error: false
     feedback_stats:
       instructional_text_issue: 2
@@ -627,26 +575,25 @@ sections:
       typo: 2
       other: 1
     from_console: false
-    hint: ! "The syntax for `if`/`elsif`/`else` looks like this:\n\n    if expression\n
-      \     # Do something\n    elsif expression\n      # Do something else\n    else\n
-      \     # Do yet another thing\n    end"
-    instruction: Create an `if`/`else` statement in the editor. Make sure to include
-      at least one `elsif`. Each branch of the statement should print something to
-      the console.
+    hint: ! "`if`/`elsif`/`else`的语法是这样的：\n\n    if expression\n
+      \     # 做一些事情\n    elsif expression\n      # 做一些其它事情\n    else\n
+      \     # 再做另外一些事情\n    end"
+    instruction: 在编辑器中编写一个`if`/`else`语句。确保带有至少一个
+      `elsif`。每个分支语句都要向控制台打印一些东西。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: If, Else, and Elsif
+    name: if、else和elsif
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"It looks like your syntax isn't quite
-      right. Check the Hint if you need help!\"\nend\n\nif code.scan(\"if\").length
-      == 0\n  return \"Make sure to include an 'if' statement!\"\nend\n\nif code.scan(\"elsif\").length
-      == 0\n  return \"Did you include at least one 'elsif'?\"\nend\n\nif code.scan(\"else\").length
-      == 0\n  return \"Don't forget your 'else'!\"\nend\n\nif prints.length == 0\n
-      \ return \"It looks like you didn't print anything to the console.\"\nend\n\nreturn
+    test_functions: ! "if code == nil\n  return \"你没有编写任何代码！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可查看提示！
+      \"\nend\n\nif code.scan(\"if\").length
+      == 0\n  return \"确保写了'if'语句！\"\nend\n\nif code.scan(\"elsif\").length
+      == 0\n  return \"你写了至少一个'elsif'吗？\"\nend\n\nif code.scan(\"else\").length
+      == 0\n  return \"别忘了'else'！\"\nend\n\nif prints.length == 0\n
+      \ return \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn
       true"
     updated_at: 2012-10-09 18:40:53.125000000 Z
     view: console_and_editor
@@ -655,29 +602,28 @@ sections:
         UFoCsqnplwACApAN
     created_at: 2012-09-19 17:36:50.000000000 Z
     default_code: ''
-    entry: Good! Now let's review the `unless` statement.
+    entry: 好！现在让我们复习`unless`语句。
     expect_error: false
     feedback_stats:
       instructional_text_issue: 2
       total: 2
     from_console: false
-    hint: ! "Remember, `unless` syntax looks like this:\n\n    unless condition\n
-      \     # Do something!\n    end\n\nFor `unless`, the `# Do something!` bit will
-      execute if the condition evaluates to `false`."
-    instruction: Create an `unless` statement in the editor. The statement should
-      print something to the console.
+    hint: ! "记住，`unless`的语法是这样的：\n\n    unless 条件\n
+      \     # 做一些事情！\n    end\n\n
+      对于`unless`语句，`# 做一些事情！`这段代码将会在条件为`false`时执行。"
+    instruction: 在编辑器中写一个`unless`语句。该语句应向控制台打印一些东西。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Unless
+    name: unless
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"It looks like your syntax isn't quite
-      right. Check the Hint if you need help!\"\nend\n\nif code.scan(\"unless\").length
-      == 0\n  return \"Make sure to include an 'unless' statement!\"\nend\n\nif prints.length
-      == 0\n  return \"It looks like you didn't print anything to the console.\"\nend\n\nreturn
+    test_functions: ! "if code == nil\n  return \"你没有写任何代码！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"貌似你的语法不大正确。如需帮助可查看提示！
+      \"\nend\n\nif code.scan(\"unless\").length
+      == 0\n  return \"确保写了'unless'语句！\"\nend\n\nif prints.length
+      == 0\n  return \"貌似你没有向控制台打印任何东西。\"\nend\n\nreturn
       true"
     updated_at: 2012-10-01 01:16:02.000000000 Z
     view: console_and_editor
@@ -685,10 +631,9 @@ sections:
       raw_data: !binary |-
         UFoCs7c8swACAman
     created_at: 2012-09-19 17:36:51.000000000 Z
-    default_code: ! "# test_1 should be false\ntest_1 = \n\n# test_2 = should be false\ntest_2
-      = \n\n# test_3 = should be true\ntest_3 = "
-    entry: Now let's review comparators / relational operators. We've turned the tables
-      a bit!
+    default_code: ! "# test_1应为false\ntest_1 = \n\n# test_2应为false\ntest_2
+      = \n\n# test_3应为true\ntest_3 = "
+    entry: 现在让我们来复习比较运算符/关系操作符。
     expect_error: false
     feedback_stats:
       instructional_text_issue: 3
@@ -696,25 +641,23 @@ sections:
       typo: 4
       correctness_test_issue: 1
     from_console: false
-    hint: Remember, comparators are `==`, `!=`, `>`, `>=`, `<`, and `<=`.
-    instruction: We're letting you know what value (`true` or `false`) we want each
-      variable to have, and your job is to add an expression that evaluates to the
-      correct value using comparators.
+    hint: 记住，比较运算符是`==`、`!=`、`>`、`>=`、`<`和`<=`。
+    instruction: 我们给出了变量应有的值（`true`或者`false`），你的任务是将一个比较运算表达式赋值给变量，使得变量得到正确的值。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Dare to Compare
+    name: 敢于比较
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"Make sure to put an expression after
-      each =!\"\nend\n\nif code.scan(\">\").length == 0 && code.scan(\"<\").length
+    test_functions: ! "if code == nil\n  return \"你没有写任何代码！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"确保在每个=后面写一个表达式！
+      \"\nend\n\nif code.scan(\">\").length == 0 && code.scan(\"<\").length
       == 0 && code.scan(\"!=\").length == 0 && code.scan(\"==\").length == 0\n  return
-      \"Make sure to use comparators in your expressions.\"\nend\n\nif test_1\n  return
-      \"It looks like your value for test_1 isn't correct.\"\nend\n\nif test_2\n  return
-      \"It looks like your value for test_2 isn't correct.\"\nend\n\nif !test_3\n
-      \ return \"It looks like your value for test_3 isn't correct.\"\nend\n\nreturn
+      \"确保在你的表达式中使用比较运算符。\"\nend\n\nif test_1\n  return
+      \"貌似你给test_1赋的值不正确。\"\nend\n\nif test_2\n  return
+      \"貌似你给test_2赋的值不正确。\"\nend\n\nif !test_3\n
+      \ return \"貌似你给test_3赋的值不正确。\"\nend\n\nreturn
       true"
     updated_at: 2012-11-10 23:44:54.095000000 Z
     view: console_and_editor
@@ -722,9 +665,9 @@ sections:
       raw_data: !binary |-
         UFoC1gYJ4QACApdQ
     created_at: 2012-09-19 17:37:26.000000000 Z
-    default_code: ! "# test_1 should be true\ntest_1 = \n\n# test_2 = should be true\ntest_2
-      = \n\n# test_3 = should be false\ntest_3 = "
-    entry: Home stretch! Let's go over boolean operators.
+    default_code: ! "# test_1应为true\ntest_1 = \n\n# test_2应为true\ntest_2
+      = \n\n# test_3应为false\ntest_3 = "
+    entry: 最后冲刺！让我们来复习布尔操作符。
     expect_error: false
     feedback_stats:
       correctness_test_issue: 1
@@ -735,24 +678,22 @@ sections:
       positive_feedback: 1
     from_console: false
     hint: ''
-    instruction: The code in the editor indicates what value (`true` or `false`) we
-      want each variable to have, and your job is to add an expression that evaluates
-      to the correct value using boolean operators (`&&`, `||`, or `!`).
+    instruction: 编辑器中的代码注释给出了每个变量应为的值（`true`或者`false`），
+      你的任务是将一个含布尔操作符（`&&`、`||`或者`!`）的表达式赋值给每个变量，使得它们得到正确的值。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Billions of Booleans
+    name: N多布尔操作符
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"Make sure to put an expression after
-      each =!\"\nend\n\nif code.scan(\"&&\").length == 0 && code.scan(\"||\").length
-      == 0 && code.scan(\"!\").length == 0\n  return \"Make sure to use boolean operators
-      in your expressions.\"\nend\n\nunless test_1\n  return \"It looks like your
-      value for test_1 isn't correct.\"\nend\n\nunless test_2\n  return \"It looks
-      like your value for test_2 isn't correct.\"\nend\n\nif test_3\n  return \"It
-      looks like your value for test_3 isn't correct.\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你没有写任何代码！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"确保在每个=后面写一个表达式！
+      \"\nend\n\nif code.scan(\"&&\").length == 0 && code.scan(\"||\").length
+      == 0 && code.scan(\"!\").length == 0\n  return \"确保在你的表达式中使用布尔操作符。
+      \"\nend\n\nunless test_1\n  return \"貌似你给test_1赋的值不正确。
+      \"\nend\n\nunless test_2\n  return \"貌似你给test_2赋的值不正确。\"\nend\n\nif test_3\n  return \"
+      貌似你给test_3赋的值不正确。\"\nend\n\nreturn true"
     updated_at: 2012-11-10 23:42:35.097000000 Z
     view: console_and_editor
   feedback_total: 23
@@ -760,7 +701,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Review
+  name: 复习
   num_forum_answers: 16
   num_forum_questions: 11
   published: true
