@@ -78,11 +78,11 @@ sections:
       correctness_test_issue: 3
     from_console: false
     hint: ''
-    instruction: Ready to learn Ruby? Click the green Run button to continue!
+    instruction: 准备好开学Ruby了吗？按一下绿色的「运行（Run）」按钮继续吧！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Overview & Sneak Peek
+    name: 概览
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -93,28 +93,21 @@ sections:
       raw_data: !binary |-
         UFnX3ibViwACAAtW
     created_at: 2012-09-19 14:34:06.000000000 Z
-    default_code: ! 'my_num =     # Add your code here!
+    default_code: ! 'my_num =     # 你的代码写这里！
 
 
-      my_boolean =     # And here!
+      my_boolean =     # 这里！
 
 
-      my_string =     # Also here.'
-    entry: ! 'In Ruby, your information (or data) can come in different types. There
-      are three **data types** in Ruby that we''re interested in right now: **numbers**,
-      **booleans** (which can be true or false), and **strings** (words or phrases
-      like `"I''m learning Ruby!"`).
+      my_string =     # 还有这里！'
+    entry: ! '在Ruby中，你的数据信息可以是不同类型的，现在我们马上来了解三种**数据类型**：
+      **数字类型**、**布尔（真假）类型**、**字符串类型（比如："我正在学Ruby"）**
 
 
-      Computer programs exist to quickly analyze and manipulate data. For that reason,
-      it''s important for us to understand the different data types that we can use
-      in our programs.
+      计算机分析处理数据的速度非常快。为此，理解如何在程序中使用不同的数据结构尤为重要。
 
-
-      Reminder: never use quotation marks ('' or ") with booleans, or Ruby will think
-      you''re talking about a string (a word or phrase) instead of a value that can
-      be true or false. It''s also important to remember that Ruby is case-sensitive
-      (it cares about capitalization).'
+      注意：不要在给布尔类型套上引号（"true" 或者 ''false''都是不对的），
+      否则Ruby会认为这是一个字符串类型的数据。此外，还要记住Ruby是英文字母大小写敏感的。'
     expect_error: false
     feedback_stats:
       instructional_text_issue: 5
@@ -123,20 +116,19 @@ sections:
       other: 9
       correctness_test_issue: 1
     from_console: false
-    hint: You can set a variable to a value just by typing the value after the `=`
-      sign.
-    instruction: ! 'Set the following variables to the corresponding values:
+    hint: 在 `=` 右边写上相应的值就可以给`=`左边的变量赋值啦！
+    instruction: ! '给下列变量设定相应的值：
 
 
-      * `my_num` to the value `25`
+      * 将`my_num` 赋值为 `25`
 
-      * `my_boolean` to the value `true`
+      * 将`my_boolean` 赋值为 `true`
 
-      * `my_string` to the value `"Ruby"` (note the capitalization!)'
+      * 将`my_string` 赋值为 `"Ruby"` (注意大小写!)'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: ! 'Data Types: Numbers, Strings, Booleans'
+    name: ! '数据类型: 数字类型, 字符串类型, 布尔类型'
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -154,7 +146,9 @@ sections:
         UFnX34qTxQACAAuI
     created_at: 2012-09-19 14:34:07.000000000 Z
     default_code: ''
-    entry: ! "One of the most basic concepts in computer programming is the **variable**.
+    entry: ! "在编程中，其中一个最基本的概念是**变量**。
+    
+      One of the most basic concepts in computer programming is the **variable**.
       You can think of a variable as a word or name that grasps a single value. For
       example, let's say you needed the number 25 from our last example, but you're
       not going to use it right away. You can set a variable, say `my_num`, to grasp
