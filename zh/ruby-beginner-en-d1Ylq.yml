@@ -78,11 +78,11 @@ sections:
       correctness_test_issue: 3
     from_console: false
     hint: ''
-    instruction: Ready to learn Ruby? Click the green Run button to continue!
+    instruction: 准备好开学Ruby了吗？按一下绿色的「运行（Run）」按钮继续吧！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Overview & Sneak Peek
+    name: 概览
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -93,28 +93,21 @@ sections:
       raw_data: !binary |-
         UFnX3ibViwACAAtW
     created_at: 2012-09-19 14:34:06.000000000 Z
-    default_code: ! 'my_num =     # Add your code here!
+    default_code: ! 'my_num =     # 你的代码写这里！
 
 
-      my_boolean =     # And here!
+      my_boolean =     # 这里！
 
 
-      my_string =     # Also here.'
-    entry: ! 'In Ruby, your information (or data) can come in different types. There
-      are three **data types** in Ruby that we''re interested in right now: **numbers**,
-      **booleans** (which can be true or false), and **strings** (words or phrases
-      like `"I''m learning Ruby!"`).
+      my_string =     # 还有这里！'
+    entry: ! '在Ruby中，你的数据信息可以是不同类型的，现在我们马上来了解三种**数据类型**：
+      **数字类型**、**布尔（真假）类型**、**字符串类型（比如："我正在学Ruby"）**
 
 
-      Computer programs exist to quickly analyze and manipulate data. For that reason,
-      it''s important for us to understand the different data types that we can use
-      in our programs.
+      计算机分析处理数据的速度非常快。为此，理解如何在程序中使用不同的数据结构尤为重要。
 
-
-      Reminder: never use quotation marks ('' or ") with booleans, or Ruby will think
-      you''re talking about a string (a word or phrase) instead of a value that can
-      be true or false. It''s also important to remember that Ruby is case-sensitive
-      (it cares about capitalization).'
+      注意：不要在给布尔类型套上引号（"true" 或者 ''false''都是不对的），
+      否则Ruby会认为这是一个字符串类型的数据。此外，还要记住Ruby是英文字母大小写敏感的。'
     expect_error: false
     feedback_stats:
       instructional_text_issue: 5
@@ -123,29 +116,27 @@ sections:
       other: 9
       correctness_test_issue: 1
     from_console: false
-    hint: You can set a variable to a value just by typing the value after the `=`
-      sign.
-    instruction: ! 'Set the following variables to the corresponding values:
+    hint: 在 `=` 右边写上相应的值就可以给`=`左边的变量赋值啦！
+    instruction: ! '给下列变量设定相应的值：
 
 
-      * `my_num` to the value `25`
+      * 将`my_num` 赋值为 `25`
 
-      * `my_boolean` to the value `true`
+      * 将`my_boolean` 赋值为 `true`
 
-      * `my_string` to the value `"Ruby"` (note the capitalization!)'
+      * 将`my_string` 赋值为 `"Ruby"` (注意大小写!)'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: ! 'Data Types: Numbers, Strings, Booleans'
+    name: ! '数据类型: 数字类型, 字符串类型, 布尔类型'
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"Make sure to put the value of each
-      variable after the equals sign!\"\nend\n\nif my_num != 25\n  return \"It looks
-      like you didn't set my_num equal to 25.\"\nend\n\nif !my_boolean\n  return \"It
-      looks like you didn't set my_boolean to true.\"\nend\n\nif my_string != \"Ruby\"\n
-      \ return \"It looks like you didn't set my_string to \\\"Ruby\\\".\"\nend\n\nreturn
+    test_functions: ! "if code == nil\n  return \"你必须得输入点什么东西！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"请确保每个变量的值都放在其等号的后
+      面\"\nend\n\nif my_num != 25\n  return \"你好像没有把 my_num 设为 25.\"\nend\n\nif
+      !my_boolean\n  return \"你好像没有把 my_boolean 设为 true.\"\nend\n\nif my_string != \"Ruby\"\n
+      \ return \"你好像没有把 my_string 设为 \\\"Ruby\\\".\"\nend\n\nreturn
       true"
     updated_at: 2012-11-24 06:47:14.760000000 Z
     view: console_and_editor
@@ -154,14 +145,13 @@ sections:
         UFnX34qTxQACAAuI
     created_at: 2012-09-19 14:34:07.000000000 Z
     default_code: ''
-    entry: ! "One of the most basic concepts in computer programming is the **variable**.
-      You can think of a variable as a word or name that grasps a single value. For
-      example, let's say you needed the number 25 from our last example, but you're
-      not going to use it right away. You can set a variable, say `my_num`, to grasp
-      the value 25 and hang onto it for later use, like this:\n\n    my_num = 25\n\nDeclaring
-      variables in Ruby is easy: you just write out a name like `my_num`, use `=`
-      to assign it a value, and you're done! If you need to change a variable, no
-      sweat: just type it again and hit `=` to assign it a new value."
+    entry: ! "在编程中，其中一个最基本的概念是**变量**。
+    
+      **变量**是计算机编程中最基础的概念之一。你可以认为变量是一个存放值的地方，它有自己的名字。比如，
+      上述例子中我们需要25这个值，但你并不是马上就要用到这个值，所以你先把25存放在一个变量里，
+      比如叫这个变量为`my_num`，稍后再使用这个值：\n\n   my_num = 25\n\n在Ruby中声明变量非常简单：
+      你只要给变量起一个名字，比如叫`my_num`，用等号`=`来赋予它一个值就可以啦！如果你想改变一个变量
+      的值也非常简单，只要再输入这个变量名用等号`=`赋予它一个新的值就可以啦！"
     expect_error: false
     feedback_stats:
       instructional_text_issue: 3
@@ -171,18 +161,17 @@ sections:
       correctness_test_issue: 1
     from_console: false
     hint: ''
-    instruction: Set the variable `my_num` to the value `100`, then click the Run
-      button to run your code.
+    instruction: 将变量`my_num`的值设为`100`，然后按运行按钮把代码跑起来。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Variables
+    name: 变量
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ my_num\nrescue NameError\n  return \"Did you create a variable called my_num?\"\nend\n\nif
-      my_num != 100\n  return \"Did you set my_num equal to 100?\"\nend\n\nreturn
+    test_functions: ! "if code == nil\n  return \"你必须得输入点什么东西！\"\nend\n\nbegin\n
+      \ my_num\nrescue NameError\n  return \"你好像没有创建一个叫my_num的变量诶？\"\nend\n\nif
+      my_num != 100\n  return \"你确定把100赋值给my_num了？\"\nend\n\nreturn
       true"
     updated_at: 2012-11-02 16:19:37.349000000 Z
     view: console_and_editor
@@ -191,34 +180,32 @@ sections:
         UFnX4OiJ4wACAAuL
     created_at: 2012-09-19 14:34:08.000000000 Z
     default_code: ''
-    entry: ! 'Ruby isn''t limited to simple expressions of assignment like `my_num
-      = 100`; it can also do all the math you learned about in school.
+    entry: ! '除了像`my_num = 100`这样简单的表达值赋值，Ruby还可以有更自由的方式。你甚至可以
+      将一个数学表达式赋给一个变量。
 
 
-      There are six arithmetic operators we''re going to focus on:
+      如下是六个算术操作符：
 
 
-      Addition (`+`)
+      加 (`+`)
 
-      Subtraction (`-`)
+      减 (`-`)
 
-      Multiplication (`*`)
+      乘 (`*`)
 
-      Division (`/`)
+      除 (`/`)
 
-      Exponentiation (`**`)
+      取幂 (`**`)
 
-      Modulo (`%`)
-
-
-      The only ones that probably look weird to you are exponentiation and modulo.
-      Exponentiation raises one number (the base) to the power of the other (the exponent).
-      For example, `2**3` is `8`, since `2**3` means "give me 2 * 2 * 2" (2 multiplied
-      together 3 times). `3**2` is `9` (3 * 3), and so on.
+      取模 (`%`)
 
 
-      Modulo returns the remainder of division. For example, `25 % 7` would be `4`,
-      since 7 goes into 25 3 times with 4 left over.'
+      取幂和取模可能看起来有点晕。取幂的意思是将M(称作基数)自身相乘N(称作指数)次。如：`2**3`
+      是`8`， `2**3` 即 "2 * 2 * 2" (3个2相乘)。 `3**2` 是 `9` (3 * 3)，诸如此类。
+
+
+      取模的意思是让一个数与另一个数字相除，返回余数。如：`25 % 7` 是 `4`，因为25被3个7除
+      后余4。'
     expect_error: false
     feedback_stats:
       positive_feedback: 6
@@ -228,8 +215,7 @@ sections:
       instructional_text_issue: 5
     from_console: false
     hint: ''
-    instruction: Do a little math practice in the editor (the window to the right).
-      When you're ready, click Run to move on to the next exercise.
+    instruction: 在右侧编辑器中做几个数学练习吧。做好之后按运行进入下一个练习。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
@@ -237,9 +223,8 @@ sections:
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      result == nil\n  return \"Make sure to do at least one math calculation in the
-      editor!\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你必须得输入点什么东西！\"\nend\n\nif
+      result == nil\n  return \"你必须得先计算点什么东西！\"\nend\n\nreturn true"
     updated_at: 2012-10-03 04:51:42.000000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -247,11 +232,9 @@ sections:
         UFnX4Zro+AACAAx3
     created_at: 2012-09-19 14:34:09.000000000 Z
     default_code: ''
-    entry: ! "The `print` command just takes whatever you give it and prints it to
-      the screen. `puts` (for \"put string\") is slightly different: it adds a new
-      (blank) line after the thing you want it to print. You use them like this:\n\n
-      \   puts \"What's up?\"\n    print \"Oxnard Montalvo\"\n\nNo parentheses or
-      semicolons needed!"
+    entry: ! "`print` 是输出语句，你输入什么东西非它，它就输出什么东西。`puts` (用于\"输入字符串\")
+      有一些不同：它会在你要输出的内容末尾添加空行。如：\n\n
+      \   puts \"干嘛？\"\n    print \"Oxnard Montalvo\"\n\n不需要逗号或括号！"
     expect_error: false
     feedback_stats:
       other: 14
@@ -261,21 +244,19 @@ sections:
       positive_feedback: 15
     from_console: false
     hint: ''
-    instruction: ! 'In the editor, use at least one `print` statement and at least
-      one `puts` statement. You can print out any strings you like! (Make sure to
-      put your strings between quotes, like this: `"Hello!"`.)'
+    instruction: ! '请在当前编辑器中至少使用一次`print`语句，至少一次`puts`语句。
+      你可以随便输出什么内容！(记得给你想要输出的字符串套上双引号，像`"你好！"`。)'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: ! '''puts'' and ''print'''
+    name: ! '''puts'' 与 ''print'''
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      code.scan(\"print\").length == 0 || prints.length == 0\n  return \"Did you remember
-      to put in at least one print statement?\"\nend\n\nif code.scan(\"puts\").length
-      == 0 || prints.length == 0\n  return \"Did you remember to put in at least one
-      puts statement?\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你必须得输入点什么东西！\"\nend\n\nif
+      code.scan(\"print\").length == 0 || prints.length == 0\n  return \"是不是忘了练习
+      一次print语句？\"\nend\n\nif code.scan(\"puts\").length == 0 || prints.length 
+      == 0\n  return \"是不是忘了练习一次puts语句？\"\nend\n\nreturn true"
     updated_at: 2012-10-09 02:00:52.000000000 Z
     view: console_and_editor
   feedback_total: 139
@@ -283,7 +264,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Variables & Data Types
+  name: 变量与数据类型
   num_forum_answers: 58
   num_forum_questions: 21
   published: true
@@ -296,26 +277,20 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 14:45:35.000000000 Z
   default_view: console_and_editor
-  entry: Strings (words or phrases) have a lot of built-in abilities. These abilities
-    are called methods, and in this section, we'll learn how to use them to control
-    text!
+  entry: 字符串有很多内建(自身支持)的功能，这些功能叫做方法，本节我们将学习用这些方法来控制文本！
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFnakALvRgACADao
     created_at: 2012-09-19 14:45:36.000000000 Z
     default_code: ''
-    entry: ! 'Because everything in Ruby is an object (more on this later), everything
-      in Ruby has certain built-in abilities called **methods**. You can think of
-      methods as "skills" that certain objects have. For instance, strings (words
-      or phrases) have built-in methods that can tell you the length of the string,
-      reverse the string, and more.
+    entry: ! '因为Ruby中所有东西都是对象(以后会详细解释)，Ruby中所有东西都有
+      一些内建的功能，我们称之为**方法**。你可以把方法理解为特定对象才有的"技能"。
+      比如，字符串的内建方法包括：返回字符串长度、逆转字符串等。
 
 
-      We also promised to tell you more about the **interpreter**. The interpreter
-      is the program that takes the code you write and runs it. You type code in the
-      **editor**, the interpreter reads your code, and it shows you the result of
-      running your code in the **console** (the bottom window on the right).'
+      我们来解释下什么是**解释器**。解释器接收你写的代码并运行，你在**编辑器**中输入代码，
+      解释器从中读出代码，并在**控制台**(右下方的窗口)中输出代码的运行结果。'
     expect_error: false
     feedback_stats:
       positive_feedback: 6
@@ -326,11 +301,11 @@ sections:
       correctness_test_issue: 1
     from_console: false
     hint: ''
-    instruction: Enough small talk. Click Run to start learning about string methods!
+    instruction: 废话少说。按运行按钮学习一下字符串方法吧！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Everything in Ruby is an Object
+    name: Ruby之中，万物皆对象
     solution_code: ''
     solution_entry: ''
     tabs: []
@@ -342,15 +317,12 @@ sections:
         UFnapa34sgACADrm
     created_at: 2012-09-19 14:45:57.000000000 Z
     default_code: ''
-    entry: ! "Methods are summoned using a `.`. If you have a string, `\"I love espresso\"`,
-      and take the `.length` of it, Ruby will return the length of the string (that
-      is, the number of characters—words, numbers, spaces, and symbols). Check it
-      out:\n\n    \"I love espresso\".length\n    # ==> 15\n\n(That little line starting
-      with the `#` isn't part of what you need to write—it just shows you the output
-      Ruby will provide. More on this in the next section!)\n\nTaking the length of
-      input can be useful if, for example, you want to make a website that takes credit
-      card payments. Ruby can check to make sure the credit card number appears to
-      be valid."
+    entry: ! "方法都是被`.`召唤出来的。比如你有一个字符串，`\"I love espresso\"`,
+      在其后紧跟`.length`，Ruby会返回这个字符串的长度(即字符串中字符、数字、空格、符号的个数)。
+      试试:\n\n    \"I love espresso\".length\n    # ==> 15\n\n(这一行是以`#`开头的，井号
+      并不是你要写的代码的一部分，这一行只是显示Ruby的输出结果。 下一节将会详细描述！)\n\n得到
+      输入字符串的长度非常有用，比如你想做一个网站来处理信用卡卡号，就可以用Ruby来检查确保信用卡
+      卡号是合法的。"
     expect_error: false
     feedback_stats:
       positive_feedback: 4
@@ -361,18 +333,17 @@ sections:
       typo: 1
     from_console: false
     hint: ''
-    instruction: Call the `.length` method on your name (remember to use quotes around
-      your name).
+    instruction: 对你的名字字符串调用`.length` (记得前后加上双引号)。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: The '.length' Method
+    name: '.length' 方法
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      code.scan(\".length\").length == 0\n  return \"Make sure to call the .length
-      method on your name!\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你必须得输入点什么东西！\"\nend\n\nif
+      code.scan(\".length\").length == 0\n  return \"请对你的名字调用 .length 方法！
+      \"\nend\n\nreturn true"
     updated_at: 2012-10-18 13:37:24.084000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -380,12 +351,9 @@ sections:
         UFnappGJpQACAEKn
     created_at: 2012-09-19 14:45:58.000000000 Z
     default_code: ''
-    entry: ! "The `.reverse` method is called the same way `.length` is, but instead
-      of asking Ruby to tell you how long a string is, it spits out a backwards version
-      of the string you gave it. For instance,\n\n    \"Eric\".reverse\n\nwill result
-      in\n\n    \"cirE\"\n\nReversing input can be useful if you want to sort a list
-      of values from highest to lowest instead of lowest to highest. (We'll get to
-      sorting in later lesson.)"
+    entry: ! "`.reverse`方法的调用和 `.length`类似，但不是返回字符串的长度，而是返回一个
+      逆序的当前字符串。比如：\n\n    \"你好\".reverse\n\n会得到\n\n    \"好你\"\n\n
+      当你想要把一个从高到低排序(我们会在以后的课程中介绍排序。)的列表弄成从低到高，逆序将会非常有用。"
     expect_error: false
     feedback_stats:
       correctness_test_issue: 4
@@ -395,20 +363,18 @@ sections:
       instructional_text_issue: 1
     from_console: false
     hint: ''
-    instruction: Call the `.reverse` method on your name. Don't forget those quotation
-      marks around your name to make it a string!
+    instruction: 对你的名字调用`.reverse`方法。别忘了名字用双引号包起来！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: The '.reverse' Method
+    name: '.reverse' 方法
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"Did you remember to put quotes around
-      your name? Take a look at the example to the left if you're stuck.\"\nend\n\nif
-      code.scan(\".reverse\").length == 0\n  return \"Make sure to call the .reverse
-      method on your name!\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你必须得输入点什么东西！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"是不是忘了给你的名字加上引号？如果遇到
+      问题看以下左侧的例子。\"\nend\n\nif code.scan(\".reverse\").length == 0\n  return
+      \"请对你的名字调用 .reverse 方法！\"\nend\n\nreturn true"
     updated_at: 2012-11-13 20:05:53.326000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -416,9 +382,8 @@ sections:
         UFnap5S4YAACADfu
     created_at: 2012-09-19 14:45:59.000000000 Z
     default_code: ''
-    entry: Let's try one more method (er, *two* methods). As you might have guessed,
-      the `.upcase` and `.downcase` methods convert a string to ALL UPPER CASE or
-      all lower case, respectively.
+    entry: 让我们来多试几个方法（额，两个吧）。你可能猜到了，`.upcase`和`.downcase`这两个
+      方法依次将字符串中所有英文字母转成大写或小写。
     expect_error: false
     feedback_stats:
       positive_feedback: 6
@@ -429,23 +394,21 @@ sections:
       correctness_test_issue: 6
     from_console: false
     hint: ''
-    instruction: ! "Call `.upcase` on your name to make your name ALL CAPS and use
-      `puts` to print it to the screen, like this:\n\n    puts \"eric\".upcase\n    #
-      ==> ERIC\n\nOn the next line, call `.downcase` to make your name all lower case.
-      Make sure to use `puts` so you can see it printed out!"
+    instruction: ! "对你的英文名字调用`.upcase`把所有字母都变大写，再用`puts`打印出来，如：
+      \n\n    puts \"eric\".upcase\n    # ==> ERIC\n\n接着，调用`.downcase`把你的英文名字
+      变成全小写。别忘了用`puts`语句打印出来才能看到结果！"
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: ! '''.upcase'' & ''.downcase'''
+    name: ! '''.upcase'' 与 ''.downcase'''
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      code.scan(\".upcase\").length == 0\n  return \"Make sure you call the .upcase
-      method on your name.\"\nend\n\nif code.scan(\".downcase\").length == 0\n  return
-      \"Don't forget to call .downcase on your name after you call .upcase!\"\nend\n\nif
-      prints.length == 0\n  return \"It looks like you didn't print anything to the
-      console.\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你必须得输入点什么东西！\"\nend\n\nif
+      code.scan(\".upcase\").length == 0\n  return \"记得对你的英文名字调用 .upcase
+      方法。\"\nend\n\nif code.scan(\".downcase\").length == 0\n  return
+      \"调用完.upcase 别忘了调用一遍 .downcase 方法！\"\nend\n\nif prints.length == 0\n
+      return \"你好像忘了输出到终端里了！\"\nend\n\nreturn true"
     updated_at: 2012-10-30 11:40:18.908000000 Z
     view: console_and_editor
   feedback_total: 73
@@ -453,7 +416,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: String Methods
+  name: 字符串方法
   num_forum_answers: 14
   num_forum_questions: 8
   published: true
@@ -466,26 +429,20 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 14:53:07.000000000 Z
   default_view: console_and_editor
-  entry: Now that you know how to write a little bit of Ruby, let's cover some of
-    the standards and conventions that will help you write clear code that others
-    will find a pleasure to read.
+  entry: 到这一步你已经会写一些Ruby代码了，现在来了解一些编程规范和约定来帮助你写出
+    清晰易读的代码。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFncVLc8swACAEXP
     created_at: 2012-09-19 14:53:08.000000000 Z
     default_code: ''
-    entry: ! "You probably saw us use the `#` sign a few times in earlier exercises.
-      The `#` sign is for **comments** in Ruby. A comment is a bit of text that Ruby
-      won't try to run as code: it's just for humans to read. Writing good comments
-      not only clarifies your code for other people who may read it, but helps remind
-      you of what you were doing when you wrote the code days, months, or even years
-      earlier.\n\nThe `#` sign should come before your comment and affects anything
-      you write after it, so long as you're on a single line. (We'll show you how
-      to do multi-line comments in a second.) Check out these examples:\n\n    # I'm
-      a full line comment!\n    \"Eric\".length # I'm a comment, too!\n\nThe second
-      example will return `4`, since the comment comes after the code that Ruby will
-      execute."
+    entry: ! "你可能已经在之前的练习中见过我们使用井号`#`。`#`在Ruby中用于**注释**。
+      注释不会被当作代码执行：仅仅是方便人阅读代码用的。写好注释不仅能方便别人阅读
+      你写的代码，还能帮助你很快回忆起几天、几个月、甚至几年前写的代码。\n\n 每一行中以`#`
+      开头的内容都会被当作注释（稍后介绍如何注释多行内容）。试试如下代码：\n\n    # 我
+      是一整行注释！\n    \"Eric\".length # 我也是注释！\n\n第二行会输出 `4`, 因为注释
+      之前的内容会被执行。"
     expect_error: false
     feedback_stats:
       other: 6
@@ -495,16 +452,16 @@ sections:
       positive_feedback: 1
     from_console: false
     hint: ''
-    instruction: Write a comment in the editor. It can be anything you like!
+    instruction: 在编辑器中写一些注释，内容随意！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Single-Line Comments
+    name: 单行注释
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nunless
-      code.include? \"#\"\n  return \"Make sure to write a comment using the # symbol.\"\nend\n\nreturn
+    test_functions: ! "if code == nil\n  return \"你必须得输入点什么东西！\"\nend\n\nunless
+      code.include? \"#\"\n  return \"别忘了用井号(#)来注释\"\nend\n\nreturn
       true"
     updated_at: 2012-10-17 09:34:40.935000000 Z
     view: console_and_editor
@@ -513,14 +470,12 @@ sections:
         UFncayQEDAACAFpV
     created_at: 2012-09-19 14:53:31.000000000 Z
     default_code: ''
-    entry: ! "You can write a comment that spans multiple lines by starting each line
-      with a `#`, but there's an easier way. If you start with `=begin` and end with
-      `=end`, *everything* between those two expressions will be a comment. Take a
-      look at this example:\n\n    =begin\n    I'm a comment!\n    I don't need any
-      # symbols.\n    =end\n\nDon't put any space between the `=` sign and the words
-      `begin` or `end`. You can do that with math (`2 + 5` is the same as `2+5`),
-      but in this case, Ruby will get confused. `=begin` and `=end` also need to be
-      on lines all by themselves, just as shown above."
+    entry: ! "你可以给每行行首加上`#`来达到多行注释的效果，但是还有一种更简单的方法。
+      你可以用`=begin`开头，`=end`结尾，这两个表达式之间的*全部内容*都会被当作注释。
+      看看下面的例子：\n\n    =begin\n    我是注释！\n   我不需要井号# \n    =end\n\n
+      不管`begin`还是`end`，和`=`之间都不能留空格。数学表达式(`2 + 5`和`2+5`是一样)
+      之间是可以加空格的，但这里不行。另外，`=begin` 和 `=end`也需要分别单独一行，和
+      上面例子里面一样。"
     expect_error: false
     feedback_stats:
       correctness_test_issue: 12
@@ -530,21 +485,18 @@ sections:
       other: 4
     from_console: false
     hint: ''
-    instruction: Create a multi-line comment in the editor to the right. Make sure
-      `=begin` and `=end` are on their own lines!
+    instruction: 在右侧的编辑器中写一个多行注释。`=begin` 和 `=end`一定要单独一行！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Multi-Line Comments
+    name: 多行注释
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      code.split(\"\\n\").grep(/^=begin$/).size == 0\n  return \"It looks like you
-      didn't include =begin. Make sure there's no space between the equals sign and
-      the word begin!\"\nend\n\nif code.split(\"\\n\").grep(/=end/).size == 0\n  return
-      \"It looks like you didn't end your comment with =end. Make sure there's no
-      space between the equals sign and the word end!\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你必须得输入点什么东西！\"\nend\n\nif
+      code.split(\"\\n\").grep(/^=begin$/).size == 0\n  return \"你好像没有写=begin，
+      别忘了begin和=之间也不能加空格哦！\"\nend\n\nif code.split(\"\\n\").grep(/=end/).size == 0\n  return
+      \"你的多行注释好像没有以=end结尾. 别忘了end和=之间也不能加空格哦！\"\nend\n\nreturn true"
     updated_at: 2012-11-14 04:47:37.366000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -552,13 +504,10 @@ sections:
         UFncbiQEDAACAFp4
     created_at: 2012-09-19 14:53:34.000000000 Z
     default_code: ''
-    entry: There are many different kinds of variables you'll encounter as you progress
-      through these courses, but right now we're just concerned with regular old **local
-      variables**. By convention, these variables should start with a lowercase letter
-      and words should be separated by underscores, like `counter` and `masterful_method`.
-      Ruby won't stop you from starting your local variables with other symbols, such
-      as capital letters, `$`s, or `@`s, but by convention these mean different things,
-      so it's best to avoid confusion by doing what the Ruby community does.
+    entry: 接下去的课程中你会遇到各种不同的变量，但是现在我们只要知道**局部变量**就好了。
+      规范来讲，变量都是以小写字母表示，单词之间用下划线连接，如`counter`和`masterful_method`。
+      Ruby中局部变量也可以以其他符号开头，如大小字母、`$`符号、`@`符号，但是这些有特殊含义，
+      所以最好还是避免违背Ruby社区制定的规范。
     expect_error: false
     feedback_stats:
       correctness_test_issue: 5
@@ -567,22 +516,20 @@ sections:
       other: 3
       instructional_text_issue: 3
     from_console: false
-    hint: ! "Remember how to set a variable to a string? You do it like this:\n\n
+    hint: ! "还记得怎么定义一个字符串变量嘛？像这样：\n\n
       \   some_variable = \"Your string here!\""
-    instruction: ! 'Create a variable `name` in the editor and set it equal to your
-      name as a string (between quotes, like this: `"Eric"`). Your string can be capitalized,
-      but `name` should be all lower case!'
+    instruction: ! '在编辑器中定义一个叫`name`的变量，将其设为你的英文名字（用双引号包起来，
+        如 `"Eric"`）。 你的名字可以以大写字母开头，但是`name`必须全是小写！'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Naming Conventions
+    name: 命名规范
     solution_code: ''
     solution_entry: ''
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ name\nrescue NameError\n  return \"Did you declare a variable called name?\"\nend\n\nunless
-      name.is_a? String\n  return \"It looks like you didn't set your name variable
-      equal to a string.\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你必须得输入点什么东西！\"\nend\n\nbegin\n
+      \ name\nrescue NameError\n  return \"有定义一个叫name的变量嘛？？\"\nend\n\nunless
+      name.is_a? String\n  return \"你定义的name变量好像不是字符串类型的数据。\"\nend\n\nreturn true"
     updated_at: 2012-10-24 23:02:54.195000000 Z
     view: console_and_editor
   feedback_total: 55
@@ -590,7 +537,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Writing Good Code
+  name: 写「好」代码
   num_forum_answers: 14
   num_forum_questions: 6
   published: true
@@ -603,39 +550,35 @@ sections:
 - !ruby/hash:Moped::BSON::Document
   created_at: 2012-09-19 14:56:01.000000000 Z
   default_view: console_and_editor
-  entry: Great work so far! Let's go over some of the Ruby syntax you've learned.
+  entry: 非常好！现在我们来回顾下已经学过的Ruby语法。
   exercises:
   - _id: !ruby/object:Moped::BSON::ObjectId
       raw_data: !binary |-
         UFndAlCxegACAFwh
     created_at: 2012-09-19 14:56:02.000000000 Z
     default_code: ''
-    entry: Let's quickly review how to declare and set variables. Remember, you declare
-      a variable just by saying its name, and you set it using `=`. You can always
-      check the **Hint** below if you need more help.
+    entry: 我们来快速回顾下如何声明和设定变量。记住，声明变量就是给它取一个名字，
+      然后用`=`给它赋值。如果需要任何帮助你可以随时点击下面的**提示**。
     expect_error: false
     feedback_stats:
       typo: 3
       total: 7
       other: 4
     from_console: false
-    hint: ! "Remember, variable declaration looks like this:\n\n    variable_name\n\nSetting
-      a variable looks like this:\n\n    name = \"Eric\"\n    age = 26\n    hungry
-      = true"
-    instruction: Create a variable called `my_name` and set it equal to your name
-      as a string. Create a second variable called `my_age` and set it equal to your
-      age as a number (don't use any quotes around the number).
+    hint: ! "记住，像这样声明变量：\n\n    variable_name\n\n像这样给变量赋值：
+      \n\n    name = \"Eric\"\n    age = 26\n    hungry = true"
+    instruction: 创建一个叫`my_name`的变量，将它赋值为你名字的字符串。创建第二个变量，
+        叫`my_age`，将它设为一个数字（数字是不用加双引号的哦）。
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Variables & Data Types
+    name: 变量与数据类型
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ my_name\nrescue NameError\n  return \"Did you declare a variable called my_name?\"\nend\n\nbegin\n
-      \ my_age\nrescue NameError\n  return \"Did you declare a variable called my_age?\"\nend\n\nunless
-      my_name.is_a? String\n  return \"It looks like the variable my_name isn't a
-      string.\"\nend\n\nunless my_age.is_a? Integer\n  return \"It looks like the
-      variable my_age isn't an integer.\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你必须得输入点什么东西！\"\nend\n\nbegin\n
+      \ my_name\nrescue NameError\n  return \"你有声明一个叫my_name的变量嘛？\"\nend\n\nbegin\n
+      \ my_age\nrescue NameError\n  return \"你有声明一个叫my_age的变量嘛？\"\nend\n\nunless
+      my_name.is_a? String\n  return \"你声明的my_name变量好像不是字符串类型的哦。\"\nend\n\nunless
+      my_age.is_a? Integer\n  return \"你声明的my_age变量好像不是数字(integer)类型的哦。\"\nend\n\nreturn true"
     updated_at: 2012-11-06 22:46:40.105000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -643,7 +586,7 @@ sections:
         UFndGZS4YAACAFvW
     created_at: 2012-09-19 14:56:25.000000000 Z
     default_code: ''
-    entry: Good! Now let's do a little math.
+    entry: 很好！来做点数学吧！
     expect_error: false
     feedback_stats:
       positive_feedback: 1
@@ -654,31 +597,28 @@ sections:
       other: 2
     from_console: false
     hint: ''
-    instruction: ! 'In the editor, set the variables:
+    instruction: ! '在编辑器中，定义如下变量：
 
 
-      * `sum` equal to `13 + 379`
+      * `sum`等于`13 + 379`
 
-      * `product` equal to `923 * 15`
+      * `product`等于`923 * 15`
 
-      * `quotient` equal to `13209 / 17`'
+      * `quotient`等于`13209 / 17`'
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Math
+    name: 数学
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ sum\nrescue NameError\n  return \"Did you declare a variable called sum?\"\nend\n\nbegin\n
-      \ product\nrescue NameError\n  return \"Did you declare a variable called product?\"\nend\n\nbegin\n
-      \ quotient\nrescue NameError\n  return \"Did you declare a variable called quotient?\"\nend\n\nif
-      sum != 13 + 379 || code.scan(\"+\").length == 0\n  return \"It looks like the
-      variable sum isn't quite right. Did you set it equal to 13 + 379, and did you
-      use the + sign to do it?\"\nend\n\nif product != 923 * 15 || code.scan(\"*\").length
-      == 0\n  return \"It looks like the variable product isn't quite right. Did you
-      set it equal to 923 * 15, and did you use the * sign to do it?\"\nend\n\nif
-      quotient != 13209 / 17 || code.scan(\"/\").length == 0\n  return \"It looks
-      like the variable quotient isn't quite right. Did you set it equal to 13209
-      / 17, and did you use the / sign to do it?\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你必须得输入点什么东西！\"\nend\n\nbegin\n
+      \ sum\nrescue NameError\n  return \"你有定义一个叫sum的变量吗？\"\nend\n\nbegin\n
+      \ product\nrescue NameError\n  return \"你有定义一个叫product的变量吗？\"\nend\n\nbegin\n
+      \ quotient\nrescue NameError\n  return \"你有定义一个叫quotient的变量嘛？\"\nend\n\nif
+      sum != 13 + 379 || code.scan(\"+\").length == 0\n  return \"sum的值好像不正确。你是把它
+      设定为 13 + 379吗？「+」有没有加？\"\nend\n\nif product != 923 * 15 || code.scan(\"*\").length
+      == 0\n  return \"product的值好像不正确，你是把它设定为923 * 15吗？「*」有没有加？\"\nend\n\nif
+      quotient != 13209 / 17 || code.scan(\"/\").length == 0\n  return \"quotient的值好像不正确。
+      你是把它设定为13209 / 17吗？「/」有没有加？\"\nend\n\nreturn true"
     updated_at: 2012-10-24 23:06:03.475000000 Z
     view: console_and_editor
   - _id: !ruby/object:Moped::BSON::ObjectId
@@ -686,8 +626,8 @@ sections:
         UFndHybViwACAFfc
     created_at: 2012-09-19 14:56:31.000000000 Z
     default_code: ''
-    entry: ! 'Well done! Let''s do a little review of string methods. Remember, you
-      call a method by using the `.` operator, like this: `"string".method`.'
+    entry: ! '很好！我们来复习下字符串方法吧！记住，通过`.`操作符来调用一个方法，
+        像这样：`"string".method`。'
     expect_error: false
     feedback_stats:
       positive_feedback: 4
@@ -696,26 +636,23 @@ sections:
       correctness_test_issue: 7
       other: 7
     from_console: false
-    hint: ! "For instance, if your name is \"Steve,\" you might type\n\n    name =
-      \"Steve\".downcase\n\nto convert your name to `\"steve\"`."
-    instruction: ! "Declare a variable `name` and set it equal to a string containing
-      your name. Call `.downcase` on your name to make it all lower case, call `.reverse`
-      on your lowercase name to make it backwards, then call `.upcase` on your backwards
-      name to make it ALL CAPS.\n\nIn Ruby, you can do this two ways: each method
-      call on a separate line, or you can *chain them together*, like this:\n\n    name.method1.method2.method3"
+    hint: ! "比如你的名字是 \"Steve,\" 于是你输入\n\n    name =
+      \"Steve\".downcase\n\n来把你的名字弄成全小写 `\"steve\"`."
+    instruction: ! "定义一个`name`变量，将其设为包含你英文名字的字符串。调用`.downcase`
+      把你的名字转换成全小写，调用`.reverse`将全小写后的英文名字逆序，再调用`.upcase`
+      将你逆序后的名字全部大写。\n\nRuby中，你可以以两种方式达到：每一个方法都在单独一行
+      中调用，或者你*把他们连起来*，像这样：\n\n    name.method1.method2.method3"
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Strings and String Methods
+    name: 字符串与字符串方法
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nbegin\n
-      \ name\nrescue NameError\n  return \"Did you declare a variable called name?\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"It looks like your syntax isn't quite
-      right. Check the Hint if you need help!\"\nend\n\nif code.scan(\".downcase\").length
-      == 0\n  return \"It looks like you didn't call the .downcase method on your
-      name.\"\nend\n\nif code.scan(\".reverse\").length == 0\n  return \"It looks
-      like you didn't call the .reverse method on your name.\"\nend\n\nif code.scan(\".upcase\").length
-      == 0\n  return \"It looks like you didn't call the .upcase method on your name.\"\nend\n\nreturn
+    test_functions: ! "if code == nil\n  return \"你必须得输入点什么东西！\"\nend\n\nbegin\n
+      \ name\nrescue NameError\n  return \"你有定义一个叫name的变量吗？\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"你的语法好像不太对哦！看看提示或许有帮助！\"\nend\n\nif
+      code.scan(\".downcase\").length == 0\n  return \"你好像没有对你的名字调用.downcase方法哦。\"\nend\n\nif
+      code.scan(\".reverse\").length == 0\n  return \"你好像没有对你的名字调用.reverse方法哦。\"\nend\n\nif 
+      code.scan(\".upcase\").length == 0\n  return \"你好像没有对你的名字调用.upcase方法哦。\"\nend\n\nreturn
       true"
     updated_at: 2012-10-16 01:20:14.732000000 Z
     view: console_and_editor
@@ -724,8 +661,7 @@ sections:
         UFndIJS4YAACAFxS
     created_at: 2012-09-19 14:56:32.000000000 Z
     default_code: ''
-    entry: Great work! For our last review exercise for this lesson, let's go over
-      single- and multi-line comments.
+    entry: 棒极了！本次课程的最后一个练习，让我们来回顾下单行注释和多行注释。
     expect_error: false
     feedback_stats:
       correctness_test_issue: 6
@@ -735,26 +671,22 @@ sections:
       typo: 1
       instructional_text_issue: 2
     from_console: false
-    hint: Remember, a single-line comment is created using `#`, and a multi-line comment
-      starts with `=begin` (no space between `=` and `begin`!) and ends with `=end`.
-      `=begin` and `=end` need to be on their own lines.
-    instruction: Create a single-line comment and a multi-line comment in the editor
-      to the right. (Check the Hint if you need a reminder on the syntax.) Hit Run
-      to see your glorious comments and complete the Introduction to Ruby!
+    hint: 记住，单行注释是以`#`开头，多行注释以`=begin`(`=`与`begin`之间没有空格！)，
+      `=end`结尾，`=begin`和`=end`都要单独一行。
+    instruction: 在右侧编辑器中创建一个单行注释，一个多行租户是(如果忘了语法就查看下提示) 。
+      按一下「运行」按钮看一下你棒极了的注释来结束Ruby入门课程吧！
     library:
     - https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
     load_submission_from_previous_exercise: false
-    name: Comments
+    name: 注释
     tabs: []
-    test_functions: ! "if code == nil\n  return \"You gotta type something!\"\nend\n\nif
-      exception.kind_of? SyntaxError\n  return \"Your syntax doesn't look quite right.
-      Check the Hint if you need help!\"\nend\n\nunless code.include? \"#\"\n  return
-      \"It looks like you didn't create a single-line comment using #.\"\nend\n\nif
-      code.split(\"\\n\").grep(/^=begin$/).size == 0\n  return \"It looks like you
-      didn't include =begin. Make sure there's no space between the equals sign and
-      the word begin!\"\nend\n\nif code.split(\"\\n\").grep(/=end/).size == 0\n  return
-      \"It looks like you didn't end your comment with =end. Make sure there's no
-      space between the equals sign and the word end!\"\nend\n\nreturn true"
+    test_functions: ! "if code == nil\n  return \"你必须得输入点什么东西！\"\nend\n\nif
+      exception.kind_of? SyntaxError\n  return \"你的语法好像不太对，查看下提示或许
+      有帮助哦！ \"\nend\n\nunless code.include? \"#\"\n  return \"你好像没有用#创建
+      单行注释哦。\"\nend\n\nif code.split(\"\\n\").grep(/^=begin$/).size == 0\n  
+      return \"你好像没有写=begin。别忘了=和begin之间不能有空格！\"\nend\n\nif 
+      code.split(\"\\n\").grep(/=end/).size == 0\n  return \"你的注释块好像没有以=end结尾。
+      别忘了=和end之间不能有空格！\"\nend\n\nreturn true"
     updated_at: 2012-10-15 14:17:39.748000000 Z
     view: console_and_editor
   feedback_total: 68
@@ -762,7 +694,7 @@ sections:
   language_id: !ruby/object:Moped::BSON::ObjectId
     raw_data: !binary |-
       TyFOXyFuzxlcRMGV
-  name: Review
+  name: 复习
   num_forum_answers: 12
   num_forum_questions: 10
   published: true
